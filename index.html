@@ -2877,6 +2877,74 @@
 			max-height: 48px;
 			width: auto;
 		}
+
+		/* VWD Luxury Rotating Hero Headline */
+		.vwd-hero-subtitle {
+			text-transform: uppercase !important;
+			font-weight: 600 !important;
+			letter-spacing: 3.5px !important;
+			color: rgba(255, 255, 255, 0.92) !important;
+			margin-bottom: 12px !important;
+		}
+		.vwd-hero-title {
+			color: #ffffff !important;
+			font-weight: 700 !important;
+			letter-spacing: -0.5px;
+			margin-bottom: 0;
+		}
+		.vwd-rotator-wrapper {
+			display: inline-block;
+			position: relative;
+			vertical-align: baseline;
+			transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+			text-align: left;
+		}
+		.vwd-rotator-text {
+			display: inline-block;
+			color: #CFB165;
+			transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+			transform: translateY(0);
+			opacity: 1;
+			will-change: transform, opacity;
+			white-space: nowrap;
+		}
+		@supports (-webkit-background-clip: text) or (background-clip: text) {
+			.vwd-rotator-text {
+				background: linear-gradient(135deg, #CFB165 0%, #F5DE98 50%, #CFB165 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+		}
+		.vwd-rotator-text.slide-out {
+			opacity: 0;
+			transform: translateY(-24px);
+		}
+		.vwd-rotator-text.slide-in-prep {
+			opacity: 0;
+			transform: translateY(24px);
+			transition: none !important;
+		}
+		.vwd-rotator-text.slide-in {
+			opacity: 1;
+			transform: translateY(0);
+		}
+		@media (max-width: 767px) {
+			.vwd-hero-subtitle {
+				font-size: 13px !important;
+				letter-spacing: 2px !important;
+				margin-bottom: 8px !important;
+			}
+			.vwd-hero-title {
+				font-size: 34px !important;
+				line-height: 1.25 !important;
+			}
+			.vwd-rotator-wrapper {
+				display: block !important;
+				width: 100% !important;
+				text-align: center;
+				margin-top: 6px;
+			}
+		}
 	</style>
 	<meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress.">
 	<link rel="icon" href="images/favicon.png" sizes="32x32">
@@ -3184,11 +3252,11 @@
 													<div class="gel-space gel-b46f9f9c16e09fbbeb5d5186dd3ca1ff"></div>
 													<div class="gel-heading gel-heading-style-02 text-center">
 														<div
-															class="gel-heading-subtitle gel-52f0dea1b3281b910c0a854428d1c529">
-															Let us guide your home</div>
-														<h2
-															class="gel-heading-title gel-fbc7df15d02750c95c77b1ae4ed5549f">
-															Find Your Dream Home</h2>
+															class="gel-heading-subtitle gel-52f0dea1b3281b910c0a854428d1c529 vwd-hero-subtitle">
+															Let VWD Real Estate Guide You To</div>
+														<h1
+															class="gel-heading-title gel-fbc7df15d02750c95c77b1ae4ed5549f vwd-hero-title">
+															Find Your Dream <span class="vwd-rotator-wrapper"><span class="vwd-rotator-text">Home</span></span></h1>
 													</div>
 													<div class="gel-space gel-80f168be0863135b801b58564d31e16e"></div>
 													<div class="g5element__property-search-form  custom-ere-search-01">
@@ -7857,6 +7925,85 @@ C17.23029,7.64164,17.23029,9.6129,17.23029,9.6129z"></path>
 		//# sourceURL=https://homeid.g5plus.net/wp-includes/js/wp-emoji-loader.min.js</script>
 	<script>jQuery("style#gsf-custom-css").append("   .g5_property-id-2419 {background-image: url('https://homeid.g5plus.net/wp-content/uploads/2020/10/properties-city-01.jpg');padding-bottom: 125%;    background-size: cover;}.g5_property-id-6939 {background-image: url('https://homeid.g5plus.net/wp-content/uploads/2020/10/properties-city-02.jpg');padding-bottom: 125%;    background-size: cover;}.g5_property-id-6327 {background-image: url('https://homeid.g5plus.net/wp-content/uploads/2020/10/properties-city-03.jpg');padding-bottom: 125%;    background-size: cover;}.g5_property-id-5544 {background-image: url('https://homeid.g5plus.net/wp-content/uploads/2020/10/properties-city-04.jpg');padding-bottom: 125%;    background-size: cover;}.g5_property-id-2915 {background-image: url('https://homeid.g5plus.net/wp-content/uploads/2020/10/properties-city-05.jpg');padding-bottom: 125%;    background-size: cover;}");</script>
 
+	<!-- VWD Luxury Headline Rotator -->
+	<script id="vwd-headline-rotator">
+		(function () {
+			var words = ["Home", "Villa", "Penthouse", "Plot", "Off-Plan Investments"];
+			var currentIndex = 0;
+			var rotatorEl = document.querySelector(".vwd-rotator-text");
+			var wrapperEl = document.querySelector(".vwd-rotator-wrapper");
+			if (!rotatorEl || !wrapperEl) return;
+
+			var timer = null;
+
+			function updateWidth() {
+				if (window.innerWidth >= 768) {
+					wrapperEl.style.width = rotatorEl.offsetWidth + "px";
+				} else {
+					wrapperEl.style.width = "auto";
+				}
+			}
+
+			function rotate() {
+				rotatorEl.classList.remove("slide-in");
+				rotatorEl.classList.add("slide-out");
+
+				setTimeout(function () {
+					currentIndex = (currentIndex + 1) % words.length;
+					rotatorEl.textContent = words[currentIndex];
+					rotatorEl.classList.remove("slide-out");
+					rotatorEl.classList.add("slide-in-prep");
+					updateWidth();
+
+					// Force reflow
+					void rotatorEl.offsetWidth;
+
+					rotatorEl.classList.remove("slide-in-prep");
+					rotatorEl.classList.add("slide-in");
+				}, 380);
+			}
+
+			function startTimer() {
+				if (!timer) {
+					timer = setInterval(rotate, 2800);
+				}
+			}
+
+			function stopTimer() {
+				if (timer) {
+					clearInterval(timer);
+					timer = null;
+				}
+			}
+
+			// Initialize width
+			if (document.readyState === "complete") {
+				updateWidth();
+			} else {
+				window.addEventListener("load", updateWidth);
+				setTimeout(updateWidth, 200);
+			}
+			window.addEventListener("resize", updateWidth);
+
+			startTimer();
+
+			// Pause on hover
+			var heroTitle = document.querySelector(".vwd-hero-title");
+			if (heroTitle) {
+				heroTitle.addEventListener("mouseenter", stopTimer);
+				heroTitle.addEventListener("mouseleave", startTimer);
+			}
+
+			// Pause when tab not visible
+			document.addEventListener("visibilitychange", function () {
+				if (document.hidden) {
+					stopTimer();
+				} else {
+					startTimer();
+				}
+			});
+		})();
+	</script>
 
 </body>
 
