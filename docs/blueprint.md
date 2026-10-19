@@ -1,188 +1,213 @@
-# Real Estate Website Research & Architectural Blueprint
+# VWD Real Estate LLC — Architectural Blueprint & Engineering Specification
 
 **Project Repository:** `vwd_real_estate`  
-**Reference Competitor:** [White & Co Real Estate](https://whiteandcogroup.com/)  
-**Selected Foundation:** **HomeID** (Real Estate HTML Template)  
-**Target Market:** Dubai Luxury Real Estate (Sales, Leasing, Off-Plan, Mortgages, Commercial)  
-**Status:** Architecture Finalized & Approved — Implementation Phase Pending  
+**GitHub Remote:** [manu-gitxen/vwd_real_estate](https://github.com/manu-gitxen/vwd_real_estate.git) (`main` branch)  
+**Client:** **VWD REAL ESTATE LLC** (Dubai, United Arab Emirates)  
+**Competitor Benchmark:** [White & Co Real Estate](https://whiteandcogroup.com/)  
+**Base Foundation:** **HomeID** (Real Estate HTML5 & Bootstrap Foundation in `index.html`)  
+**Target Market:** Dubai Luxury Brokerage (Sales, Leasing, Off-Plan Investments, Commercial, Mortgages)  
+**Current Status:** Core Foundation, Brand System, 6-Pillar Navigation, 4-Column Sliders & Animated Hero Rotator **Completed & Pushed to Main**  
 
 ---
 
-## 1. Executive Strategy
+## 1. Executive Summary & Brand Identity
 
-Our goal is to build an enterprise-grade real estate brokerage website that competes directly with premier Dubai brokerages like **White & Co Real Estate**.
+VWD Real Estate LLC is an ultra-luxury Dubai brokerage engineered to compete directly with market leaders like White & Co Real Estate. The digital experience combines enterprise-grade property search with bespoke aesthetics, dynamic financial calculators, and verified community guides.
 
-### Core Philosophy:
-1. **Foundation:** We start with **HomeID**, an industry-standard, robust HTML5 & Bootstrap real estate template providing proven grid layouts, filter structures, and agent directories.
-2. **Design & Prestige:** We adapt HomeID with White & Co’s high-converting luxury aesthetic:
-   - **Color Palette:** Deep Emerald Teal (`#296059`), Slate Charcoal (`#1D1D20`), Warm Sand/Off-White (`#F7F5F0`), Accent Gold (`#C5A880`), and Pure White (`#FFFFFF`).
-   - **Typography:** Modern geometric sans-serif body (*Plus Jakarta Sans* / *Proxima Nova* style) paired with refined display serif headings (*Bell MT* / *Playfair*).
-   - **Interactive Elements:** Multi-image touch sliders (Swiper.js) on every property card, sticky contact bars on mobile, and floating WhatsApp triggers.
-3. **Real Utility:** Rather than generic mockups, our platform includes dedicated financial calculators (Dubai Mortgage & Net Rental Yield), 42 Dubai community lifestyle guides, and dynamic property search filtering.
+### 1.1 VWD Luxury Brand Design System
 
----
-
-## 2. Competitor Technical Audit (`whiteandcogroup.com`)
-
-The competitor operates an enterprise WordPress brokerage platform:
-- **Core CMS:** WordPress 7.1.3 + Hello Elementor Child Theme (`hello-theme-child-master`).
-- **Builder:** Elementor Pro (v4.2.3 / v4.3.5) with custom loop grid widgets.
-- **Carousels:** Swiper.js v8.4.5 (touch-enabled sliders on listing cards and galleries).
-- **Media Optimization:** Cloudinary CDN (`res.cloudinary.com/dswlx4y5x/...`) delivering automated WebP images with watermarking.
-- **SEO & Structured Data:** Yoast SEO Premium v28.7 generating full JSON-LD schema graphs (`RealEstateAgent`, `Product`, `WebPage`, `BreadcrumbList`).
-
----
-
-## 3. Discovered Public URL Inventory & Sitemaps
-
-The competitor exposes an XML sitemap index (`sitemap_index.xml`) referencing 9 distinct sitemaps covering **over 250 verified canonical URLs**:
-
-### Sitemap Breakdown
-1. `page-sitemap.xml` — Core service and transaction pages
-2. `meet-the-team-sitemap.xml` — 140+ individual agent profiles
-3. `property-area-guide-sitemap.xml` — 42 Dubai community and location guides
-4. `post-sitemap.xml` — Market news and investment articles
-5. `category-sitemap.xml` & `post_tag-sitemap.xml` — Blog taxonomy indexes
-6. `location-sitemap.xml` & `position-sitemap.xml` — Agent taxonomies
-
-### Complete Discovered URL Catalog
-
-#### A. Core Properties & Listings
-- `https://whiteandcogroup.com/properties/for-sale/` — Residential For Sale
-- `https://whiteandcogroup.com/properties/for-rent/` — Residential For Rent
-- `https://whiteandcogroup.com/properties/commercial/` — Commercial Overview
-- `https://whiteandcogroup.com/properties/commercial/for-sale/` — Commercial For Sale
-- `https://whiteandcogroup.com/properties/commercial/for-rent/` — Commercial For Rent
-- `https://whiteandcogroup.com/property/{reference-id}` — Dynamic Property Details (e.g. `RL-244588`)
-
-#### B. Off-Plan & Developer Ecosystem
-- `https://whiteandcogroup.com/off-plan-dubai/` — Off-Plan Landing Hub
-- `https://whiteandcogroup.com/off-plan-dubai/projects/` — Off-Plan Projects Directory
-- `https://whiteandcogroup.com/off-plan-dubai/areas/` — Off-Plan by Community
-- `https://whiteandcogroup.com/off-plan-dubai/developers/` — Major Developers (Emaar, Damac, Sobha, Meraas, etc.)
-- `https://whiteandcogroup.com/single-offplan-project/` — Project Detail Layout
-- `https://whiteandcogroup.com/single-developer/` — Developer Profile Layout
-
-#### C. Core Brokerage Services
-- `https://whiteandcogroup.com/services/buy-property/` — Property Acquisition Advisory
-- `https://whiteandcogroup.com/services/sell-property/` — Valuation & Listing Service
-- `https://whiteandcogroup.com/services/rent-property/` — Tenant & Landlord Leasing
-- `https://whiteandcogroup.com/services/off-plan-properties/` — Off-Plan Advisory
-- `https://whiteandcogroup.com/services/commercial/` — Commercial Sales & Leasing
-- `https://whiteandcogroup.com/services/mortgages/` — Mortgage Brokerage & Financing
-- `https://whiteandcogroup.com/services/property-management/` — Landlord Property Management
-- `https://whiteandcogroup.com/services/holiday-homes/` — Short-Term Vacation Rentals
-
-#### D. Interactive Financial Tools
-- `https://whiteandcogroup.com/mortgage-calculator/` — Home Loan Monthly Installment Estimator
-- `https://whiteandcogroup.com/rental-yield-calculator/` — Investment ROI & Yield Calculator
-
-#### E. Verified Dubai Community Guides (42 Areas)
-Main Directory: `https://whiteandcogroup.com/about-us/dubai-communities/`  
-Individual Guides:
-- Downtown Dubai (`/downtown-dubai/` / `/downtown/`)
-- Dubai Marina (`/dubai-marina/` / `/marina/`)
-- Palm Jumeirah (`/palm-jumeirah/`)
-- Dubai Hills Estate (`/dubai-hills-estate/` / `/dubai-hills/`)
-- Business Bay (`/business-bay/`)
-- Dubai Creek Harbour (`/dubai-creek-harbour/`)
-- Jumeirah Village Circle - JVC (`/jumeirah-village-circle/` / `/jvc/`)
-- Jumeirah Village Triangle - JVT (`/jumeirah-village-triangle/` / `/jvt/`)
-- Jumeirah Lake Towers - JLT (`/jumeirah-lake-towers/` / `/jlt/`)
-- Jumeirah Beach Residences - JBR (`/jumeirah-beach-residences/` / `/jbr/`)
-- Arabian Ranches 1, 2, 3 (`/arabian-ranches-1/`, `/arabian-ranches-2/`, `/arabian-ranches-3/`)
-- Damac Hills 1 & 2 (`/damac-hills-1/`, `/damac-hills-2/`)
-- Damac Lagoons (`/damac-lagoons/`)
-- Tilal Al Ghaf (`/tilal-al-ghaf/`)
-- Bluewaters Island (`/bluewaters-island/`)
-- Emaar Beachfront (`/emaar-beachfront/`)
-- Emaar South (`/emaar-south/`)
-- Dubai South (`/dubai-south/`)
-- Al Barari (`/al-barari/`)
-- Sobha Hartland (`/sobha-hartland/`)
-- Mudon (`/mudon/`)
-- The Valley (`/the-valley/`)
-- Villanova (`/villanova/`)
-- Al Furjan (`/al-furjan/`)
-- Emirates Living (`/emirates-living/`)
-- The Meadows (`/the-meadows/`)
-- The Views (`/the-views/`)
-- The Villa (`/the-villa/`)
-- The Greens (`/greens/`)
-- Jumeirah Islands (`/jumeirah-islands/`)
-- Jumeirah Golf Estates (`/jumeirah-golf-estate/` / `/jge/`)
-- Jumeirah Park (`/jumeirah-park/`)
-- Town Square (`/town-square/`)
-- Arjan (`/arjan/`)
-- Maritime City (`/maritme-city/`)
-- Meydan City (`/meydan-city/`)
-- Mira & Mira Oasis (`/mira-and-mira-oasis/`)
-- Victory Heights (`/victory-heights/`)
-
-#### F. Team Directory (140+ Individual Agent Profiles)
-`https://whiteandcogroup.com/meet-the-team/`  
-Sample profiles: `/meet-the-team/ryan-kidd/`, `/ashana-sidhu/`, `/daniel-shearer/`, `/hannah-wilson/`, etc.
-
-#### G. Media & Content
-- `https://whiteandcogroup.com/about-us/latest-property-news/`
-- `https://whiteandcogroup.com/market-reports/`
-- `https://whiteandcogroup.com/about-us/podcasts/`
-- `https://whiteandcogroup.com/about-us/property-videos/`
-
-#### H. Lead Capture & Careers
-- `https://whiteandcogroup.com/contact/` (Contact Directory)
-- `https://whiteandcogroup.com/contact/general-enquiry/` (General Lead Form)
-- `https://whiteandcogroup.com/contact/list-a-property/` (Dedicated Valuation / Seller Form)
-- `https://whiteandcogroup.com/contact/leave-a-suggestion/` (Client Feedback)
-- `https://whiteandcogroup.com/about-us/careers/` & `/send-us-your-cv/` (Recruitment)
-
----
-
-## 4. Reusable Page Template Architecture
-
-Instead of coding 250+ individual static files, we map all routes to **10 Reusable Master Templates**:
-
-| Template ID | Name | Applied To | Key Features |
+| Element | Specification | Values / Tokens | Implementation |
 | :--- | :--- | :--- | :--- |
-| **T-01** | `HomeTemplate` | Homepage (`index.html`) | Hero search tab (Buy/Rent/Off-Plan), featured listings swiper, luxury service grid, community highlights, counter stats, agent showcase, lead CTA. |
-| **T-02** | `ListingGridTemplate` | `properties-for-sale.html`, `properties-for-rent.html`, `commercial-sale.html`, `commercial-rent.html` | Multi-select filter bar, sort dropdown, responsive 3-column cards with Swiper touch galleries, badges, pagination, mobile filter modal. |
-| **T-03** | `PropertyDetailTemplate` | `property-detail.html` (Dynamic `/property/:id`) | Full image swiper + thumbnail strip, title/price/reference pill, quick specs (beds, baths, sqft), description, amenities checklist, map, mortgage calculator embed, sticky agent contact bar with WhatsApp CTA. |
-| **T-04** | `ServiceDetailTemplate` | `services-sell.html`, `services-property-management.html`, `services-mortgages.html`, etc. | Hero banner, value propositions, step-by-step process accordion, valuation lead form, FAQs, related specialist agent card. |
-| **T-05** | `CommunityDirectoryTemplate` | `communities.html` | Grid of Dubai community cards with lifestyle tags (Beachfront, Golf, Urban, Family) and price metrics. |
-| **T-06** | `CommunityDetailTemplate` | `community-detail.html` | Community hero, lifestyle overview, schools/amenities list, map, and dynamic feed of properties in that specific community. |
-| **T-07** | `TeamDirectoryTemplate` | `meet-the-team.html` | Department filter tabs (Sales, Leasing, Commercial, Off-Plan), agent portrait cards with direct Call, WhatsApp, and Email triggers. |
-| **T-08** | `AgentDetailTemplate` | `agent-detail.html` | Agent biography, languages spoken, DED/RERA license info, direct inquiry form, active exclusive listings. |
-| **T-09** | `CalculatorTemplate` | `mortgage-calculator.html`, `rental-yield-calculator.html` | Slider and numeric inputs, real-time formula computation (pure JavaScript), monthly installment chart, pre-qualification lead form. |
-| **T-10** | `StandardArticleTemplate` | `blog.html`, `article-detail.html`, `privacy-policy.html`, `terms.html` | Clean editorial typography, breadcrumbs, social share buttons, related articles. |
+| **Primary Brand Authority** | Deep Navy Blue | `#00265E` | Navigation headers, dark badges, high-contrast structural accents |
+| **Luxury Accent & Metallic** | VWD Luxury Gold | `#CFB165` | Buttons, hover states, active indicators, featured listing badges |
+| **Gold Gradient Shimmer** | Metallic Luster | `linear-gradient(135deg, #CFB165 0%, #F5DE98 50%, #CFB165 100%)` | Rotating hero keywords, luxury CTAs |
+| **Background Overlays** | Pure & Charcoal Black | `#000000` (opacity 0.40–0.85) / `#1D1D20` | Hero backdrop overlays, footer section, modal masks |
+| **Crisp Neutral** | Pure White & Soft Greys | `#FFFFFF`, `#F7F5F0`, `#ABABAB`, `#696969` | Body typography, card surfaces, borders |
+| **Brand Assets** | Dual Vector Logos | `images/VWD_logo_transparent.svg` (Dark/Sticky)<br>`images/VWD_logo_white.svg` (Transparent/Dark Hero) | Standardized height `48px`, aspect ratio preserved |
 
 ---
 
-## 5. Technical Formulas & Algorithms
+## 2. Global Navigation & Header Architecture
 
-### A. Dubai Mortgage Calculator
-Central Bank of the UAE mandates a minimum 20% down payment for expat buyers (15% for UAE nationals for properties under 5M AED).
+The site header is fully aligned with modern luxury brokerage standards, replacing generic demo links with **6 Core Pillars** and White & Co action elements.
+
+```mermaid
+graph LR
+    Logo["VWD Logo"] --> Nav["6 Core Navigation Pillars"]
+    Nav --> Buy["BUY"]
+    Nav --> Rent["RENT"]
+    Nav --> Sell["SELL"]
+    Nav --> OffPlan["OFF PLAN"]
+    Nav --> Commercial["COMMERCIAL"]
+    Nav --> About["ABOUT"]
+    Nav --> Actions["Header Utility CTAs"]
+    Actions --> Outlook["READ OUR OUTLOOK"]
+    Actions --> Drawer["Off-Canvas Drawer (☰)"]
+    Actions --> Lang["Language (🇬🇧)"]
+```
+
+### 2.1 Navigation Pillars & Taxonomies
+
+1. **BUY (`properties-for-sale.html`)**:
+   - Apartments for Sale
+   - Luxury Villas for Sale
+   - Penthouses & Sky Collections
+   - Townhouses & Duplexes
+   - Private Estates & Plots
+2. **RENT (`properties-for-rent.html`)**:
+   - Annual Residential Leasing
+   - Luxury Furnished Apartments
+   - High-End Villas & Mansions
+   - Holiday Homes & Short-Term Stays
+3. **SELL (`list-a-property.html`)**:
+   - List Your Property with VWD
+   - Free Instant Property Valuation
+   - Seller's Advisory & Conveyancing Guide
+4. **OFF PLAN (`off-plan.html`)**:
+   - Dubai Off-Plan Projects Hub
+   - Developer Portfolios (Emaar, Nakheel, DAMAC, Sobha, Meraas, Omniyat)
+   - High-ROI Investment Hotspots
+   - Flexible Payment Plans Guide
+   - Capital Appreciation & Yield Forecasts
+5. **COMMERCIAL (`commercial.html`)**:
+   - Grade-A Corporate Offices
+   - Prime Retail & Showroom Spaces
+   - Logistics, Warehouses & Industrial
+   - Commercial Land & Full Buildings
+6. **ABOUT (`about-us.html`)**:
+   - About VWD Real Estate LLC & Mission
+   - Meet The Team (Broker Directory)
+   - Real Estate Careers & Recruitment
+   - Market Reports & Quarterly Outlook
+   - Client Reviews & Legal Compliance
+
+### 2.2 Header Action Utilities
+
+- **`READ OUR OUTLOOK` CTA Button**: High-visibility glassmorphism button (`rgba(0, 38, 94, 0.45)` with gold hover `#CFB165`) driving traffic directly to institutional research reports (`market-reports.html`).
+- **Off-Canvas Drawer Toggle (`☰`)**: Full-height drawer for quick mobile/tablet access and extended brand directories.
+- **Language Indicator (`🇬🇧`)**: English locale indicator prepared for future multi-language expansion (Arabic / Russian).
+
+---
+
+## 3. Hero Section & Animated Headline Engine
+
+The homepage hero features an animated rotating keyword engine designed to showcase VWD's luxury offerings dynamically.
+
+```mermaid
+sequenceDiagram
+    participant User as Visitor
+    participant Hero as Hero Headline
+    participant Rotator as JS Rotator Engine
+    User->>Hero: Views Hero Section
+    Hero->>Hero: Displays "Find Your Dream Home"
+    Note over Rotator: Pauses 2800ms
+    Rotator->>Hero: Slides "Home" up & out (translateY -24px, opacity 0)
+    Rotator->>Hero: Prepares next word "Villa" from bottom (translateY +24px)
+    Rotator->>Hero: Slides "Villa" smoothly to baseline (translateY 0, opacity 1)
+    Note over Rotator: Cycles: Home -> Villa -> Penthouse -> Plot -> Off-Plan Investments
+```
+
+### 3.1 Hero Specifications
+
+- **Eyebrow Subtitle**:  
+  `<div class="gel-heading-subtitle vwd-hero-subtitle">LET VWD REAL ESTATE GUIDE YOU TO</div>`  
+  *Styling:* Bold 600 weight, `text-transform: uppercase`, `letter-spacing: 3.5px`, crisp white.
+- **Main Heading**:  
+  `<h1 class="gel-heading-title vwd-hero-title">Find Your Dream <span class="vwd-rotator-wrapper"><span class="vwd-rotator-text">Home</span></span></h1>`  
+  *Rotating Categories (Every 2.8s):*
+  1. `Home`
+  2. `Villa`
+  3. `Penthouse`
+  4. `Plot`
+  5. `Off-Plan Investments`
+- **Animation Mechanics**:
+  - GPU-accelerated vertical slide-and-fade (`translateY(-24px)` exit, `translateY(24px)` enter).
+  - Shimmering metallic gold text fill via `-webkit-background-clip: text` with solid `#CFB165` fallback.
+  - Smooth desktop container width transitions (`0.35s cubic-bezier(0.4, 0, 0.2, 1)`) eliminating jumpy layout shifts.
+  - **Mobile Stacking:** On viewports `< 768px`, the rotator automatically displays on its own line (`display: block !important; width: 100% !important; text-align: center;`), preventing text clipping.
+  - **Performance UX:** Auto-pauses on hover and listens to `document.visibilitychange` to suspend animation loops when the tab is inactive.
+
+---
+
+## 4. Property Card & Carousel Architecture
+
+The HomeID base template included 5 distinct Slick slider carousels that previously stretched listing cards across the full screen due to unparsed double-quoted JSON strings.
+
+### 4.1 Slick Slider Resolution
+
+All `data-slick-options` in `index.html` were re-engineered with valid single-quoted camelCase configuration strings:
+
+```html
+data-slick-options='{"slidesToShow": 4, "slidesToScroll": 4, "arrows": true, "dots": true, "infinite": false, "responsive": [{"breakpoint": 1200, "settings": {"slidesToShow": 3, "slidesToScroll": 3}}, {"breakpoint": 992, "settings": {"slidesToShow": 2, "slidesToScroll": 2}}, {"breakpoint": 768, "settings": {"slidesToShow": 1, "slidesToScroll": 1}}]}'
+```
+
+- **Desktop (>= 1200px):** 4 Clean columns per slide.
+- **Laptop (992px – 1199px):** 3 Columns.
+- **Tablet (768px – 991px):** 2 Columns.
+- **Mobile (< 768px):** 1 Full-width card with touch swipe.
+
+---
+
+## 5. Reusable Master Templates
+
+The entire 250+ page inventory mapped from the competitor audit is structured into **10 Reusable Master Templates**:
+
+| ID | Master Template | Applied Views | Core Features |
+| :--- | :--- | :--- | :--- |
+| **T-01** | `HomeTemplate` | `index.html` | Hero search tabs (Buy/Rent/Off-Plan), animated rotator, 4-column carousels, communities showcase, team grid, lead CTA. |
+| **T-02** | `ListingGridTemplate` | `properties-for-sale.html`, `properties-for-rent.html`, `commercial.html` | Multi-select filters (Type, Beds, Price, Area), sorting, 3-column card grid, badge overlays, pagination. |
+| **T-03** | `PropertyDetailTemplate` | `property-detail.html` (Dynamic `/property/:id`) | High-res image gallery, quick specs (bed/bath/sqft), amenities grid, mortgage calculator embed, sticky WhatsApp contact bar. |
+| **T-04** | `ServiceDetailTemplate` | `services-sell.html`, `services-mortgages.html`, `services-property-management.html` | Value propositions, step-by-step process accordion, instant valuation inquiry form, client testimonials. |
+| **T-05** | `CommunityDirectoryTemplate` | `communities.html` | 42 Dubai community cards categorized by lifestyle tags (Beachfront, Golf, Urban, Family). |
+| **T-06** | `CommunityDetailTemplate` | `community-detail.html` | Community hero, schools, hospitals, commute times, map, and dynamic listings feed in that community. |
+| **T-07** | `TeamDirectoryTemplate` | `meet-the-team.html` | Department filter tabs (Sales, Leasing, Commercial, Off-Plan), agent portrait cards with direct Call/WhatsApp/Email triggers. |
+| **T-08** | `AgentDetailTemplate` | `agent-detail.html` | Agent bio, languages, RERA license, active listings, direct contact modal. |
+| **T-09** | `CalculatorTemplate` | `mortgage-calculator.html`, `rental-yield-calculator.html` | Interactive sliders, real-time formula computation (pure JavaScript), loan amortizations, lead capture. |
+| **T-10** | `StandardArticleTemplate` | `market-reports.html`, `blog.html`, `privacy-policy.html`, `terms.html` | Editorial typography, table of contents, downloadable PDF triggers, social share links. |
+
+---
+
+## 6. Financial Algorithms (Dubai Real Estate Standards)
+
+### 6.1 Dubai Mortgage Calculator
+Regulated under Central Bank of the UAE mandates (minimum 20% down payment for expat buyers on properties up to AED 5M):
 
 $$\text{Monthly Payment } (M) = P \times \frac{r(1+r)^n}{(1+r)^n - 1}$$
 
-- $P$ = Loan Principal Amount = Property Price - Down Payment
-- $r$ = Monthly interest rate = $\frac{\text{Annual Interest Rate}}{12 \times 100}$
-- $n$ = Total monthly installments = Loan Term (years) $\times 12$
+- $P$ = Loan Principal Amount = $\text{Property Price} - \text{Down Payment}$
+- $r$ = Monthly Interest Rate = $\frac{\text{Annual Interest Rate}}{12 \times 100}$
+- $n$ = Total Monthly Installments = $\text{Loan Term in Years} \times 12$
 
-### B. Dubai Rental Yield Calculator
+### 6.2 Dubai Rental Yield Calculator
 $$\text{Gross Rental Yield (\%)} = \left(\frac{\text{Annual Rental Income}}{\text{Property Purchase Price}}\right) \times 100$$
 
-$$\text{Net Rental Yield (\%)} = \left(\frac{\text{Annual Rental Income} - \text{Annual Service Charges \& Maintenance}}{\text{Property Purchase Price} + \text{DLD Fee (4\%)} + \text{Trustee \& Broker Fees}}\right) \times 100$$
+$$\text{Net Rental Yield (\%)} = \left(\frac{\text{Annual Rental Income} - \text{Annual Service Charges \& Maintenance}}{\text{Property Purchase Price} + \text{DLD Transfer Fee (4\%)} + \text{Trustee \& Brokerage Fees}}\right) \times 100$$
 
 ---
 
-## 6. Implementation Milestones
+## 7. Security & Version Control Protocol
 
-- **Milestone 1:** Project foundation setup with HomeID source assets & folder configuration.
-- **Milestone 2:** Global design system integration (Emerald/Charcoal palette, header, mega-menu, footer).
-- **Milestone 3:** Homepage implementation with luxury hero search and Swiper featured listings.
-- **Milestone 4:** Property listing catalog with multi-facet filters (Buy, Rent, Commercial).
-- **Milestone 5:** Single property detail layout with gallery, specs, amenities, and agent card.
-- **Milestone 6:** Interactive Dubai Mortgage & Rental Yield calculators.
-- **Milestone 7:** Community guides (42 Dubai locations) & core brokerage service pages.
-- **Milestone 8:** Team directory (agent profiles) & lead-generation forms with WhatsApp integration.
-- **Milestone 9:** SEO optimization, performance audits, and production release.
+### 7.1 Secret Protection Policy
+- **Mapbox Credentials:** All map components must utilize placeholder tokens (`pk.placeholder_mapbox_token`) in public files to maintain complete compliance with GitHub Push Protection and security audits. Active keys are injected via environment configurations.
+- **Repository Cleanliness:** No temporary backup files or credentials committed to source control.
+
+### 7.2 Git Workflows
+- **Target Repository:** `https://github.com/manu-gitxen/vwd_real_estate.git`
+- **Default Production Branch:** `main`
+- All changes must be tested across mobile and desktop breakpoints prior to staging and deployment.
+
+---
+
+## 8. Implementation Roadmap & Progress Tracker
+
+| Milestone | Scope of Work | Status | Verification |
+| :--- | :--- | :--- | :--- |
+| **Milestone 1** | Project setup, HomeID base template integration, folder asset structuring. | **COMPLETED** | Verified in `index.html` |
+| **Milestone 2** | VWD Brand System: Navy (`#00265E`) + Gold (`#CFB165`) palette, dual SVG logos (`VWD_logo_white.svg`, `VWD_logo_transparent.svg`). | **COMPLETED** | Deployed to `main` |
+| **Milestone 3** | Card layout fix: Standardized all 5 Slick slider configs to single-quoted camelCase 4-column carousels. | **COMPLETED** | Deployed to `main` |
+| **Milestone 4** | 6-Pillar Navigation: BUY, RENT, SELL, OFF PLAN, COMMERCIAL, ABOUT + `READ OUR OUTLOOK` CTA + Drawer Toggle + UK Flag. | **COMPLETED** | Commit `3485b7e` |
+| **Milestone 5** | Hero Section: Animated rotating headline cycling 5 VWD categories with metallic gold shimmer and mobile stacking. | **COMPLETED** | Commit `23d6948` |
+| **Milestone 6** | Secondary Interior Templates: `properties-for-sale.html`, `properties-for-rent.html`, `off-plan.html` with multi-facet filters. | **NEXT** | Pending Phase Kickoff |
+| **Milestone 7** | Interactive Financial Tools: Dedicated Dubai Mortgage & Net Rental Yield Calculators. | **QUEUED** | Spec Finalized |
+| **Milestone 8** | Dubai Community Guides (42 Locations) & Team Directory (140+ Broker Profiles). | **QUEUED** | Spec Finalized |
+| **Milestone 9** | Lead Generation: WhatsApp direct integrations, Valuation Request funnels, and CRM Webhooks. | **QUEUED** | Spec Finalized |
