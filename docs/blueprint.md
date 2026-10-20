@@ -205,8 +205,12 @@ $$\text{Net Rental Yield (\%)} = \left(\frac{\text{Annual Rental Income} - \text
 | **Milestone 2** | VWD Brand System: Navy (`#00265E`) + Gold (`#CFB165`) palette, dual SVG logos (`VWD_logo_white.svg`, `VWD_logo_transparent.svg`). | **COMPLETED** | Deployed to `main` |
 | **Milestone 3** | Card layout fix: Standardized all 5 Slick slider configs to single-quoted camelCase 4-column carousels. | **COMPLETED** | Deployed to `main` |
 | **Milestone 4** | 6-Pillar Navigation: BUY, RENT, SELL, OFF PLAN, COMMERCIAL, ABOUT + `READ OUR OUTLOOK` CTA + Drawer Toggle + UK Flag. | **COMPLETED** | Commit `3485b7e` |
-| **Milestone 5** | Hero Section: Animated rotating headline cycling 4 luxury categories (Home, Villa, Penthouse, Plot) with metallic gold shimmer and clean single-line alignment. | **COMPLETED** | Verified in `index.html` |
-| **Milestone 6** | Secondary Interior Templates: `properties-for-sale.html`, `properties-for-rent.html`, `off-plan.html` with multi-facet filters. | **NEXT** | Pending Phase Kickoff |
+| **Milestone 5.0** | Hero Section: Animated rotating headline cycling 4 luxury categories (Home, Villa, Penthouse, Plot) with metallic gold shimmer and clean single-line alignment. | **COMPLETED** | Commit `c5819e5` |
+| **Milestone 5.1** | Step 1 — Featured Properties in AED: 20 luxury Dubai properties (10 Sale, 10 Rent) across Palm Jumeirah, Downtown, Dubai Hills, Emaar Beachfront, plus localized hero search dropdowns. | **COMPLETED** | Commit `c822ed1` |
+| **Milestone 5.2** | Step 2 — Dubai Communities Showcase: 8-destination slider (Palm Jumeirah, Downtown Dubai, Dubai Hills, Dubai Marina, Business Bay, Dubai Creek Harbour, Jumeirah Golf Estates, Emaar Beachfront). | **COMPLETED** | Commit `482f622` |
+| **Milestone 5.3** | Step 3 — VWD Advisory Pillars & Market Intelligence Spotlight: 3 concise corporate advisory pillars + dedicated quarterly Dubai Real Estate Outlook feature section. | **COMPLETED** | Commits `434dfa6`, `b001965` |
+| **Milestone 5.4** | Step 4 — Footer Localization & Compliance: Dubai HQ (Control Tower, Motor City), RERA ORN: 30124 & DED licenses, structured Properties & Advisory menus, Market Intelligence newsletter, 2026 legal copyright. | **COMPLETED** | Commit `d9ed402` |
+| **Milestone 6** | Secondary Interior Templates: `properties-for-sale.html`, `properties-for-rent.html`, `off-plan.html` with multi-facet filters. | **NEXT** | Ready for Kickoff |
 | **Milestone 7** | Interactive Financial Tools: Dedicated Dubai Mortgage & Net Rental Yield Calculators. | **QUEUED** | Spec Finalized |
 | **Milestone 8** | Dubai Community Guides (42 Locations) & Team Directory (140+ Broker Profiles). | **QUEUED** | Spec Finalized |
 | **Milestone 9** | Lead Generation: WhatsApp direct integrations, Valuation Request funnels, and CRM Webhooks. | **QUEUED** | Spec Finalized |
