@@ -4,15 +4,15 @@
 **GitHub Remote:** [manu-gitxen/vwd_real_estate](https://github.com/manu-gitxen/vwd_real_estate.git) (`main` branch)  
 **Client:** **VWD REAL ESTATE LLC** (Dubai, United Arab Emirates)  
 **Competitor Benchmark:** [White & Co Real Estate](https://whiteandcogroup.com/)  
-**Base Foundation:** **HomeID** (Real Estate HTML5 & Bootstrap Foundation in `index.html`)  
+**Base Foundation:** **HomeID** (Real Estate HTML5, Bootstrap v4.3.1 & WPBakery Foundation in `index.html`)  
 **Target Market:** Dubai Luxury Brokerage (Sales, Leasing, Off-Plan Investments, Commercial, Mortgages)  
-**Current Status:** Core Foundation, Brand System, 6-Pillar Navigation, 4-Column Sliders & Animated Hero Rotator **Completed & Pushed to Main**  
+**Current Status:** Homepage Phase (Steps 1–4, Brand System, 6-Pillar Navigation, 4-Column Sliders, Animated Hero Rotator, RERA/DLD Compliance Footer) **100% Completed & Deployed to Main**  
 
 ---
 
 ## 1. Executive Summary & Brand Identity
 
-VWD Real Estate LLC is an ultra-luxury Dubai brokerage engineered to compete directly with market leaders like White & Co Real Estate. The digital experience combines enterprise-grade property search with bespoke aesthetics, dynamic financial calculators, and verified community guides.
+VWD Real Estate LLC is an ultra-luxury Dubai brokerage engineered to compete directly with market leaders like White & Co Real Estate. The digital experience combines enterprise-grade property search with bespoke aesthetics, dynamic financial calculators, verified community guides, and institutional market intelligence.
 
 ### 1.1 VWD Luxury Brand Design System
 
@@ -40,8 +40,7 @@ graph LR
     Nav --> OffPlan["OFF PLAN"]
     Nav --> Commercial["COMMERCIAL"]
     Nav --> About["ABOUT"]
-    Nav --> Actions["Header Utility CTAs"]
-    Actions --> Outlook["READ OUR OUTLOOK"]
+    Actions["Header Utility CTAs"] --> Outlook["READ OUR OUTLOOK"]
     Actions --> Drawer["Off-Canvas Drawer (☰)"]
     Actions --> Lang["Language (🇬🇧)"]
 ```
@@ -65,7 +64,7 @@ graph LR
    - Seller's Advisory & Conveyancing Guide
 4. **OFF PLAN (`off-plan.html`)**:
    - Dubai Off-Plan Projects Hub
-   - Developer Portfolios (Emaar, Nakheel, DAMAC, Sobha, Meraas, Omniyat)
+   - Developer Portfolios (Emaar, Nakheel, DAMAC, Sobha, Meraas, Omniyat, Ellington, Aldar)
    - High-ROI Investment Hotspots
    - Flexible Payment Plans Guide
    - Capital Appreciation & Yield Forecasts
@@ -130,7 +129,7 @@ sequenceDiagram
 
 ## 4. Property Card & Carousel Architecture
 
-The HomeID base template included 5 distinct Slick slider carousels that previously stretched listing cards across the full screen due to unparsed double-quoted JSON strings.
+The HomeID base template includes 5 distinct Slick slider carousels that previously stretched listing cards across the full screen due to unparsed double-quoted JSON strings.
 
 ### 4.1 Slick Slider Resolution
 
@@ -147,29 +146,88 @@ data-slick-options='{"slidesToShow": 4, "slidesToScroll": 4, "arrows": true, "do
 
 ---
 
-## 5. Reusable Master Templates
+## 5. Style Architecture & Master Shell Engineering Policy
+
+The site frontend runs on a synchronized, multi-tier layout engine:
+1. **Bootstrap v4.3.1:** Core responsive 12-column grid (`container`, `row`, `col-lg-4`, `col-md-6`), forms, and utilities.
+2. **WPBakery / Visual Composer:** Section paddings, backgrounds, and layout column wrappers (`vc_row`, `vc_column`).
+3. **G5 Core Theme Engine:** Dynamic typography (Poppins), responsive breakpoints, and color themes.
+
+> [!IMPORTANT]
+> **Master Shell Integrity Policy:**  
+> The theme's runtime scripts (`frontend.min.js`, `app.min.js`) directly read DOM style declarations and rely on the exact CSS cascade order in `<head>`. Externalizing or modifying these style tags causes cascade conflicts and breaks container padding and font-size scaling.  
+> **Engineering Rule:** Every new interior page must be created by cloning the working **Master Shell** (`index.html`), retaining the `<head>`, Global Sticky Header, Global Footer, and script initialization verbatim, while swapping solely the inner content inside `<div id="wrapper-content">...</div>`.
+
+---
+
+## 6. Reusable Master Templates
 
 The entire 250+ page inventory mapped from the competitor audit is structured into **10 Reusable Master Templates**:
 
 | ID | Master Template | Applied Views | Core Features |
 | :--- | :--- | :--- | :--- |
-| **T-01** | `HomeTemplate` | `index.html` | Hero search tabs (Buy/Rent/Off-Plan), animated rotator, 4-column carousels, communities showcase, team grid, lead CTA. |
-| **T-02** | `ListingGridTemplate` | `properties-for-sale.html`, `properties-for-rent.html`, `commercial.html` | Multi-select filters (Type, Beds, Price, Area), sorting, 3-column card grid, badge overlays, pagination. |
+| **T-01** | `HomeTemplate` | `index.html` | Hero search tabs (Buy/Rent/Off-Plan), animated rotator, 4-column carousels, communities showcase, value pillars, institutional market reports, compliance footer. |
+| **T-02** | `ListingGridTemplate` | `properties-for-sale.html`, `properties-for-rent.html`, `commercial.html` | Multi-facet horizontal filter bar (Type, Community, Beds, Price in AED), sort controls, 3-column Bootstrap card grid, badge overlays, pagination. |
 | **T-03** | `PropertyDetailTemplate` | `property-detail.html` (Dynamic `/property/:id`) | High-res image gallery, quick specs (bed/bath/sqft), amenities grid, mortgage calculator embed, sticky WhatsApp contact bar. |
 | **T-04** | `ServiceDetailTemplate` | `services-sell.html`, `services-mortgages.html`, `services-property-management.html` | Value propositions, step-by-step process accordion, instant valuation inquiry form, client testimonials. |
 | **T-05** | `CommunityDirectoryTemplate` | `communities.html` | 42 Dubai community cards categorized by lifestyle tags (Beachfront, Golf, Urban, Family). |
 | **T-06** | `CommunityDetailTemplate` | `community-detail.html` | Community hero, schools, hospitals, commute times, map, and dynamic listings feed in that community. |
 | **T-07** | `TeamDirectoryTemplate` | `meet-the-team.html` | Department filter tabs (Sales, Leasing, Commercial, Off-Plan), agent portrait cards with direct Call/WhatsApp/Email triggers. |
 | **T-08** | `AgentDetailTemplate` | `agent-detail.html` | Agent bio, languages, RERA license, active listings, direct contact modal. |
-| **T-09** | `CalculatorTemplate` | `mortgage-calculator.html`, `rental-yield-calculator.html` | Interactive sliders, real-time formula computation (pure JavaScript), loan amortizations, lead capture. |
+| **T-09** | `CalculatorTemplate` | `mortgage-calculator.html`, `rental-yield-calculator.html` | Interactive sliders, real-time formula computation (pure JavaScript), loan amortizations, Dubai upfront fees breakdown, lead capture. |
 | **T-10** | `StandardArticleTemplate` | `market-reports.html`, `blog.html`, `privacy-policy.html`, `terms.html` | Editorial typography, table of contents, downloadable PDF triggers, social share links. |
 
 ---
 
-## 6. Financial Algorithms (Dubai Real Estate Standards)
+## 7. Deep Specification for Phase 2 Interior Pages
 
-### 6.1 Dubai Mortgage Calculator
-Regulated under Central Bank of the UAE mandates (minimum 20% down payment for expat buyers on properties up to AED 5M):
+### 7.1 `ListingGridTemplate` (`properties-for-sale.html` & `properties-for-rent.html`)
+- **Breadcrumb & Header:** High-contrast navy hero bar with live inventory count (*"Showing 1–12 of 160 Luxury Residences"*).
+- **Horizontal Sticky Filter Bar:**
+  - Property Type dropdown (Apartments, Penthouses, Villas, Townhouses, Duplexes, Plots).
+  - Dubai Community dropdown (Palm Jumeirah, Downtown, Dubai Hills, Dubai Marina, Business Bay, Creek Harbour, Emaar Beachfront).
+  - Bedroom selector pills (`Studio`, `1`, `2`, `3`, `4`, `5+`).
+  - Price Range Slider in AED (`AED 1M` – `AED 85M+` for Sale; `AED 80K/yr` – `AED 1.5M/yr` for Rent).
+  - Layout toggle (3-Column Grid `fa-th-large` vs List View `fa-th-list`) and sorting (*Price: Low to High*, *Price: High to Low*, *Newest*).
+- **Listing Cards:** Standardized HomeID 3-column card architecture with verified badges, AED pricing, bed/bath/sqft specs, and direct WhatsApp & Call triggers on hover.
+- **Pagination:** Numeric pagination (`< 1 2 3 4 5 >`) with an instant *"Reset Filters"* control.
+
+### 7.2 `OffPlanShowcaseTemplate` (`off-plan.html`)
+- **Editorial Hero Banner:** *"Dubai Off-Plan Projects & Investment Launches 2026–2029"* with VIP early-access triggers.
+- **Developer Logo Filter Pills:** Quick filters for Dubai Tier-1 master developers (**Emaar**, **Nakheel**, **DAMAC**, **Sobha**, **Meraas**, **Omniyat**, **Ellington**, **Aldar**).
+- **Project Specific Attributes:**
+  - Handover timeline badges (e.g. `Handover: Q2 2027`, `Q4 2028`).
+  - Payment plan highlights in VWD Gold (e.g. `80/20 Payment Plan | 10% Down Payment`).
+  - Starting prices (e.g. *"Starting from AED 2,400,000"*).
+  - Action CTAs: *"Download Brochure (PDF)"* and *"Book VIP Launch Tour via WhatsApp"*.
+- **Investor Advisory Spotlight:** UAE 10-Year Golden Visa eligibility reminder (*properties ≥ AED 2M qualify*) and 0% property tax benefits.
+
+### 7.3 `CalculatorTemplate` (`mortgage-calculator.html`)
+- **Regulatory Framework:** UAE Central Bank (CBUAE) lending regulations.
+- **Interactive Input Column:**
+  - Buyer residency status toggle (*UAE Resident / Expat* min 20% down, *UAE National* min 15%, *Non-Resident* min 35%).
+  - Property purchase price slider (AED 1M to AED 50M) with direct numeric input and quick presets (AED 2M, AED 5M, AED 10M, AED 20M).
+  - Down payment slider with automatic enforcement of CBUAE minimum legal thresholds.
+  - Loan tenure slider (5 to 25 years).
+  - Interest rate slider (4.25% to 6.50%).
+- **Dynamic Cost Breakdown Output Card:**
+  - Monthly payment ($M$) computed via standard amortization formula.
+  - Loan Principal vs Total Interest payable.
+  - **Comprehensive Dubai Upfront Purchasing Cost Schedule:**
+    - DLD Land Department Transfer Fee (4% of property price).
+    - DLD Administrative Fee (AED 4,300).
+    - Property Registration Trustee Fee (AED 4,200).
+    - Real Estate Brokerage Commission (2% + 5% VAT).
+    - Bank Mortgage Valuation Fee (~AED 3,000).
+    - Mortgage Registration Fee (0.25% of loan amount + AED 290).
+    - **Total Upfront Cash Required (Down Payment + Government & Registration Fees).**
+- **Lead Capture:** Direct *"Get Pre-Approved with VWD Advisors"* WhatsApp & callback trigger.
+
+---
+
+## 8. Financial Algorithms (Dubai Real Estate Standards)
+
+### 8.1 Dubai Mortgage Payment Formula
 
 $$\text{Monthly Payment } (M) = P \times \frac{r(1+r)^n}{(1+r)^n - 1}$$
 
@@ -177,27 +235,28 @@ $$\text{Monthly Payment } (M) = P \times \frac{r(1+r)^n}{(1+r)^n - 1}$$
 - $r$ = Monthly Interest Rate = $\frac{\text{Annual Interest Rate}}{12 \times 100}$
 - $n$ = Total Monthly Installments = $\text{Loan Term in Years} \times 12$
 
-### 6.2 Dubai Rental Yield Calculator
+### 8.2 Dubai Rental Yield Formula
+
 $$\text{Gross Rental Yield (\%)} = \left(\frac{\text{Annual Rental Income}}{\text{Property Purchase Price}}\right) \times 100$$
 
 $$\text{Net Rental Yield (\%)} = \left(\frac{\text{Annual Rental Income} - \text{Annual Service Charges \& Maintenance}}{\text{Property Purchase Price} + \text{DLD Transfer Fee (4\%)} + \text{Trustee \& Brokerage Fees}}\right) \times 100$$
 
 ---
 
-## 7. Security & Version Control Protocol
+## 9. Security & Version Control Protocol
 
-### 7.1 Secret Protection Policy
+### 9.1 Secret Protection Policy
 - **Mapbox Credentials:** All map components must utilize placeholder tokens (`pk.placeholder_mapbox_token`) in public files to maintain complete compliance with GitHub Push Protection and security audits. Active keys are injected via environment configurations.
 - **Repository Cleanliness:** No temporary backup files or credentials committed to source control.
 
-### 7.2 Git Workflows
+### 9.2 Git Workflows
 - **Target Repository:** `https://github.com/manu-gitxen/vwd_real_estate.git`
 - **Default Production Branch:** `main`
 - All changes must be tested across mobile and desktop breakpoints prior to staging and deployment.
 
 ---
 
-## 8. Implementation Roadmap & Progress Tracker
+## 10. Implementation Roadmap & Progress Tracker
 
 | Milestone | Scope of Work | Status | Verification |
 | :--- | :--- | :--- | :--- |
