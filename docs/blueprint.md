@@ -104,7 +104,7 @@ sequenceDiagram
     Rotator->>Hero: Slides "Home" up & out (translateY -24px, opacity 0)
     Rotator->>Hero: Prepares next word "Villa" from bottom (translateY +24px)
     Rotator->>Hero: Slides "Villa" smoothly to baseline (translateY 0, opacity 1)
-    Note over Rotator: Cycles: Home -> Villa -> Penthouse -> Plot -> Off-Plan Investments
+    Note over Rotator: Cycles: Home -> Villa -> Penthouse -> Plot
 ```
 
 ### 3.1 Hero Specifications
@@ -119,7 +119,6 @@ sequenceDiagram
   2. `Villa`
   3. `Penthouse`
   4. `Plot`
-  5. `Off-Plan Investments`
 - **Animation Mechanics**:
   - GPU-accelerated vertical slide-and-fade (`translateY(-24px)` exit, `translateY(24px)` enter).
   - Shimmering metallic gold text fill via `-webkit-background-clip: text` with solid `#CFB165` fallback.
@@ -206,7 +205,7 @@ $$\text{Net Rental Yield (\%)} = \left(\frac{\text{Annual Rental Income} - \text
 | **Milestone 2** | VWD Brand System: Navy (`#00265E`) + Gold (`#CFB165`) palette, dual SVG logos (`VWD_logo_white.svg`, `VWD_logo_transparent.svg`). | **COMPLETED** | Deployed to `main` |
 | **Milestone 3** | Card layout fix: Standardized all 5 Slick slider configs to single-quoted camelCase 4-column carousels. | **COMPLETED** | Deployed to `main` |
 | **Milestone 4** | 6-Pillar Navigation: BUY, RENT, SELL, OFF PLAN, COMMERCIAL, ABOUT + `READ OUR OUTLOOK` CTA + Drawer Toggle + UK Flag. | **COMPLETED** | Commit `3485b7e` |
-| **Milestone 5** | Hero Section: Animated rotating headline cycling 5 VWD categories with metallic gold shimmer and mobile stacking. | **COMPLETED** | Commit `23d6948` |
+| **Milestone 5** | Hero Section: Animated rotating headline cycling 4 luxury categories (Home, Villa, Penthouse, Plot) with metallic gold shimmer and clean single-line alignment. | **COMPLETED** | Verified in `index.html` |
 | **Milestone 6** | Secondary Interior Templates: `properties-for-sale.html`, `properties-for-rent.html`, `off-plan.html` with multi-facet filters. | **NEXT** | Pending Phase Kickoff |
 | **Milestone 7** | Interactive Financial Tools: Dedicated Dubai Mortgage & Net Rental Yield Calculators. | **QUEUED** | Spec Finalized |
 | **Milestone 8** | Dubai Community Guides (42 Locations) & Team Directory (140+ Broker Profiles). | **QUEUED** | Spec Finalized |
