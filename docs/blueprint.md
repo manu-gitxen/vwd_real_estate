@@ -86,6 +86,14 @@ graph LR
 - **Off-Canvas Drawer Toggle (`☰`)**: Full-height drawer for quick mobile/tablet access and extended brand directories.
 - **Language Indicator (`🇬🇧`)**: English locale indicator prepared for future multi-language expansion (Arabic / Russian).
 
+### 2.3 Header Responsive Architecture & Stretched Container Alignment
+
+To guarantee pixel-perfect presentation and symmetric outer margins across all screen resolutions (from ultrawide 2560px down to laptop 992px):
+- **Single-Row Flexbox Locking:** `.g5core-header-customize-inner` enforces `flex-wrap: nowrap !important; display: flex !important; align-items: center !important;`, preventing the drawer toggle (`☰`) and UK flag (`🇬🇧`) from dropping underneath the button.
+- **Button Text Integrity:** `.vwd-btn-outlook` incorporates `white-space: nowrap !important;`, ensuring the CTA text never breaks onto multiple lines.
+- **Laptop Viewport Adaptability (992px – 1250px):** Menu link horizontal padding adjusts to `7px` with `font-size: 12px`, and button padding adjusts to `6px 11px` (`font-size: 11px`), providing smooth clearance for all 6 pillars.
+- **Symmetric 95% Stretched Container Rule (992px+):** Legacy theme styles clamped `.container` to a rigid `960px` below 1200px, causing the right edge (after the UK flag) to collapse to 0 margin at 1119px while the left edge retained outer spacing. This was resolved by extending `.header-layout-stretched .container { max-width: 95% !important; padding: 0 20px !important; }` across all viewports $\ge 992\text{px}$, guaranteeing completely symmetric outer margins on both sides.
+
 ---
 
 ## 3. Hero Section & Animated Headline Engine
@@ -122,7 +130,8 @@ sequenceDiagram
   - GPU-accelerated vertical slide-and-fade (`translateY(-24px)` exit, `translateY(24px)` enter).
   - Shimmering metallic gold text fill via `-webkit-background-clip: text` with solid `#CFB165` fallback.
   - Smooth desktop container width transitions (`0.35s cubic-bezier(0.4, 0, 0.2, 1)`) eliminating jumpy layout shifts.
-  - **Mobile Stacking:** On viewports `< 768px`, the rotator automatically displays on its own line (`display: block !important; width: 100% !important; text-align: center;`), preventing text clipping.
+  - **Tablet & Laptop Scaling (768px – 1199px):** Headings dynamically scale to `44px` with balanced line-height (`1.25`) to prevent awkward line breaks and spacing gaps during rotator transitions.
+  - **Mobile Stacking (< 768px):** On viewports `< 768px`, the rotator automatically displays on its own line (`display: block !important; width: 100% !important; text-align: center;`), preventing text clipping.
   - **Performance UX:** Auto-pauses on hover and listens to `document.visibilitychange` to suspend animation loops when the tab is inactive.
 
 ---
@@ -149,14 +158,16 @@ data-slick-options='{"slidesToShow": 4, "slidesToScroll": 4, "arrows": true, "do
 ## 5. Style Architecture & Master Shell Engineering Policy
 
 The site frontend runs on a synchronized, multi-tier layout engine:
-1. **Bootstrap v4.3.1:** Core responsive 12-column grid (`container`, `row`, `col-lg-4`, `col-md-6`), forms, and utilities.
+1. **Bootstrap v4.3.1:** Core responsive 12-column grid (`container`, `row`, `col-lg-4`, `col-md-6`), forms, and utilities in `css/d18ea250285690b034808cf39b8fc75d.css` (1.29 MB).
 2. **WPBakery / Visual Composer:** Section paddings, backgrounds, and layout column wrappers (`vc_row`, `vc_column`).
 3. **G5 Core Theme Engine:** Dynamic typography (Poppins), responsive breakpoints, and color themes.
+4. **Master Unified Stylesheet (`css/style.css`):** All theme customizations, Gutenberg block tokens, responsive media queries, WPBakery backgrounds (with resolved relative `../images/` URLs), and the VWD Luxury Gold Hero Rotator are consolidated into `css/style.css` (3,030+ lines, ~94 KB).
 
 > [!IMPORTANT]
 > **Master Shell Integrity Policy:**  
-> The theme's runtime scripts (`frontend.min.js`, `app.min.js`) directly read DOM style declarations and rely on the exact CSS cascade order in `<head>`. Externalizing or modifying these style tags causes cascade conflicts and breaks container padding and font-size scaling.  
-> **Engineering Rule:** Every new interior page must be created by cloning the working **Master Shell** (`index.html`), retaining the `<head>`, Global Sticky Header, Global Footer, and script initialization verbatim, while swapping solely the inner content inside `<div id="wrapper-content">...</div>`.
+> The theme's runtime scripts (`frontend.min.js`, `app.min.js`, `js_composer_front.min.js`) directly read DOM style declarations (`document.getElementById('g5core-custom-css')`, `style[data-type="vc_shortcodes-custom-css"]`) and rely on the exact CSS cascade order in `<head>`.  
+> To prevent script exceptions and timing race conditions, lightweight DOM placeholder hooks (`<style id="g5core-custom-css"></style>`, `<style id="global-styles-inline-css"></style>`, `<style data-type="vc_shortcodes-custom-css"></style>`) are preserved in `<head>`, and `css/style.css` is linked at the exact point of theme cascade priority.  
+> **Engineering Rule:** Every new interior page must be created by cloning the working **Master Shell** (`index.html`), retaining the `<head>`, Global Sticky Header, Global Footer, and script initialization verbatim, while swapping solely the inner content inside `<div id="wrapper_content">...</div>`.
 
 ---
 
@@ -269,6 +280,7 @@ $$\text{Net Rental Yield (\%)} = \left(\frac{\text{Annual Rental Income} - \text
 | **Milestone 5.2** | Step 2 — Dubai Communities Showcase: 8-destination slider (Palm Jumeirah, Downtown Dubai, Dubai Hills, Dubai Marina, Business Bay, Dubai Creek Harbour, Jumeirah Golf Estates, Emaar Beachfront). | **COMPLETED** | Commit `482f622` |
 | **Milestone 5.3** | Step 3 — VWD Advisory Pillars & Market Intelligence Spotlight: 3 concise corporate advisory pillars + dedicated quarterly Dubai Real Estate Outlook feature section. | **COMPLETED** | Commits `434dfa6`, `b001965` |
 | **Milestone 5.4** | Step 4 — Footer Localization & Compliance: Dubai HQ (Control Tower, Motor City), RERA ORN: 30124 & DED licenses, structured Properties & Advisory menus, Market Intelligence newsletter, 2026 legal copyright. | **COMPLETED** | Commit `d9ed402` |
+| **Milestone 5.5** | Master Stylesheet & Responsive Architecture: Consolidated 3,000+ lines into `css/style.css` with DOM placeholder hooks, single-row header actions, 95% stretched container rule across 992px+, and tablet/laptop hero scaling. | **COMPLETED** | Verified in `index.html` & `css/style.css` |
 | **Milestone 6** | Secondary Interior Templates: `properties-for-sale.html`, `properties-for-rent.html`, `off-plan.html` with multi-facet filters. | **NEXT** | Ready for Kickoff |
 | **Milestone 7** | Interactive Financial Tools: Dedicated Dubai Mortgage & Net Rental Yield Calculators. | **QUEUED** | Spec Finalized |
 | **Milestone 8** | Dubai Community Guides (42 Locations) & Team Directory (140+ Broker Profiles). | **QUEUED** | Spec Finalized |
