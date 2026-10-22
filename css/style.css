@@ -2873,6 +2873,43 @@ img.wp-smiley,
 			text-transform: uppercase;
 		}
 
+		/* ==========================================================================
+		   Interior Pages & Solid Header Architecture
+		   (Standard top flow with white background & high-contrast luxury typography)
+		   ========================================================================== */
+		.g5core-site-header:not(.header-float) {
+			background-color: #ffffff !important;
+			border-bottom: 1px solid #ebebeb !important;
+			position: relative !important;
+		}
+		.g5core-site-header:not(.header-float) .menu-horizontal > .menu-item > a {
+			color: #1a1a1a !important;
+		}
+		.g5core-site-header:not(.header-float) .menu-horizontal > .menu-item > a:hover,
+		.g5core-site-header:not(.header-float) .menu-horizontal > .current-menu-item > a,
+		.g5core-site-header:not(.header-float) .menu-horizontal > .current-menu-parent > a,
+		.g5core-site-header:not(.header-float) .menu-horizontal > .current-menu-ancestor > a,
+		.g5core-site-header:not(.header-float) .menu-horizontal > .menu-current > a {
+			color: #CFB165 !important;
+		}
+		.g5core-site-header:not(.header-float) .vwd-header-drawer-toggle {
+			color: #00265E !important;
+		}
+		.g5core-site-header:not(.header-float) .vwd-header-drawer-toggle:hover {
+			color: #CFB165 !important;
+		}
+
+		/* Mobile Header on Interior Pages */
+		.g5core-mobile-header:not(.header-float) {
+			background-color: #ffffff !important;
+			border-bottom: 1px solid #ebebeb !important;
+		}
+		.g5core-mobile-header:not(.header-float) .toggle-icon span,
+		.g5core-mobile-header:not(.header-float) .toggle-icon span:before,
+		.g5core-mobile-header:not(.header-float) .toggle-icon span:after {
+			background-color: #00265E !important;
+		}
+
 		/* Responsive navigation adjustment for laptop viewports (992px to 1250px) */
 		@media (max-width: 1250px) and (min-width: 992px) {
 			.menu-horizontal > .menu-item > a {
