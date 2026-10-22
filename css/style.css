@@ -1418,7 +1418,7 @@ img.wp-smiley,
 		}
 
 		a:hover {
-			color: #25e1f1;
+			color: #CFB165;
 		}
 
 		.form-group textarea:-moz-placeholder {
@@ -1493,37 +1493,37 @@ img.wp-smiley,
 
 		.btn.btn-secondary {
 			color: #00265E;
-			background-color: #eff6f7;
-			border-color: #eff6f7;
+			background-color: #fbf9f4;
+			border-color: #fbf9f4;
 		}
 
 		.btn.btn-secondary:focus,
 		.btn.btn-secondary:hover,
 		.btn.btn-secondary:active {
 			color: #00265E;
-			background-color: #cde3e6;
-			border-color: #d6e8ea;
+			background-color: #e5ded0;
+			border-color: #fbf9f4;
 		}
 
 		.btn.btn-secondary.btn-outline {
-			color: #eff6f7;
+			color: #fbf9f4;
 		}
 
 		.btn.btn-secondary.btn-outline:focus,
 		.btn.btn-secondary.btn-outline:hover,
 		.btn.btn-secondary.btn-outline:active {
-			background-color: #eff6f7;
+			background-color: #fbf9f4;
 			color: #00265E;
-			border-color: #eff6f7;
+			border-color: #fbf9f4;
 		}
 
 		.btn.btn-secondary.btn-link {
-			color: #eff6f7;
+			color: #fbf9f4;
 		}
 
 		.btn.btn-secondary.btn-gradient {
-			background-image: -webkit-gradient(linear, left top, right top, from(#eff6f7), color-stop(51%, #bcd9de), to(#eff6f7));
-			background-image: linear-gradient(to right, #eff6f7 0%, #bcd9de 51%, #eff6f7 100%);
+			background-image: -webkit-gradient(linear, left top, right top, from(#fbf9f4), color-stop(51%, #e5ded0), to(#fbf9f4));
+			background-image: linear-gradient(to right, #fbf9f4 0%, #e5ded0 51%, #fbf9f4 100%);
 		}
 
 		.btn.btn-secondary.btn-outline {
@@ -1532,53 +1532,53 @@ img.wp-smiley,
 
 		.ui-dialog .ui-dialog-buttonpane button {
 			color: #00265E;
-			background-color: #eff6f7;
-			border-color: #eff6f7;
+			background-color: #fbf9f4;
+			border-color: #fbf9f4;
 		}
 
 		.ui-dialog .ui-dialog-buttonpane button:focus,
 		.ui-dialog .ui-dialog-buttonpane button:hover,
 		.ui-dialog .ui-dialog-buttonpane button:active {
 			color: #00265E;
-			background-color: #cde3e6;
-			border-color: #d6e8ea;
+			background-color: #e5ded0;
+			border-color: #fbf9f4;
 		}
 
 		.ui-dialog .ui-dialog-buttonpane button.btn-outline {
-			color: #eff6f7;
+			color: #fbf9f4;
 		}
 
 		.ui-dialog .ui-dialog-buttonpane button.btn-outline:focus,
 		.ui-dialog .ui-dialog-buttonpane button.btn-outline:hover,
 		.ui-dialog .ui-dialog-buttonpane button.btn-outline:active {
-			background-color: #eff6f7;
+			background-color: #fbf9f4;
 			color: #00265E;
-			border-color: #eff6f7;
+			border-color: #fbf9f4;
 		}
 
 		.ui-dialog .ui-dialog-buttonpane button.btn-link {
-			color: #eff6f7;
+			color: #fbf9f4;
 		}
 
 		.ui-dialog .ui-dialog-buttonpane button.btn-gradient {
-			background-image: -webkit-gradient(linear, left top, right top, from(#eff6f7), color-stop(51%, #bcd9de), to(#eff6f7));
-			background-image: linear-gradient(to right, #eff6f7 0%, #bcd9de 51%, #eff6f7 100%);
+			background-image: -webkit-gradient(linear, left top, right top, from(#fbf9f4), color-stop(51%, #e5ded0), to(#fbf9f4));
+			background-image: linear-gradient(to right, #fbf9f4 0%, #e5ded0 51%, #fbf9f4 100%);
 		}
 
 		.secondary-color {
-			color: #eff6f7;
+			color: #fbf9f4;
 		}
 
 		.secondary-bg-color,
 		.g5ere__sf-advanced-button a.btn,
 		.g5ere__property-content .g5ere__lpa-rounded a:hover,
 		.ui-dialog .ui-dialog-titlebar {
-			background-color: #eff6f7;
+			background-color: #fbf9f4;
 		}
 
 		.secondary-border-color,
 		.g5ere__property-content .g5ere__lpa-rounded a:hover {
-			border-color: #eff6f7;
+			border-color: #fbf9f4;
 		}
 
 		.primary-color,
@@ -1790,7 +1790,7 @@ img.wp-smiley,
 
 		.vc_progress_bar .vc_general.vc_single_bar.vc_progress-bar-color-secondary .vc_bar,
 		.vc_progress_bar.vc_progress-bar-color-secondary .vc_single_bar .vc_bar {
-			background-color: #eff6f7;
+			background-color: #fbf9f4;
 		}
 
 		.vc_progress_bar .vc_general.vc_single_bar.vc_progress-bar-color-secondary .vc_label,
@@ -2050,27 +2050,27 @@ img.wp-smiley,
 		}
 
 		.secondary-text-color {
-			color: #eff6f7 !important
+			color: #fbf9f4 !important
 		}
 
 		.secondary-text-hover-color:hover {
-			color: #eff6f7 !important
+			color: #fbf9f4 !important
 		}
 
 		.secondary-bg-color {
-			background-color: #eff6f7 !important
+			background-color: #fbf9f4 !important
 		}
 
 		.secondary-bg-hover-color:hover {
-			background-color: #eff6f7 !important
+			background-color: #fbf9f4 !important
 		}
 
 		.secondary-border-color {
-			border-color: #eff6f7 !important
+			border-color: #fbf9f4 !important
 		}
 
 		.secondary-border-hover-color:hover {
-			border-color: #eff6f7 !important
+			border-color: #fbf9f4 !important
 		}
 
 		.dark-text-color {
@@ -2150,7 +2150,7 @@ img.wp-smiley,
 		}
 
 		a:hover {
-			color: #25e1f1
+			color: #CFB165
 		}
 
 		h1,
@@ -3154,4 +3154,73 @@ img.wp-smiley,
 }
 .vwd-listing-content .g5ere__search-form {
 	margin-top: 0 !important;
+}
+
+/* ==========================================================================
+   Section 12: VWD Brand Theme Color Overrides (Replaces Theme Skyblue / Cyan)
+   ========================================================================== */
+.g5ere__property-overview-list .media-icon {
+	color: #00265E !important;
+	background-color: rgba(207, 177, 101, 0.1) !important;
+	border: 1px solid rgba(207, 177, 101, 0.4) !important;
+	border-radius: 6px !important;
+	transition: all 0.25s ease !important;
+}
+.g5ere__property-overview-list .media-icon svg,
+.g5ere__property-overview-list .media-icon i {
+	fill: #00265E !important;
+	stroke: #00265E !important;
+}
+.g5ere__property-overview-list .media-icon:hover,
+.g5ere__property-overview-item:hover .media-icon {
+	color: #CFB165 !important;
+	background-color: rgba(0, 38, 94, 0.06) !important;
+	border-color: #CFB165 !important;
+}
+.g5ere__property-overview-list .media-icon:hover svg,
+.g5ere__property-overview-item:hover .media-icon svg {
+	fill: #CFB165 !important;
+	stroke: #CFB165 !important;
+}
+
+/* Button & CTA Colors */
+.g5ere__sp-open-google-maps,
+.btn-accent,
+.btn.btn-accent,
+input[type=submit].btn-accent,
+.g5ere__contact-actions-send-message input[type=submit],
+.g5ere__contact-agent-form input[type=submit],
+.ere-mortgage-form button[type=submit],
+.btn:not(.btn-outline):not(.btn-link):not(.btn-light):not(.btn-dark):not(.btn-secondary) {
+	background-color: #00265E !important;
+	border-color: #00265E !important;
+	color: #ffffff !important;
+	font-weight: 600 !important;
+	transition: all 0.25s ease !important;
+}
+
+.g5ere__sp-open-google-maps:hover,
+.btn-accent:hover,
+.btn.btn-accent:hover,
+input[type=submit].btn-accent:hover,
+.g5ere__contact-actions-send-message input[type=submit]:hover,
+.g5ere__contact-agent-form input[type=submit]:hover,
+.ere-mortgage-form button[type=submit]:hover,
+.btn:not(.btn-outline):not(.btn-link):not(.btn-light):not(.btn-dark):not(.btn-secondary):hover {
+	background-color: #CFB165 !important;
+	border-color: #CFB165 !important;
+	color: #00265E !important;
+}
+
+/* Icons, Badges & Accents */
+.g5ere__property-feature-item i,
+.g5ere__property-feature-item.active i,
+.text-accent,
+.g5ere__property-actions li a:hover {
+	color: #CFB165 !important;
+}
+
+/* Hide non-functional demo localhost reCAPTCHA error box */
+.ere-recaptcha-wrap {
+	display: none !important;
 }
