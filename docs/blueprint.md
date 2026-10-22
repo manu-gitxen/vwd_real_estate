@@ -193,15 +193,21 @@ The entire 250+ page inventory mapped from the competitor audit is structured in
 ## 7. Deep Specification for Phase 2 Interior Pages
 
 ### 7.1 `ListingGridTemplate` (`properties-for-sale.html` & `properties-for-rent.html`)
-- **Breadcrumb & Header:** High-contrast navy hero bar with live inventory count (*"Showing 1–12 of 160 Luxury Residences"*).
-- **Horizontal Sticky Filter Bar:**
-  - Property Type dropdown (Apartments, Penthouses, Villas, Townhouses, Duplexes, Plots).
-  - Dubai Community dropdown (Palm Jumeirah, Downtown, Dubai Hills, Dubai Marina, Business Bay, Creek Harbour, Emaar Beachfront).
-  - Bedroom selector pills (`Studio`, `1`, `2`, `3`, `4`, `5+`).
-  - Price Range Slider in AED (`AED 1M` – `AED 85M+` for Sale; `AED 80K/yr` – `AED 1.5M/yr` for Rent).
-  - Layout toggle (3-Column Grid `fa-th-large` vs List View `fa-th-list`) and sorting (*Price: Low to High*, *Price: High to Low*, *Newest*).
-- **Listing Cards:** Standardized HomeID 3-column card architecture with verified badges, AED pricing, bed/bath/sqft specs, and direct WhatsApp & Call triggers on hover.
-- **Pagination:** Numeric pagination (`< 1 2 3 4 5 >`) with an instant *"Reset Filters"* control.
+- **Visual Design Integrity & Typography:** 100% matched to the official HomeID template and homepage typography (Poppins 400/500/600/700). Completely eliminated artificial custom inline filter boxes and non-theme wrappers ("AI look").
+- **Page Title & Breadcrumbs:** Official HomeID `.g5core-page-title.g5core-page-title-default` and `.g5core-breadcrumbs` hierarchical trail.
+- **Horizontal Filter Bar:** Authentic HomeID `.g5ere__search-form.g5ere__sf-layout-layout-01.custom-ere-search-01` form styling:
+  - Property Type dropdown (Apartment, Penthouse, Luxury Villa, Townhouse, Duplex, Residential Plot).
+  - Dubai Community dropdown (Palm Jumeirah, Downtown Dubai, Dubai Hills Estate, Dubai Marina, Business Bay, Dubai Creek Harbour, Emaar Beachfront).
+  - Bedroom selector dropdown (Studio, 1 Bed, 2 Beds, 3 Beds, 4 Beds, 5+ Beds).
+  - Min Price & Max Price AED numeric inputs.
+  - Reset filters trigger and live client-side reactive filtering.
+- **Official HomeID Toolbar:** `.g5ere__toolbar.g5ere__property-toolbar.boxed` with real-time result counter, order selector (*Default Order*, *Price: Low to High*, *Price: High to Low*, *Featured*), and layout switcher (3-column grid vs list).
+- **Listing Cards (Skin-02):** Authentic `.g5ere__property-skin-02` cards:
+  - Scroll reveal animations powered by HomeID's native engine: `.g5ere__property-item-inner.g5ere__loop-item-inner.g5core__animate-when-almost-visible.g5core__btt`.
+  - Badges: Dubai MLS Verified, For Sale / For Rent status, Featured badge.
+  - Native HomeID SVG icons (bed, bath, house-plan square footage).
+  - Direct WhatsApp agent inquiry buttons (`https://wa.me/971501234567`) on card footers.
+- **Pagination:** HomeID-styled numeric pagination (`< 1 2 3 >`).
 
 ### 7.2 `OffPlanShowcaseTemplate` (`off-plan.html`)
 - **Editorial Hero Banner:** *"Dubai Off-Plan Projects & Investment Launches 2026–2029"* with VIP early-access triggers.
@@ -281,7 +287,7 @@ $$\text{Net Rental Yield (\%)} = \left(\frac{\text{Annual Rental Income} - \text
 | **Milestone 5.3** | Step 3 — VWD Advisory Pillars & Market Intelligence Spotlight: 3 concise corporate advisory pillars + dedicated quarterly Dubai Real Estate Outlook feature section. | **COMPLETED** | Commits `434dfa6`, `b001965` |
 | **Milestone 5.4** | Step 4 — Footer Localization & Compliance: Dubai HQ (Control Tower, Motor City), RERA ORN: 30124 & DED licenses, structured Properties & Advisory menus, Market Intelligence newsletter, 2026 legal copyright. | **COMPLETED** | Commit `d9ed402` |
 | **Milestone 5.5** | Master Stylesheet & Responsive Architecture: Consolidated 3,000+ lines into `css/style.css` with DOM placeholder hooks, single-row header actions, 95% stretched container rule across 992px+, and tablet/laptop hero scaling. | **COMPLETED** | Verified in `index.html` & `css/style.css` |
-| **Milestone 6.1** | Secondary Interior Templates (Sales & Rentals): Implemented `properties-for-sale.html` and `properties-for-rent.html` using the Full-Width 3-Column Grid (`T-02: ListingGridTemplate`) with horizontal multi-facet filters (Type, Community, Beds, Price AED), instant client-side filtering, live sorting, grid/list view switcher, and direct WhatsApp triggers. | **COMPLETED** | Verified in `properties-for-sale.html` & `properties-for-rent.html` |
+| **Milestone 6.1** | Secondary Interior Templates (Sales & Rentals): Implemented authentic HomeID `properties-for-sale.html` and `properties-for-rent.html` matching reference typography (Poppins), official skin-02 cards, native page titles & breadcrumbs, boxed toolbar, scroll reveal animations (`.g5core__btt`), and zero AI inline wrappers. | **COMPLETED** | Verified & Tested in both files |
 | **Milestone 6.2** | Secondary Interior Templates (Off-Plan): `off-plan.html` with master developer logo filters (Emaar, Nakheel, DAMAC, Sobha, Meraas), handover timelines, payment plan badges (80/20, 60/40), and Golden Visa advisory banner. | **NEXT** | Ready for Kickoff |
 | **Milestone 7** | Interactive Financial Tools: Dedicated Dubai Mortgage & Net Rental Yield Calculators. | **QUEUED** | Spec Finalized |
 | **Milestone 8** | Dubai Community Guides (42 Locations) & Team Directory (140+ Broker Profiles). | **QUEUED** | Spec Finalized |

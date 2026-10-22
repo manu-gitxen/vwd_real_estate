@@ -276,879 +276,992 @@
 		</header>
 		<div id="wrapper_content" class="wrapper-content clearfix">
 
-		<!-- 1. Hero Title & Breadcrumb Banner -->
-		<div class="g5core-page-title g5core-page-title-default" style="background-color: #00265E; padding: 50px 0 35px; border-bottom: 2px solid #CFB165;">
+		<!-- 1. Authentic HomeID Page Title & Breadcrumb Banner -->
+		<div class="g5core-page-title g5core-page-title-default">
 			<div class="container">
 				<div class="page-title-inner">
 					<div class="page-title-content">
-						<div class="vwd-breadcrumbs" style="font-size: 13px; color: #ABABAB; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">
-							<a href="index.html" style="color: #CFB165; text-decoration: none;">Home</a> &nbsp;/&nbsp; <span style="color: #ffffff;">Properties for Sale</span>
-						</div>
-						<h1 class="page-main-title" style="color: #ffffff; font-size: 38px; font-weight: 700; margin: 0; line-height: 1.2;">Dubai Properties For Sale</h1>
-						<p style="color: #d1d5db; font-size: 15px; margin-top: 8px; margin-bottom: 0;">Curated luxury residences, exclusive beachfront villas, and investment penthouses across prime Dubai destinations.</p>
+						<h1 class="page-main-title">Dubai Properties For Sale</h1>
 					</div>
+					<ul class="g5core-breadcrumbs">
+						<li><a href="index.html"><span>Home</span></a></li>
+						<li class="breadcrumb-sep">/</li>
+						<li><span>Dubai Properties For Sale</span></li>
+					</ul>
 				</div>
 			</div>
 		</div>
 
-		<!-- 2. Main Listing Section -->
-		<div class="g5ere__main-content" style="padding-top: 40px; padding-bottom: 80px; background-color: #fbfbfb;">
+		<!-- 2. Primary Content Container -->
+		<div id="primary-content" class="">
 			<div class="container">
-				
-				<!-- Horizontal Multi-Facet Filter Bar -->
-				<div class="vwd-filter-box" style="background: #ffffff; box-shadow: 0 4px 25px rgba(0,0,0,0.06); border-radius: 8px; padding: 24px 28px; margin-bottom: 35px; border: 1px solid #eaeaea;">
-					<form id="vwd-filter-form" onsubmit="return false;">
-						<div class="row align-items-center">
-							<!-- Property Type -->
-							<div class="col-lg-3 col-md-6 col-12 mb-3 mb-lg-0">
-								<label style="font-size: 12px; font-weight: 600; text-transform: uppercase; color: #00265E; margin-bottom: 6px; display: block; letter-spacing: 0.5px;">Property Type</label>
-								<select id="filter-type" class="form-control" style="height: 44px; border: 1px solid #ddd; border-radius: 4px; font-size: 14px; color: #333; width: 100%;">
-									<option value="all">All Property Types</option>
-									<option value="villa">Luxury Villas</option>
-									<option value="penthouse">Penthouses</option>
-									<option value="apartment">Apartments</option>
-								</select>
-							</div>
+				<div class="row">
+					<div id="main-content" class="col">
+						<div class="g5ere__main-content">
+							<div data-archive-wrapper="" class="g5ere__listing-wrap g5ere__property_layout-grid">
+								
+								<!-- Native Horizontal Search & Filter Bar (Matching Theme Styling) -->
+								<div class="g5ere__search-form g5ere__sf-layout-layout-01 custom-ere-search-01" style="background: #ffffff; padding: 20px 24px; border: 1px solid #ebebeb; border-radius: 6px; margin-bottom: 25px;">
+									<form id="vwd-filter-form" method="get" autocomplete="off" onsubmit="return false;">
+										<div class="row align-items-end">
+											<div class="col-lg-3 col-md-6 col-12 mb-2 mb-lg-0">
+												<label class="g5ere__s-label" style="font-size: 13px; font-weight: 600; margin-bottom: 5px; color: #333;">Property Type</label>
+												<select id="filter-type" name="type" class="form-control" style="height: 42px; font-size: 14px; border-color: #ddd;">
+													<option value="all" selected="selected">All Property Types</option>
+													<option value="villa">Luxury Villas</option>
+													<option value="penthouse">Penthouses</option>
+													<option value="apartment">Apartments</option>
+												</select>
+											</div>
+											<div class="col-lg-3 col-md-6 col-12 mb-2 mb-lg-0">
+												<label class="g5ere__s-label" style="font-size: 13px; font-weight: 600; margin-bottom: 5px; color: #333;">Community</label>
+												<select id="filter-location" name="location" class="form-control" style="height: 42px; font-size: 14px; border-color: #ddd;">
+													<option value="all" selected="selected">All Dubai Communities</option>
+													<option value="palm-jumeirah">Palm Jumeirah</option>
+													<option value="downtown-dubai">Downtown Dubai</option>
+													<option value="dubai-hills-estate">Dubai Hills Estate</option>
+													<option value="emaar-beachfront">Emaar Beachfront</option>
+													<option value="dubai-creek-harbour">Dubai Creek Harbour</option>
+													<option value="jumeirah-golf-estates">Jumeirah Golf Estates</option>
+													<option value="business-bay">Business Bay</option>
+													<option value="dubai-marina">Dubai Marina</option>
+													<option value="tilal-al-ghaf">Tilal Al Ghaf</option>
+													<option value="arabian-ranches">Arabian Ranches</option>
+												</select>
+											</div>
+											<div class="col-lg-2 col-md-4 col-12 mb-2 mb-lg-0">
+												<label class="g5ere__s-label" style="font-size: 13px; font-weight: 600; margin-bottom: 5px; color: #333;">Bedrooms</label>
+												<select id="filter-beds" name="bedrooms" class="form-control" style="height: 42px; font-size: 14px; border-color: #ddd;">
+													<option value="all" selected="selected">Any Beds</option>
+													<option value="2">2 Bedrooms</option>
+													<option value="3">3 Bedrooms</option>
+													<option value="4">4 Bedrooms</option>
+													<option value="5">5+ Bedrooms</option>
+													<option value="6">6+ Bedrooms</option>
+												</select>
+											</div>
+											<div class="col-lg-2 col-md-4 col-12 mb-2 mb-lg-0">
+												<label class="g5ere__s-label" style="font-size: 13px; font-weight: 600; margin-bottom: 5px; color: #333;">Max Price (AED)</label>
+												<select id="filter-price" name="price" class="form-control" style="height: 42px; font-size: 14px; border-color: #ddd;">
+													
+      <option value="all" selected="selected">Any Price</option>
+      <option value="5000000">Up to AED 5 Million</option>
+      <option value="10000000">Up to AED 10 Million</option>
+      <option value="20000000">Up to AED 20 Million</option>
+      <option value="30000000">Up to AED 30 Million</option>
+      <option value="50000000">Up to AED 50 Million</option>
+												</select>
+											</div>
+											<div class="col-lg-2 col-md-4 col-12">
+												<button id="vwd-reset-btn" type="button" class="btn btn-block" style="background-color: #00265E; color: #CFB165; font-weight: 600; height: 42px; border-radius: 4px; font-size: 13px; text-transform: uppercase;">
+													Reset Filters
+												</button>
+											</div>
+										</div>
+									</form>
+								</div>
 
-							<!-- Community / Location -->
-							<div class="col-lg-3 col-md-6 col-12 mb-3 mb-lg-0">
-								<label style="font-size: 12px; font-weight: 600; text-transform: uppercase; color: #00265E; margin-bottom: 6px; display: block; letter-spacing: 0.5px;">Community</label>
-								<select id="filter-location" class="form-control" style="height: 44px; border: 1px solid #ddd; border-radius: 4px; font-size: 14px; color: #333; width: 100%;">
-									<option value="all">All Dubai Communities</option>
-									<option value="palm-jumeirah">Palm Jumeirah</option>
-									<option value="downtown-dubai">Downtown Dubai</option>
-									<option value="dubai-hills-estate">Dubai Hills Estate</option>
-									<option value="emaar-beachfront">Emaar Beachfront</option>
-									<option value="dubai-creek-harbour">Dubai Creek Harbour</option>
-									<option value="jumeirah-golf-estates">Jumeirah Golf Estates</option>
-									<option value="business-bay">Business Bay</option>
-									<option value="dubai-marina">Dubai Marina</option>
-									<option value="tilal-al-ghaf">Tilal Al Ghaf</option>
-									<option value="arabian-ranches">Arabian Ranches</option>
-								</select>
-							</div>
+								<!-- Official HomeID Toolbar (Results Count, Sorting, View Switcher) -->
+								<div class="g5ere__toolbar g5ere__property-toolbar boxed">
+									<div class="g5ere__toolbar-inner">
+										<div class="g5ere__toolbar-desktop">
+											<div class="container" style="padding: 0;">
+												<div class="g5ere__toolbar-content-inner d-flex align-items-center justify-content-between">
+													<div class="g5ere__toolbar-left">
+														<ul class="g5ere__toolbar-list">
+															<li>
+																<p class="g5ere__result-count">
+																	Showing <span id="vwd-showing-count">12</span> of <span id="vwd-total-count">12</span> results
+																</p>
+															</li>
+														</ul>
+													</div>
+													<div class="g5ere__toolbar-right d-flex align-items-center" style="gap: 15px;">
+														<ul class="g5ere__toolbar-list d-flex align-items-center mb-0">
+															<li style="margin-right: 15px;">
+																<form class="g5ere__ordering" method="get">
+																	<select id="vwd-sort-order" name="orderby" class="g5ere__orderby form-control" style="height: 38px; font-size: 13px; border-color: #ddd; padding: 4px 10px; width: auto; display: inline-block;">
+																		<option value="default" selected="selected">Default sorting</option>
+																		<option value="featured">Sort by featured First</option>
+																		<option value="price-asc">Sort by price: low to high</option>
+																		<option value="price-desc">Sort by price: high to low</option>
+																		<option value="beds-desc">Sort by bedrooms: most first</option>
+																	</select>
+																</form>
+															</li>
+															<li>
+																<div class="g5ere__switch-layout">
+																	<a id="vwd-btn-list" class="" href="javascript:void(0)" title="List View" data-layout="list"><i class="fas fa-list-ul"></i></a>
+																	<a id="vwd-btn-grid" class="active" href="javascript:void(0)" title="Grid View" data-layout="grid"><i class="fas fa-th-large"></i></a>
+																</div>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
 
-							<!-- Bedrooms -->
-							<div class="col-lg-2 col-md-4 col-12 mb-3 mb-lg-0">
-								<label style="font-size: 12px; font-weight: 600; text-transform: uppercase; color: #00265E; margin-bottom: 6px; display: block; letter-spacing: 0.5px;">Bedrooms</label>
-								<select id="filter-beds" class="form-control" style="height: 44px; border: 1px solid #ddd; border-radius: 4px; font-size: 14px; color: #333; width: 100%;">
-									<option value="all">Any Beds</option>
-									<option value="2">2 Bedrooms</option>
-									<option value="3">3 Bedrooms</option>
-									<option value="4">4 Bedrooms</option>
-									<option value="5">5+ Bedrooms</option>
-									<option value="6">6+ Bedrooms</option>
-								</select>
-							</div>
+								<!-- Official HomeID Property Loop Wrap with Scroll Reveal Animations -->
+								<div id="vwd-property-container" data-items-container="" class="g5ere__listing-inner row g5core__gutter-30">
 
-							<!-- Price Range -->
-							<div class="col-lg-2 col-md-4 col-12 mb-3 mb-lg-0">
-								<label style="font-size: 12px; font-weight: 600; text-transform: uppercase; color: #00265E; margin-bottom: 6px; display: block; letter-spacing: 0.5px;">Max Price (AED)</label>
-								<select id="filter-price" class="form-control" style="height: 44px; border: 1px solid #ddd; border-radius: 4px; font-size: 14px; color: #333; width: 100%;">
-									<option value="all">Any Price</option>
-									<option value="5000000">Up to AED 5 Million</option>
-									<option value="10000000">Up to AED 10 Million</option>
-									<option value="20000000">Up to AED 20 Million</option>
-									<option value="30000000">Up to AED 30 Million</option>
-									<option value="50000000">Up to AED 50 Million</option>
-								</select>
-							</div>
+									<!-- Property 101 -->
+									<article class="g5core__gutter-item g5ere__property-item g5ere__property-skin-02 g5ere__property-item-1 g5ere__property-item-featured g5ere__has-image-featured post-101 property type-property status-publish has-post-thumbnail hentry property-type-villa property-status-for-sale property-city-dubai col-xl-4 col-lg-4 col-md-6 col-12 vwd-property-card"
+										data-id="101"
+										data-type="villa"
+										data-location="palm-jumeirah"
+										data-beds="5"
+										data-price="34500000"
+										data-location-obj='{"id":101,"title":"Signature Beachfront Villa","thumb":"images/single-property-45.jpg","address":"Frond M, Palm Jumeirah, Dubai"}'>
+										<div class="g5ere__property-item-inner g5ere__loop-item-inner g5core__animate-when-almost-visible g5core__btt g5ere__li-bordered g5ere__li-hover-box-shadow bg-white">
+											
+											<!-- Featured Image & Badges -->
+											<div class="g5core__post-featured g5ere__property-featured g5ere__pf-rounded">
+												<a title="Signature Beachfront Villa" style="background-image: url('images/single-property-45.jpg');" class="g5core__entry-thumbnail g5core__embed-responsive g5core__image-size-357x210" href="property-detail.html?id=101">
+												</a>
+												<div class="g5ere__loop-property-badge">
+													<span class="g5ere__property-badge g5ere__featured">Featured</span>
+													<span style="background-color: #00265E;" class="g5ere__property-badge g5ere__status for-sale">For Sale</span>
+												</div>
+												<div class="g5ere__loop-property-actions">
+													<a data-toggle="tooltip" title="(6) Photos" class="g5ere__view-gallery" data-g5core-mfp="" data-gallery='["images/single-property-45.jpg","images/single-property-04.jpg","images/single-property-06.jpg","images/single-property-07.jpg","images/single-property-17.jpg","images/single-property-26.jpg"]' href="#">
+														<i class="fal fa-images"></i>
+													</a>
+												</div>
+											</div>
 
-							<!-- Reset / Filter Button -->
-							<div class="col-lg-2 col-md-4 col-12 text-lg-right">
-								<label style="display: block; font-size: 12px; margin-bottom: 6px; opacity: 0;" class="d-none d-lg-block">Action</label>
-								<button id="vwd-reset-btn" type="button" class="btn btn-block" style="background-color: #00265E; color: #CFB165; font-weight: 600; height: 44px; border-radius: 4px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; border: 1px solid #00265E;">
-									Reset Filters
-								</button>
+											<!-- Property Details (Exact HomeID Typography & Hierarchy) -->
+											<div class="g5ere__property-content g5ere__loop-content">
+												<div class="g5ere__lpc-top">
+													<h3 class="g5ere__loop-property-title">
+														<a title="Signature Beachfront Villa" href="property-detail.html?id=101">Signature Beachfront Villa</a>
+													</h3>
+													<div class="g5ere__loop-property-address">
+														<a title="Frond M, Palm Jumeirah, Dubai" target="_blank" href="//maps.google.com/?q=Frond%20M%2C%20Palm%20Jumeirah%2C%20Dubai">Frond M, Palm Jumeirah, Dubai</a>
+													</div>
+													<ul class="g5ere__loop-property-meta">
+														<li class="bedrooms" data-toggle="tooltip" title="Bedrooms">
+															<i class="svg-icon svg-icon-g5ere_bed"></i>
+															<span class="g5ere__property-bedrooms">5 Br</span>
+														</li>
+														<li class="bathrooms" data-toggle="tooltip" title="Bathrooms">
+															<i class="svg-icon svg-icon-g5ere_bath"></i>
+															<span class="g5ere__loop-property-bathrooms">6 Ba</span>
+														</li>
+														<li class="size" data-toggle="tooltip" title="Size">
+															<i class="svg-icon svg-icon-g5ere_house-plan"></i>
+															<span class="g5ere__loop-property-size">7,200 SqFt</span>
+														</li>
+													</ul>
+												</div>
+												<div class="g5ere__lpc-bottom d-flex flex-wrap align-items-center justify-content-between">
+													<span class="g5ere__loop-property-price">
+														<span class="g5ere__lpp-price">AED 34,500,000</span>
+													</span>
+													<div class="g5ere__loop-property-actions g5ere__lpa-rounded d-flex align-items-center">
+														<a href="https://wa.me/97148762333?text=Inquiry%20regarding%20Signature%20Beachfront%20Villa%20(AED%2034%2C500%2C000)" target="_blank" class="vwd-wa-btn" title="Inquire on WhatsApp" style="color: #25D366; font-size: 18px; margin-right: 10px; display: inline-flex; align-items: center;">
+															<i class="fab fa-whatsapp"></i>
+														</a>
+														<a href="javascript:void(0)" class="property-favorite" data-property-id="101" data-toggle="tooltip" title="Add to Favorite" data-title-not-favorite="Add to Favorite" data-title-favorited="It is my favorite" data-icon-not-favorite="fal fa-star" data-icon-favorited="fas fa-star">
+															<i class="fal fa-star"></i>
+														</a>
+														<a class="compare-property" href="javascript:void(0)" data-property-id="101" data-toggle="tooltip" title="Compare">
+															<i class="fa fa-plus"></i>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</article>
+
+									<!-- Property 102 -->
+									<article class="g5core__gutter-item g5ere__property-item g5ere__property-skin-02 g5ere__property-item-1 g5ere__property-item-featured g5ere__has-image-featured post-102 property type-property status-publish has-post-thumbnail hentry property-type-penthouse property-status-for-sale property-city-dubai col-xl-4 col-lg-4 col-md-6 col-12 vwd-property-card"
+										data-id="102"
+										data-type="penthouse"
+										data-location="downtown-dubai"
+										data-beds="4"
+										data-price="28000000"
+										data-location-obj='{"id":102,"title":"Opera District Sky Penthouse","thumb":"images/single-property-04.jpg","address":"Il Primo, Downtown Dubai"}'>
+										<div class="g5ere__property-item-inner g5ere__loop-item-inner g5core__animate-when-almost-visible g5core__btt g5ere__li-bordered g5ere__li-hover-box-shadow bg-white">
+											
+											<!-- Featured Image & Badges -->
+											<div class="g5core__post-featured g5ere__property-featured g5ere__pf-rounded">
+												<a title="Opera District Sky Penthouse" style="background-image: url('images/single-property-04.jpg');" class="g5core__entry-thumbnail g5core__embed-responsive g5core__image-size-357x210" href="property-detail.html?id=102">
+												</a>
+												<div class="g5ere__loop-property-badge">
+													<span class="g5ere__property-badge g5ere__featured">Featured</span>
+													<span style="background-color: #00265E;" class="g5ere__property-badge g5ere__status for-sale">For Sale</span>
+												</div>
+												<div class="g5ere__loop-property-actions">
+													<a data-toggle="tooltip" title="(8) Photos" class="g5ere__view-gallery" data-g5core-mfp="" data-gallery='["images/single-property-04.jpg","images/single-property-02.jpg","images/single-property-03.jpg","images/single-property-38.jpg"]' href="#">
+														<i class="fal fa-images"></i>
+													</a>
+												</div>
+											</div>
+
+											<!-- Property Details (Exact HomeID Typography & Hierarchy) -->
+											<div class="g5ere__property-content g5ere__loop-content">
+												<div class="g5ere__lpc-top">
+													<h3 class="g5ere__loop-property-title">
+														<a title="Opera District Sky Penthouse" href="property-detail.html?id=102">Opera District Sky Penthouse</a>
+													</h3>
+													<div class="g5ere__loop-property-address">
+														<a title="Il Primo, Downtown Dubai" target="_blank" href="//maps.google.com/?q=Il%20Primo%2C%20Downtown%20Dubai">Il Primo, Downtown Dubai</a>
+													</div>
+													<ul class="g5ere__loop-property-meta">
+														<li class="bedrooms" data-toggle="tooltip" title="Bedrooms">
+															<i class="svg-icon svg-icon-g5ere_bed"></i>
+															<span class="g5ere__property-bedrooms">4 Br</span>
+														</li>
+														<li class="bathrooms" data-toggle="tooltip" title="Bathrooms">
+															<i class="svg-icon svg-icon-g5ere_bath"></i>
+															<span class="g5ere__loop-property-bathrooms">5 Ba</span>
+														</li>
+														<li class="size" data-toggle="tooltip" title="Size">
+															<i class="svg-icon svg-icon-g5ere_house-plan"></i>
+															<span class="g5ere__loop-property-size">5,400 SqFt</span>
+														</li>
+													</ul>
+												</div>
+												<div class="g5ere__lpc-bottom d-flex flex-wrap align-items-center justify-content-between">
+													<span class="g5ere__loop-property-price">
+														<span class="g5ere__lpp-price">AED 28,000,000</span>
+													</span>
+													<div class="g5ere__loop-property-actions g5ere__lpa-rounded d-flex align-items-center">
+														<a href="https://wa.me/97148762333?text=Inquiry%20regarding%20Opera%20District%20Sky%20Penthouse%20(AED%2028%2C000%2C000)" target="_blank" class="vwd-wa-btn" title="Inquire on WhatsApp" style="color: #25D366; font-size: 18px; margin-right: 10px; display: inline-flex; align-items: center;">
+															<i class="fab fa-whatsapp"></i>
+														</a>
+														<a href="javascript:void(0)" class="property-favorite" data-property-id="102" data-toggle="tooltip" title="Add to Favorite" data-title-not-favorite="Add to Favorite" data-title-favorited="It is my favorite" data-icon-not-favorite="fal fa-star" data-icon-favorited="fas fa-star">
+															<i class="fal fa-star"></i>
+														</a>
+														<a class="compare-property" href="javascript:void(0)" data-property-id="102" data-toggle="tooltip" title="Compare">
+															<i class="fa fa-plus"></i>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</article>
+
+									<!-- Property 103 -->
+									<article class="g5core__gutter-item g5ere__property-item g5ere__property-skin-02 g5ere__property-item-1 g5ere__property-item-featured g5ere__has-image-featured post-103 property type-property status-publish has-post-thumbnail hentry property-type-villa property-status-for-sale property-city-dubai col-xl-4 col-lg-4 col-md-6 col-12 vwd-property-card"
+										data-id="103"
+										data-type="villa"
+										data-location="dubai-hills-estate"
+										data-beds="6"
+										data-price="22500000"
+										data-location-obj='{"id":103,"title":"Fairway Contemporary Mansion","thumb":"images/single-property-07.jpg","address":"Fairway Vistas, Dubai Hills Estate"}'>
+										<div class="g5ere__property-item-inner g5ere__loop-item-inner g5core__animate-when-almost-visible g5core__btt g5ere__li-bordered g5ere__li-hover-box-shadow bg-white">
+											
+											<!-- Featured Image & Badges -->
+											<div class="g5core__post-featured g5ere__property-featured g5ere__pf-rounded">
+												<a title="Fairway Contemporary Mansion" style="background-image: url('images/single-property-07.jpg');" class="g5core__entry-thumbnail g5core__embed-responsive g5core__image-size-357x210" href="property-detail.html?id=103">
+												</a>
+												<div class="g5ere__loop-property-badge">
+													<span class="g5ere__property-badge g5ere__featured">Featured</span>
+													<span style="background-color: #00265E;" class="g5ere__property-badge g5ere__status for-sale">For Sale</span>
+												</div>
+												<div class="g5ere__loop-property-actions">
+													<a data-toggle="tooltip" title="(10) Photos" class="g5ere__view-gallery" data-g5core-mfp="" data-gallery='["images/single-property-07.jpg","images/single-property-06.jpg","images/single-property-29.jpg"]' href="#">
+														<i class="fal fa-images"></i>
+													</a>
+												</div>
+											</div>
+
+											<!-- Property Details (Exact HomeID Typography & Hierarchy) -->
+											<div class="g5ere__property-content g5ere__loop-content">
+												<div class="g5ere__lpc-top">
+													<h3 class="g5ere__loop-property-title">
+														<a title="Fairway Contemporary Mansion" href="property-detail.html?id=103">Fairway Contemporary Mansion</a>
+													</h3>
+													<div class="g5ere__loop-property-address">
+														<a title="Fairway Vistas, Dubai Hills Estate" target="_blank" href="//maps.google.com/?q=Fairway%20Vistas%2C%20Dubai%20Hills%20Estate">Fairway Vistas, Dubai Hills Estate</a>
+													</div>
+													<ul class="g5ere__loop-property-meta">
+														<li class="bedrooms" data-toggle="tooltip" title="Bedrooms">
+															<i class="svg-icon svg-icon-g5ere_bed"></i>
+															<span class="g5ere__property-bedrooms">6 Br</span>
+														</li>
+														<li class="bathrooms" data-toggle="tooltip" title="Bathrooms">
+															<i class="svg-icon svg-icon-g5ere_bath"></i>
+															<span class="g5ere__loop-property-bathrooms">7 Ba</span>
+														</li>
+														<li class="size" data-toggle="tooltip" title="Size">
+															<i class="svg-icon svg-icon-g5ere_house-plan"></i>
+															<span class="g5ere__loop-property-size">8,500 SqFt</span>
+														</li>
+													</ul>
+												</div>
+												<div class="g5ere__lpc-bottom d-flex flex-wrap align-items-center justify-content-between">
+													<span class="g5ere__loop-property-price">
+														<span class="g5ere__lpp-price">AED 22,500,000</span>
+													</span>
+													<div class="g5ere__loop-property-actions g5ere__lpa-rounded d-flex align-items-center">
+														<a href="https://wa.me/97148762333?text=Inquiry%20regarding%20Fairway%20Contemporary%20Mansion%20(AED%2022%2C500%2C000)" target="_blank" class="vwd-wa-btn" title="Inquire on WhatsApp" style="color: #25D366; font-size: 18px; margin-right: 10px; display: inline-flex; align-items: center;">
+															<i class="fab fa-whatsapp"></i>
+														</a>
+														<a href="javascript:void(0)" class="property-favorite" data-property-id="103" data-toggle="tooltip" title="Add to Favorite" data-title-not-favorite="Add to Favorite" data-title-favorited="It is my favorite" data-icon-not-favorite="fal fa-star" data-icon-favorited="fas fa-star">
+															<i class="fal fa-star"></i>
+														</a>
+														<a class="compare-property" href="javascript:void(0)" data-property-id="103" data-toggle="tooltip" title="Compare">
+															<i class="fa fa-plus"></i>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</article>
+
+									<!-- Property 104 -->
+									<article class="g5core__gutter-item g5ere__property-item g5ere__property-skin-02 g5ere__property-item-1 g5ere__property-item-featured g5ere__has-image-featured post-104 property type-property status-publish has-post-thumbnail hentry property-type-apartment property-status-for-sale property-city-dubai col-xl-4 col-lg-4 col-md-6 col-12 vwd-property-card"
+										data-id="104"
+										data-type="apartment"
+										data-location="emaar-beachfront"
+										data-beds="3"
+										data-price="7200000"
+										data-location-obj='{"id":104,"title":"Seafront Luxury Apartment","thumb":"images/single-property-42.jpg","address":"Beach Isle, Emaar Beachfront"}'>
+										<div class="g5ere__property-item-inner g5ere__loop-item-inner g5core__animate-when-almost-visible g5core__btt g5ere__li-bordered g5ere__li-hover-box-shadow bg-white">
+											
+											<!-- Featured Image & Badges -->
+											<div class="g5core__post-featured g5ere__property-featured g5ere__pf-rounded">
+												<a title="Seafront Luxury Apartment" style="background-image: url('images/single-property-42.jpg');" class="g5core__entry-thumbnail g5core__embed-responsive g5core__image-size-357x210" href="property-detail.html?id=104">
+												</a>
+												<div class="g5ere__loop-property-badge">
+													<span class="g5ere__property-badge g5ere__featured">Featured</span>
+													<span style="background-color: #00265E;" class="g5ere__property-badge g5ere__status for-sale">For Sale</span>
+												</div>
+												<div class="g5ere__loop-property-actions">
+													<a data-toggle="tooltip" title="(7) Photos" class="g5ere__view-gallery" data-g5core-mfp="" data-gallery='["images/single-property-42.jpg","images/single-property-41.jpg","images/single-property-39.jpg"]' href="#">
+														<i class="fal fa-images"></i>
+													</a>
+												</div>
+											</div>
+
+											<!-- Property Details (Exact HomeID Typography & Hierarchy) -->
+											<div class="g5ere__property-content g5ere__loop-content">
+												<div class="g5ere__lpc-top">
+													<h3 class="g5ere__loop-property-title">
+														<a title="Seafront Luxury Apartment" href="property-detail.html?id=104">Seafront Luxury Apartment</a>
+													</h3>
+													<div class="g5ere__loop-property-address">
+														<a title="Beach Isle, Emaar Beachfront" target="_blank" href="//maps.google.com/?q=Beach%20Isle%2C%20Emaar%20Beachfront">Beach Isle, Emaar Beachfront</a>
+													</div>
+													<ul class="g5ere__loop-property-meta">
+														<li class="bedrooms" data-toggle="tooltip" title="Bedrooms">
+															<i class="svg-icon svg-icon-g5ere_bed"></i>
+															<span class="g5ere__property-bedrooms">3 Br</span>
+														</li>
+														<li class="bathrooms" data-toggle="tooltip" title="Bathrooms">
+															<i class="svg-icon svg-icon-g5ere_bath"></i>
+															<span class="g5ere__loop-property-bathrooms">3 Ba</span>
+														</li>
+														<li class="size" data-toggle="tooltip" title="Size">
+															<i class="svg-icon svg-icon-g5ere_house-plan"></i>
+															<span class="g5ere__loop-property-size">2,100 SqFt</span>
+														</li>
+													</ul>
+												</div>
+												<div class="g5ere__lpc-bottom d-flex flex-wrap align-items-center justify-content-between">
+													<span class="g5ere__loop-property-price">
+														<span class="g5ere__lpp-price">AED 7,200,000</span>
+													</span>
+													<div class="g5ere__loop-property-actions g5ere__lpa-rounded d-flex align-items-center">
+														<a href="https://wa.me/97148762333?text=Inquiry%20regarding%20Seafront%20Luxury%20Apartment%20(AED%207%2C200%2C000)" target="_blank" class="vwd-wa-btn" title="Inquire on WhatsApp" style="color: #25D366; font-size: 18px; margin-right: 10px; display: inline-flex; align-items: center;">
+															<i class="fab fa-whatsapp"></i>
+														</a>
+														<a href="javascript:void(0)" class="property-favorite" data-property-id="104" data-toggle="tooltip" title="Add to Favorite" data-title-not-favorite="Add to Favorite" data-title-favorited="It is my favorite" data-icon-not-favorite="fal fa-star" data-icon-favorited="fas fa-star">
+															<i class="fal fa-star"></i>
+														</a>
+														<a class="compare-property" href="javascript:void(0)" data-property-id="104" data-toggle="tooltip" title="Compare">
+															<i class="fa fa-plus"></i>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</article>
+
+									<!-- Property 105 -->
+									<article class="g5core__gutter-item g5ere__property-item g5ere__property-skin-02 g5ere__property-item-1 g5ere__property-item-featured g5ere__has-image-featured post-105 property type-property status-publish has-post-thumbnail hentry property-type-apartment property-status-for-sale property-city-dubai col-xl-4 col-lg-4 col-md-6 col-12 vwd-property-card"
+										data-id="105"
+										data-type="apartment"
+										data-location="dubai-creek-harbour"
+										data-beds="2"
+										data-price="4850000"
+										data-location-obj='{"id":105,"title":"Waterfront Sunset Residence","thumb":"images/single-property-43.jpg","address":"Creek Horizon, Dubai Creek Harbour"}'>
+										<div class="g5ere__property-item-inner g5ere__loop-item-inner g5core__animate-when-almost-visible g5core__btt g5ere__li-bordered g5ere__li-hover-box-shadow bg-white">
+											
+											<!-- Featured Image & Badges -->
+											<div class="g5core__post-featured g5ere__property-featured g5ere__pf-rounded">
+												<a title="Waterfront Sunset Residence" style="background-image: url('images/single-property-43.jpg');" class="g5core__entry-thumbnail g5core__embed-responsive g5core__image-size-357x210" href="property-detail.html?id=105">
+												</a>
+												<div class="g5ere__loop-property-badge">
+													<span class="g5ere__property-badge g5ere__featured">Featured</span>
+													<span style="background-color: #00265E;" class="g5ere__property-badge g5ere__status for-sale">For Sale</span>
+												</div>
+												<div class="g5ere__loop-property-actions">
+													<a data-toggle="tooltip" title="(5) Photos" class="g5ere__view-gallery" data-g5core-mfp="" data-gallery='["images/single-property-43.jpg","images/single-property-23.jpg"]' href="#">
+														<i class="fal fa-images"></i>
+													</a>
+												</div>
+											</div>
+
+											<!-- Property Details (Exact HomeID Typography & Hierarchy) -->
+											<div class="g5ere__property-content g5ere__loop-content">
+												<div class="g5ere__lpc-top">
+													<h3 class="g5ere__loop-property-title">
+														<a title="Waterfront Sunset Residence" href="property-detail.html?id=105">Waterfront Sunset Residence</a>
+													</h3>
+													<div class="g5ere__loop-property-address">
+														<a title="Creek Horizon, Dubai Creek Harbour" target="_blank" href="//maps.google.com/?q=Creek%20Horizon%2C%20Dubai%20Creek%20Harbour">Creek Horizon, Dubai Creek Harbour</a>
+													</div>
+													<ul class="g5ere__loop-property-meta">
+														<li class="bedrooms" data-toggle="tooltip" title="Bedrooms">
+															<i class="svg-icon svg-icon-g5ere_bed"></i>
+															<span class="g5ere__property-bedrooms">2 Br</span>
+														</li>
+														<li class="bathrooms" data-toggle="tooltip" title="Bathrooms">
+															<i class="svg-icon svg-icon-g5ere_bath"></i>
+															<span class="g5ere__loop-property-bathrooms">3 Ba</span>
+														</li>
+														<li class="size" data-toggle="tooltip" title="Size">
+															<i class="svg-icon svg-icon-g5ere_house-plan"></i>
+															<span class="g5ere__loop-property-size">1,650 SqFt</span>
+														</li>
+													</ul>
+												</div>
+												<div class="g5ere__lpc-bottom d-flex flex-wrap align-items-center justify-content-between">
+													<span class="g5ere__loop-property-price">
+														<span class="g5ere__lpp-price">AED 4,850,000</span>
+													</span>
+													<div class="g5ere__loop-property-actions g5ere__lpa-rounded d-flex align-items-center">
+														<a href="https://wa.me/97148762333?text=Inquiry%20regarding%20Waterfront%20Sunset%20Residence%20(AED%204%2C850%2C000)" target="_blank" class="vwd-wa-btn" title="Inquire on WhatsApp" style="color: #25D366; font-size: 18px; margin-right: 10px; display: inline-flex; align-items: center;">
+															<i class="fab fa-whatsapp"></i>
+														</a>
+														<a href="javascript:void(0)" class="property-favorite" data-property-id="105" data-toggle="tooltip" title="Add to Favorite" data-title-not-favorite="Add to Favorite" data-title-favorited="It is my favorite" data-icon-not-favorite="fal fa-star" data-icon-favorited="fas fa-star">
+															<i class="fal fa-star"></i>
+														</a>
+														<a class="compare-property" href="javascript:void(0)" data-property-id="105" data-toggle="tooltip" title="Compare">
+															<i class="fa fa-plus"></i>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</article>
+
+									<!-- Property 106 -->
+									<article class="g5core__gutter-item g5ere__property-item g5ere__property-skin-02 g5ere__property-item-1 g5ere__property-item-featured g5ere__has-image-featured post-106 property type-property status-publish has-post-thumbnail hentry property-type-villa property-status-for-sale property-city-dubai col-xl-4 col-lg-4 col-md-6 col-12 vwd-property-card"
+										data-id="106"
+										data-type="villa"
+										data-location="jumeirah-golf-estates"
+										data-beds="5"
+										data-price="18900000"
+										data-location-obj='{"id":106,"title":"Championship Golf Villa","thumb":"images/single-property-40.jpg","address":"Wildflower, Jumeirah Golf Estates"}'>
+										<div class="g5ere__property-item-inner g5ere__loop-item-inner g5core__animate-when-almost-visible g5core__btt g5ere__li-bordered g5ere__li-hover-box-shadow bg-white">
+											
+											<!-- Featured Image & Badges -->
+											<div class="g5core__post-featured g5ere__property-featured g5ere__pf-rounded">
+												<a title="Championship Golf Villa" style="background-image: url('images/single-property-40.jpg');" class="g5core__entry-thumbnail g5core__embed-responsive g5core__image-size-357x210" href="property-detail.html?id=106">
+												</a>
+												<div class="g5ere__loop-property-badge">
+													<span class="g5ere__property-badge g5ere__featured">Featured</span>
+													<span style="background-color: #00265E;" class="g5ere__property-badge g5ere__status for-sale">For Sale</span>
+												</div>
+												<div class="g5ere__loop-property-actions">
+													<a data-toggle="tooltip" title="(9) Photos" class="g5ere__view-gallery" data-g5core-mfp="" data-gallery='["images/single-property-40.jpg","images/single-property-29.jpg"]' href="#">
+														<i class="fal fa-images"></i>
+													</a>
+												</div>
+											</div>
+
+											<!-- Property Details (Exact HomeID Typography & Hierarchy) -->
+											<div class="g5ere__property-content g5ere__loop-content">
+												<div class="g5ere__lpc-top">
+													<h3 class="g5ere__loop-property-title">
+														<a title="Championship Golf Villa" href="property-detail.html?id=106">Championship Golf Villa</a>
+													</h3>
+													<div class="g5ere__loop-property-address">
+														<a title="Wildflower, Jumeirah Golf Estates" target="_blank" href="//maps.google.com/?q=Wildflower%2C%20Jumeirah%20Golf%20Estates">Wildflower, Jumeirah Golf Estates</a>
+													</div>
+													<ul class="g5ere__loop-property-meta">
+														<li class="bedrooms" data-toggle="tooltip" title="Bedrooms">
+															<i class="svg-icon svg-icon-g5ere_bed"></i>
+															<span class="g5ere__property-bedrooms">5 Br</span>
+														</li>
+														<li class="bathrooms" data-toggle="tooltip" title="Bathrooms">
+															<i class="svg-icon svg-icon-g5ere_bath"></i>
+															<span class="g5ere__loop-property-bathrooms">6 Ba</span>
+														</li>
+														<li class="size" data-toggle="tooltip" title="Size">
+															<i class="svg-icon svg-icon-g5ere_house-plan"></i>
+															<span class="g5ere__loop-property-size">6,800 SqFt</span>
+														</li>
+													</ul>
+												</div>
+												<div class="g5ere__lpc-bottom d-flex flex-wrap align-items-center justify-content-between">
+													<span class="g5ere__loop-property-price">
+														<span class="g5ere__lpp-price">AED 18,900,000</span>
+													</span>
+													<div class="g5ere__loop-property-actions g5ere__lpa-rounded d-flex align-items-center">
+														<a href="https://wa.me/97148762333?text=Inquiry%20regarding%20Championship%20Golf%20Villa%20(AED%2018%2C900%2C000)" target="_blank" class="vwd-wa-btn" title="Inquire on WhatsApp" style="color: #25D366; font-size: 18px; margin-right: 10px; display: inline-flex; align-items: center;">
+															<i class="fab fa-whatsapp"></i>
+														</a>
+														<a href="javascript:void(0)" class="property-favorite" data-property-id="106" data-toggle="tooltip" title="Add to Favorite" data-title-not-favorite="Add to Favorite" data-title-favorited="It is my favorite" data-icon-not-favorite="fal fa-star" data-icon-favorited="fas fa-star">
+															<i class="fal fa-star"></i>
+														</a>
+														<a class="compare-property" href="javascript:void(0)" data-property-id="106" data-toggle="tooltip" title="Compare">
+															<i class="fa fa-plus"></i>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</article>
+
+									<!-- Property 107 -->
+									<article class="g5core__gutter-item g5ere__property-item g5ere__property-skin-02 g5ere__property-item-1 g5ere__property-item-featured g5ere__has-image-featured post-107 property type-property status-publish has-post-thumbnail hentry property-type-apartment property-status-for-sale property-city-dubai col-xl-4 col-lg-4 col-md-6 col-12 vwd-property-card"
+										data-id="107"
+										data-type="apartment"
+										data-location="business-bay"
+										data-beds="2"
+										data-price="3600000"
+										data-location-obj='{"id":107,"title":"Canal View Luxury Residence","thumb":"images/single-property-37.jpg","address":"Marasi Drive, Business Bay, Dubai"}'>
+										<div class="g5ere__property-item-inner g5ere__loop-item-inner g5core__animate-when-almost-visible g5core__btt g5ere__li-bordered g5ere__li-hover-box-shadow bg-white">
+											
+											<!-- Featured Image & Badges -->
+											<div class="g5core__post-featured g5ere__property-featured g5ere__pf-rounded">
+												<a title="Canal View Luxury Residence" style="background-image: url('images/single-property-37.jpg');" class="g5core__entry-thumbnail g5core__embed-responsive g5core__image-size-357x210" href="property-detail.html?id=107">
+												</a>
+												<div class="g5ere__loop-property-badge">
+													<span class="g5ere__property-badge g5ere__featured">Featured</span>
+													<span style="background-color: #00265E;" class="g5ere__property-badge g5ere__status for-sale">For Sale</span>
+												</div>
+												<div class="g5ere__loop-property-actions">
+													<a data-toggle="tooltip" title="(6) Photos" class="g5ere__view-gallery" data-g5core-mfp="" data-gallery='["images/single-property-37.jpg","images/single-property-33.jpg"]' href="#">
+														<i class="fal fa-images"></i>
+													</a>
+												</div>
+											</div>
+
+											<!-- Property Details (Exact HomeID Typography & Hierarchy) -->
+											<div class="g5ere__property-content g5ere__loop-content">
+												<div class="g5ere__lpc-top">
+													<h3 class="g5ere__loop-property-title">
+														<a title="Canal View Luxury Residence" href="property-detail.html?id=107">Canal View Luxury Residence</a>
+													</h3>
+													<div class="g5ere__loop-property-address">
+														<a title="Marasi Drive, Business Bay, Dubai" target="_blank" href="//maps.google.com/?q=Marasi%20Drive%2C%20Business%20Bay%2C%20Dubai">Marasi Drive, Business Bay, Dubai</a>
+													</div>
+													<ul class="g5ere__loop-property-meta">
+														<li class="bedrooms" data-toggle="tooltip" title="Bedrooms">
+															<i class="svg-icon svg-icon-g5ere_bed"></i>
+															<span class="g5ere__property-bedrooms">2 Br</span>
+														</li>
+														<li class="bathrooms" data-toggle="tooltip" title="Bathrooms">
+															<i class="svg-icon svg-icon-g5ere_bath"></i>
+															<span class="g5ere__loop-property-bathrooms">2 Ba</span>
+														</li>
+														<li class="size" data-toggle="tooltip" title="Size">
+															<i class="svg-icon svg-icon-g5ere_house-plan"></i>
+															<span class="g5ere__loop-property-size">1,450 SqFt</span>
+														</li>
+													</ul>
+												</div>
+												<div class="g5ere__lpc-bottom d-flex flex-wrap align-items-center justify-content-between">
+													<span class="g5ere__loop-property-price">
+														<span class="g5ere__lpp-price">AED 3,600,000</span>
+													</span>
+													<div class="g5ere__loop-property-actions g5ere__lpa-rounded d-flex align-items-center">
+														<a href="https://wa.me/97148762333?text=Inquiry%20regarding%20Canal%20View%20Luxury%20Residence%20(AED%203%2C600%2C000)" target="_blank" class="vwd-wa-btn" title="Inquire on WhatsApp" style="color: #25D366; font-size: 18px; margin-right: 10px; display: inline-flex; align-items: center;">
+															<i class="fab fa-whatsapp"></i>
+														</a>
+														<a href="javascript:void(0)" class="property-favorite" data-property-id="107" data-toggle="tooltip" title="Add to Favorite" data-title-not-favorite="Add to Favorite" data-title-favorited="It is my favorite" data-icon-not-favorite="fal fa-star" data-icon-favorited="fas fa-star">
+															<i class="fal fa-star"></i>
+														</a>
+														<a class="compare-property" href="javascript:void(0)" data-property-id="107" data-toggle="tooltip" title="Compare">
+															<i class="fa fa-plus"></i>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</article>
+
+									<!-- Property 108 -->
+									<article class="g5core__gutter-item g5ere__property-item g5ere__property-skin-02 g5ere__property-item-1 g5ere__property-item-featured g5ere__has-image-featured post-108 property type-property status-publish has-post-thumbnail hentry property-type-villa property-status-for-sale property-city-dubai col-xl-4 col-lg-4 col-md-6 col-12 vwd-property-card"
+										data-id="108"
+										data-type="villa"
+										data-location="tilal-al-ghaf"
+										data-beds="6"
+										data-price="26000000"
+										data-location-obj='{"id":108,"title":"Ultra-Luxury Lagoon Mansion","thumb":"images/single-property-26.jpg","address":"Elysian Mansions, Tilal Al Ghaf"}'>
+										<div class="g5ere__property-item-inner g5ere__loop-item-inner g5core__animate-when-almost-visible g5core__btt g5ere__li-bordered g5ere__li-hover-box-shadow bg-white">
+											
+											<!-- Featured Image & Badges -->
+											<div class="g5core__post-featured g5ere__property-featured g5ere__pf-rounded">
+												<a title="Ultra-Luxury Lagoon Mansion" style="background-image: url('images/single-property-26.jpg');" class="g5core__entry-thumbnail g5core__embed-responsive g5core__image-size-357x210" href="property-detail.html?id=108">
+												</a>
+												<div class="g5ere__loop-property-badge">
+													<span class="g5ere__property-badge g5ere__featured">Featured</span>
+													<span style="background-color: #00265E;" class="g5ere__property-badge g5ere__status for-sale">For Sale</span>
+												</div>
+												<div class="g5ere__loop-property-actions">
+													<a data-toggle="tooltip" title="(12) Photos" class="g5ere__view-gallery" data-g5core-mfp="" data-gallery='["images/single-property-26.jpg","images/single-property-45.jpg"]' href="#">
+														<i class="fal fa-images"></i>
+													</a>
+												</div>
+											</div>
+
+											<!-- Property Details (Exact HomeID Typography & Hierarchy) -->
+											<div class="g5ere__property-content g5ere__loop-content">
+												<div class="g5ere__lpc-top">
+													<h3 class="g5ere__loop-property-title">
+														<a title="Ultra-Luxury Lagoon Mansion" href="property-detail.html?id=108">Ultra-Luxury Lagoon Mansion</a>
+													</h3>
+													<div class="g5ere__loop-property-address">
+														<a title="Elysian Mansions, Tilal Al Ghaf" target="_blank" href="//maps.google.com/?q=Elysian%20Mansions%2C%20Tilal%20Al%20Ghaf">Elysian Mansions, Tilal Al Ghaf</a>
+													</div>
+													<ul class="g5ere__loop-property-meta">
+														<li class="bedrooms" data-toggle="tooltip" title="Bedrooms">
+															<i class="svg-icon svg-icon-g5ere_bed"></i>
+															<span class="g5ere__property-bedrooms">6 Br</span>
+														</li>
+														<li class="bathrooms" data-toggle="tooltip" title="Bathrooms">
+															<i class="svg-icon svg-icon-g5ere_bath"></i>
+															<span class="g5ere__loop-property-bathrooms">7 Ba</span>
+														</li>
+														<li class="size" data-toggle="tooltip" title="Size">
+															<i class="svg-icon svg-icon-g5ere_house-plan"></i>
+															<span class="g5ere__loop-property-size">9,200 SqFt</span>
+														</li>
+													</ul>
+												</div>
+												<div class="g5ere__lpc-bottom d-flex flex-wrap align-items-center justify-content-between">
+													<span class="g5ere__loop-property-price">
+														<span class="g5ere__lpp-price">AED 26,000,000</span>
+													</span>
+													<div class="g5ere__loop-property-actions g5ere__lpa-rounded d-flex align-items-center">
+														<a href="https://wa.me/97148762333?text=Inquiry%20regarding%20Ultra-Luxury%20Lagoon%20Mansion%20(AED%2026%2C000%2C000)" target="_blank" class="vwd-wa-btn" title="Inquire on WhatsApp" style="color: #25D366; font-size: 18px; margin-right: 10px; display: inline-flex; align-items: center;">
+															<i class="fab fa-whatsapp"></i>
+														</a>
+														<a href="javascript:void(0)" class="property-favorite" data-property-id="108" data-toggle="tooltip" title="Add to Favorite" data-title-not-favorite="Add to Favorite" data-title-favorited="It is my favorite" data-icon-not-favorite="fal fa-star" data-icon-favorited="fas fa-star">
+															<i class="fal fa-star"></i>
+														</a>
+														<a class="compare-property" href="javascript:void(0)" data-property-id="108" data-toggle="tooltip" title="Compare">
+															<i class="fa fa-plus"></i>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</article>
+
+									<!-- Property 109 -->
+									<article class="g5core__gutter-item g5ere__property-item g5ere__property-skin-02 g5ere__property-item-1 g5ere__property-item-featured g5ere__has-image-featured post-109 property type-property status-publish has-post-thumbnail hentry property-type-apartment property-status-for-sale property-city-dubai col-xl-4 col-lg-4 col-md-6 col-12 vwd-property-card"
+										data-id="109"
+										data-type="apartment"
+										data-location="dubai-marina"
+										data-beds="2"
+										data-price="5400000"
+										data-location-obj='{"id":109,"title":"Marina View High-Floor Suite","thumb":"images/single-property-39.jpg","address":"Marina Gate, Dubai Marina"}'>
+										<div class="g5ere__property-item-inner g5ere__loop-item-inner g5core__animate-when-almost-visible g5core__btt g5ere__li-bordered g5ere__li-hover-box-shadow bg-white">
+											
+											<!-- Featured Image & Badges -->
+											<div class="g5core__post-featured g5ere__property-featured g5ere__pf-rounded">
+												<a title="Marina View High-Floor Suite" style="background-image: url('images/single-property-39.jpg');" class="g5core__entry-thumbnail g5core__embed-responsive g5core__image-size-357x210" href="property-detail.html?id=109">
+												</a>
+												<div class="g5ere__loop-property-badge">
+													<span class="g5ere__property-badge g5ere__featured">Featured</span>
+													<span style="background-color: #00265E;" class="g5ere__property-badge g5ere__status for-sale">For Sale</span>
+												</div>
+												<div class="g5ere__loop-property-actions">
+													<a data-toggle="tooltip" title="(8) Photos" class="g5ere__view-gallery" data-g5core-mfp="" data-gallery='["images/single-property-39.jpg","images/single-property-30.jpg"]' href="#">
+														<i class="fal fa-images"></i>
+													</a>
+												</div>
+											</div>
+
+											<!-- Property Details (Exact HomeID Typography & Hierarchy) -->
+											<div class="g5ere__property-content g5ere__loop-content">
+												<div class="g5ere__lpc-top">
+													<h3 class="g5ere__loop-property-title">
+														<a title="Marina View High-Floor Suite" href="property-detail.html?id=109">Marina View High-Floor Suite</a>
+													</h3>
+													<div class="g5ere__loop-property-address">
+														<a title="Marina Gate, Dubai Marina" target="_blank" href="//maps.google.com/?q=Marina%20Gate%2C%20Dubai%20Marina">Marina Gate, Dubai Marina</a>
+													</div>
+													<ul class="g5ere__loop-property-meta">
+														<li class="bedrooms" data-toggle="tooltip" title="Bedrooms">
+															<i class="svg-icon svg-icon-g5ere_bed"></i>
+															<span class="g5ere__property-bedrooms">2 Br</span>
+														</li>
+														<li class="bathrooms" data-toggle="tooltip" title="Bathrooms">
+															<i class="svg-icon svg-icon-g5ere_bath"></i>
+															<span class="g5ere__loop-property-bathrooms">3 Ba</span>
+														</li>
+														<li class="size" data-toggle="tooltip" title="Size">
+															<i class="svg-icon svg-icon-g5ere_house-plan"></i>
+															<span class="g5ere__loop-property-size">1,800 SqFt</span>
+														</li>
+													</ul>
+												</div>
+												<div class="g5ere__lpc-bottom d-flex flex-wrap align-items-center justify-content-between">
+													<span class="g5ere__loop-property-price">
+														<span class="g5ere__lpp-price">AED 5,400,000</span>
+													</span>
+													<div class="g5ere__loop-property-actions g5ere__lpa-rounded d-flex align-items-center">
+														<a href="https://wa.me/97148762333?text=Inquiry%20regarding%20Marina%20View%20High-Floor%20Suite%20(AED%205%2C400%2C000)" target="_blank" class="vwd-wa-btn" title="Inquire on WhatsApp" style="color: #25D366; font-size: 18px; margin-right: 10px; display: inline-flex; align-items: center;">
+															<i class="fab fa-whatsapp"></i>
+														</a>
+														<a href="javascript:void(0)" class="property-favorite" data-property-id="109" data-toggle="tooltip" title="Add to Favorite" data-title-not-favorite="Add to Favorite" data-title-favorited="It is my favorite" data-icon-not-favorite="fal fa-star" data-icon-favorited="fas fa-star">
+															<i class="fal fa-star"></i>
+														</a>
+														<a class="compare-property" href="javascript:void(0)" data-property-id="109" data-toggle="tooltip" title="Compare">
+															<i class="fa fa-plus"></i>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</article>
+
+									<!-- Property 110 -->
+									<article class="g5core__gutter-item g5ere__property-item g5ere__property-skin-02 g5ere__property-item-1 g5ere__property-item-featured g5ere__has-image-featured post-110 property type-property status-publish has-post-thumbnail hentry property-type-villa property-status-for-sale property-city-dubai col-xl-4 col-lg-4 col-md-6 col-12 vwd-property-card"
+										data-id="110"
+										data-type="villa"
+										data-location="arabian-ranches"
+										data-beds="5"
+										data-price="12500000"
+										data-location-obj='{"id":110,"title":"Exclusive Spanish Family Villa","thumb":"images/single-property-34.jpg","address":"Polo Homes, Arabian Ranches"}'>
+										<div class="g5ere__property-item-inner g5ere__loop-item-inner g5core__animate-when-almost-visible g5core__btt g5ere__li-bordered g5ere__li-hover-box-shadow bg-white">
+											
+											<!-- Featured Image & Badges -->
+											<div class="g5core__post-featured g5ere__property-featured g5ere__pf-rounded">
+												<a title="Exclusive Spanish Family Villa" style="background-image: url('images/single-property-34.jpg');" class="g5core__entry-thumbnail g5core__embed-responsive g5core__image-size-357x210" href="property-detail.html?id=110">
+												</a>
+												<div class="g5ere__loop-property-badge">
+													<span class="g5ere__property-badge g5ere__featured">Featured</span>
+													<span style="background-color: #00265E;" class="g5ere__property-badge g5ere__status for-sale">For Sale</span>
+												</div>
+												<div class="g5ere__loop-property-actions">
+													<a data-toggle="tooltip" title="(9) Photos" class="g5ere__view-gallery" data-g5core-mfp="" data-gallery='["images/single-property-34.jpg","images/single-property-06.jpg"]' href="#">
+														<i class="fal fa-images"></i>
+													</a>
+												</div>
+											</div>
+
+											<!-- Property Details (Exact HomeID Typography & Hierarchy) -->
+											<div class="g5ere__property-content g5ere__loop-content">
+												<div class="g5ere__lpc-top">
+													<h3 class="g5ere__loop-property-title">
+														<a title="Exclusive Spanish Family Villa" href="property-detail.html?id=110">Exclusive Spanish Family Villa</a>
+													</h3>
+													<div class="g5ere__loop-property-address">
+														<a title="Polo Homes, Arabian Ranches" target="_blank" href="//maps.google.com/?q=Polo%20Homes%2C%20Arabian%20Ranches">Polo Homes, Arabian Ranches</a>
+													</div>
+													<ul class="g5ere__loop-property-meta">
+														<li class="bedrooms" data-toggle="tooltip" title="Bedrooms">
+															<i class="svg-icon svg-icon-g5ere_bed"></i>
+															<span class="g5ere__property-bedrooms">5 Br</span>
+														</li>
+														<li class="bathrooms" data-toggle="tooltip" title="Bathrooms">
+															<i class="svg-icon svg-icon-g5ere_bath"></i>
+															<span class="g5ere__loop-property-bathrooms">6 Ba</span>
+														</li>
+														<li class="size" data-toggle="tooltip" title="Size">
+															<i class="svg-icon svg-icon-g5ere_house-plan"></i>
+															<span class="g5ere__loop-property-size">6,400 SqFt</span>
+														</li>
+													</ul>
+												</div>
+												<div class="g5ere__lpc-bottom d-flex flex-wrap align-items-center justify-content-between">
+													<span class="g5ere__loop-property-price">
+														<span class="g5ere__lpp-price">AED 12,500,000</span>
+													</span>
+													<div class="g5ere__loop-property-actions g5ere__lpa-rounded d-flex align-items-center">
+														<a href="https://wa.me/97148762333?text=Inquiry%20regarding%20Exclusive%20Spanish%20Family%20Villa%20(AED%2012%2C500%2C000)" target="_blank" class="vwd-wa-btn" title="Inquire on WhatsApp" style="color: #25D366; font-size: 18px; margin-right: 10px; display: inline-flex; align-items: center;">
+															<i class="fab fa-whatsapp"></i>
+														</a>
+														<a href="javascript:void(0)" class="property-favorite" data-property-id="110" data-toggle="tooltip" title="Add to Favorite" data-title-not-favorite="Add to Favorite" data-title-favorited="It is my favorite" data-icon-not-favorite="fal fa-star" data-icon-favorited="fas fa-star">
+															<i class="fal fa-star"></i>
+														</a>
+														<a class="compare-property" href="javascript:void(0)" data-property-id="110" data-toggle="tooltip" title="Compare">
+															<i class="fa fa-plus"></i>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</article>
+
+									<!-- Property 111 -->
+									<article class="g5core__gutter-item g5ere__property-item g5ere__property-skin-02 g5ere__property-item-1 g5ere__property-item-featured g5ere__has-image-featured post-111 property type-property status-publish has-post-thumbnail hentry property-type-penthouse property-status-for-sale property-city-dubai col-xl-4 col-lg-4 col-md-6 col-12 vwd-property-card"
+										data-id="111"
+										data-type="penthouse"
+										data-location="palm-jumeirah"
+										data-beds="4"
+										data-price="45000000"
+										data-location-obj='{"id":111,"title":"Dorchester Collection Sky Mansion","thumb":"images/single-property-02.jpg","address":"One Palm, Palm Jumeirah, Dubai"}'>
+										<div class="g5ere__property-item-inner g5ere__loop-item-inner g5core__animate-when-almost-visible g5core__btt g5ere__li-bordered g5ere__li-hover-box-shadow bg-white">
+											
+											<!-- Featured Image & Badges -->
+											<div class="g5core__post-featured g5ere__property-featured g5ere__pf-rounded">
+												<a title="Dorchester Collection Sky Mansion" style="background-image: url('images/single-property-02.jpg');" class="g5core__entry-thumbnail g5core__embed-responsive g5core__image-size-357x210" href="property-detail.html?id=111">
+												</a>
+												<div class="g5ere__loop-property-badge">
+													<span class="g5ere__property-badge g5ere__featured">Featured</span>
+													<span style="background-color: #00265E;" class="g5ere__property-badge g5ere__status for-sale">For Sale</span>
+												</div>
+												<div class="g5ere__loop-property-actions">
+													<a data-toggle="tooltip" title="(14) Photos" class="g5ere__view-gallery" data-g5core-mfp="" data-gallery='["images/single-property-02.jpg","images/single-property-04.jpg"]' href="#">
+														<i class="fal fa-images"></i>
+													</a>
+												</div>
+											</div>
+
+											<!-- Property Details (Exact HomeID Typography & Hierarchy) -->
+											<div class="g5ere__property-content g5ere__loop-content">
+												<div class="g5ere__lpc-top">
+													<h3 class="g5ere__loop-property-title">
+														<a title="Dorchester Collection Sky Mansion" href="property-detail.html?id=111">Dorchester Collection Sky Mansion</a>
+													</h3>
+													<div class="g5ere__loop-property-address">
+														<a title="One Palm, Palm Jumeirah, Dubai" target="_blank" href="//maps.google.com/?q=One%20Palm%2C%20Palm%20Jumeirah%2C%20Dubai">One Palm, Palm Jumeirah, Dubai</a>
+													</div>
+													<ul class="g5ere__loop-property-meta">
+														<li class="bedrooms" data-toggle="tooltip" title="Bedrooms">
+															<i class="svg-icon svg-icon-g5ere_bed"></i>
+															<span class="g5ere__property-bedrooms">4 Br</span>
+														</li>
+														<li class="bathrooms" data-toggle="tooltip" title="Bathrooms">
+															<i class="svg-icon svg-icon-g5ere_bath"></i>
+															<span class="g5ere__loop-property-bathrooms">5 Ba</span>
+														</li>
+														<li class="size" data-toggle="tooltip" title="Size">
+															<i class="svg-icon svg-icon-g5ere_house-plan"></i>
+															<span class="g5ere__loop-property-size">6,200 SqFt</span>
+														</li>
+													</ul>
+												</div>
+												<div class="g5ere__lpc-bottom d-flex flex-wrap align-items-center justify-content-between">
+													<span class="g5ere__loop-property-price">
+														<span class="g5ere__lpp-price">AED 45,000,000</span>
+													</span>
+													<div class="g5ere__loop-property-actions g5ere__lpa-rounded d-flex align-items-center">
+														<a href="https://wa.me/97148762333?text=Inquiry%20regarding%20Dorchester%20Collection%20Sky%20Mansion%20(AED%2045%2C000%2C000)" target="_blank" class="vwd-wa-btn" title="Inquire on WhatsApp" style="color: #25D366; font-size: 18px; margin-right: 10px; display: inline-flex; align-items: center;">
+															<i class="fab fa-whatsapp"></i>
+														</a>
+														<a href="javascript:void(0)" class="property-favorite" data-property-id="111" data-toggle="tooltip" title="Add to Favorite" data-title-not-favorite="Add to Favorite" data-title-favorited="It is my favorite" data-icon-not-favorite="fal fa-star" data-icon-favorited="fas fa-star">
+															<i class="fal fa-star"></i>
+														</a>
+														<a class="compare-property" href="javascript:void(0)" data-property-id="111" data-toggle="tooltip" title="Compare">
+															<i class="fa fa-plus"></i>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</article>
+
+									<!-- Property 112 -->
+									<article class="g5core__gutter-item g5ere__property-item g5ere__property-skin-02 g5ere__property-item-1 g5ere__property-item-featured g5ere__has-image-featured post-112 property type-property status-publish has-post-thumbnail hentry property-type-apartment property-status-for-sale property-city-dubai col-xl-4 col-lg-4 col-md-6 col-12 vwd-property-card"
+										data-id="112"
+										data-type="apartment"
+										data-location="downtown-dubai"
+										data-beds="3"
+										data-price="6800000"
+										data-location-obj='{"id":112,"title":"Downtown Boulevard Executive Suite","thumb":"images/single-property-38.jpg","address":"Address Boulevard, Downtown Dubai"}'>
+										<div class="g5ere__property-item-inner g5ere__loop-item-inner g5core__animate-when-almost-visible g5core__btt g5ere__li-bordered g5ere__li-hover-box-shadow bg-white">
+											
+											<!-- Featured Image & Badges -->
+											<div class="g5core__post-featured g5ere__property-featured g5ere__pf-rounded">
+												<a title="Downtown Boulevard Executive Suite" style="background-image: url('images/single-property-38.jpg');" class="g5core__entry-thumbnail g5core__embed-responsive g5core__image-size-357x210" href="property-detail.html?id=112">
+												</a>
+												<div class="g5ere__loop-property-badge">
+													<span class="g5ere__property-badge g5ere__featured">Featured</span>
+													<span style="background-color: #00265E;" class="g5ere__property-badge g5ere__status for-sale">For Sale</span>
+												</div>
+												<div class="g5ere__loop-property-actions">
+													<a data-toggle="tooltip" title="(7) Photos" class="g5ere__view-gallery" data-g5core-mfp="" data-gallery='["images/single-property-38.jpg","images/single-property-03.jpg"]' href="#">
+														<i class="fal fa-images"></i>
+													</a>
+												</div>
+											</div>
+
+											<!-- Property Details (Exact HomeID Typography & Hierarchy) -->
+											<div class="g5ere__property-content g5ere__loop-content">
+												<div class="g5ere__lpc-top">
+													<h3 class="g5ere__loop-property-title">
+														<a title="Downtown Boulevard Executive Suite" href="property-detail.html?id=112">Downtown Boulevard Executive Suite</a>
+													</h3>
+													<div class="g5ere__loop-property-address">
+														<a title="Address Boulevard, Downtown Dubai" target="_blank" href="//maps.google.com/?q=Address%20Boulevard%2C%20Downtown%20Dubai">Address Boulevard, Downtown Dubai</a>
+													</div>
+													<ul class="g5ere__loop-property-meta">
+														<li class="bedrooms" data-toggle="tooltip" title="Bedrooms">
+															<i class="svg-icon svg-icon-g5ere_bed"></i>
+															<span class="g5ere__property-bedrooms">3 Br</span>
+														</li>
+														<li class="bathrooms" data-toggle="tooltip" title="Bathrooms">
+															<i class="svg-icon svg-icon-g5ere_bath"></i>
+															<span class="g5ere__loop-property-bathrooms">3 Ba</span>
+														</li>
+														<li class="size" data-toggle="tooltip" title="Size">
+															<i class="svg-icon svg-icon-g5ere_house-plan"></i>
+															<span class="g5ere__loop-property-size">1,950 SqFt</span>
+														</li>
+													</ul>
+												</div>
+												<div class="g5ere__lpc-bottom d-flex flex-wrap align-items-center justify-content-between">
+													<span class="g5ere__loop-property-price">
+														<span class="g5ere__lpp-price">AED 6,800,000</span>
+													</span>
+													<div class="g5ere__loop-property-actions g5ere__lpa-rounded d-flex align-items-center">
+														<a href="https://wa.me/97148762333?text=Inquiry%20regarding%20Downtown%20Boulevard%20Executive%20Suite%20(AED%206%2C800%2C000)" target="_blank" class="vwd-wa-btn" title="Inquire on WhatsApp" style="color: #25D366; font-size: 18px; margin-right: 10px; display: inline-flex; align-items: center;">
+															<i class="fab fa-whatsapp"></i>
+														</a>
+														<a href="javascript:void(0)" class="property-favorite" data-property-id="112" data-toggle="tooltip" title="Add to Favorite" data-title-not-favorite="Add to Favorite" data-title-favorited="It is my favorite" data-icon-not-favorite="fal fa-star" data-icon-favorited="fas fa-star">
+															<i class="fal fa-star"></i>
+														</a>
+														<a class="compare-property" href="javascript:void(0)" data-property-id="112" data-toggle="tooltip" title="Compare">
+															<i class="fa fa-plus"></i>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</article>
+
+								</div>
+
+								<!-- Fallback for 0 Results -->
+								<div id="vwd-no-results" style="display: none; text-align: center; padding: 50px 20px; background: #fff; border: 1px solid #ebebeb; border-radius: 6px; margin-top: 20px;">
+									<i class="fal fa-search" style="font-size: 38px; color: #CFB165; margin-bottom: 12px; display: block;"></i>
+									<h4 style="color: #00265E; font-size: 18px; margin-bottom: 6px;">No Properties Match Your Criteria</h4>
+									<p style="color: #777; font-size: 14px; margin-bottom: 15px;">Please try widening your filters or selecting "All Dubai Communities".</p>
+									<button type="button" onclick="document.getElementById('vwd-reset-btn').click();" class="btn" style="background-color: #00265E; color: #CFB165; font-weight: 600;">Reset Filters</button>
+								</div>
+
+								<!-- Official HomeID Pagination -->
+								<div class="g5core-pagination text-center" style="margin-top: 40px;">
+									<ul class="pagination justify-content-center" style="gap: 5px;">
+										<li class="page-item active"><span class="page-link" style="background-color: #00265E; border-color: #00265E; color: #CFB165;">1</span></li>
+										<li class="page-item"><a class="page-link" href="#">2</a></li>
+										<li class="page-item"><a class="page-link" href="#">3</a></li>
+										<li class="page-item"><a class="page-link next" href="#"><i class="fas fa-chevron-right"></i></a></li>
+									</ul>
+								</div>
+
 							</div>
 						</div>
-					</form>
+					</div>
 				</div>
-
-				<!-- Control Toolbar (Counter, Sorting, Grid/List Switcher) -->
-				<div class="g5ere__toolbar g5ere__property-toolbar boxed" style="background: transparent; padding: 0; margin-bottom: 25px; border: none;">
-					<div class="g5ere__toolbar-inner">
-						<div class="g5ere__toolbar-desktop">
-							<div class="g5ere__toolbar-content-inner d-flex align-items-center justify-content-between">
-								<div class="g5ere__toolbar-left">
-									<p class="g5ere__result-count" style="margin: 0; font-size: 14px; color: #555; font-weight: 500;">
-										Showing <strong id="vwd-showing-count" style="color: #00265E;">12</strong> of <strong id="vwd-total-count" style="color: #00265E;">12</strong> Verified Properties For Sale
-									</p>
-								</div>
-								<div class="g5ere__toolbar-right d-flex align-items-center" style="gap: 15px;">
-									<div class="g5ere__ordering">
-										<select id="vwd-sort-order" class="form-control" style="height: 38px; font-size: 13px; border-radius: 4px; border: 1px solid #ddd; padding: 4px 10px; color: #444;">
-											<option value="default">Default Sorting</option>
-											<option value="price-asc">Price: Low to High</option>
-											<option value="price-desc">Price: High to Low</option>
-											<option value="beds-desc">Bedrooms: Most to Least</option>
-										</select>
-									</div>
-									<div class="g5ere__switch-layout d-flex align-items-center" style="gap: 5px;">
-										<button id="vwd-btn-grid" type="button" class="btn btn-sm active" title="Grid View" style="background: #00265E; color: #CFB165; border: 1px solid #00265E; padding: 6px 12px; border-radius: 4px;">
-											<i class="fas fa-th-large"></i>
-										</button>
-										<button id="vwd-btn-list" type="button" class="btn btn-sm" title="List View" style="background: #fff; color: #555; border: 1px solid #ddd; padding: 6px 12px; border-radius: 4px;">
-											<i class="fas fa-list-ul"></i>
-										</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Property Listing Grid -->
-				<div id="vwd-property-container" class="row g5core__gutter-30 g5ere__property-loop-wrap">
-
-					<!-- Property Card 101 -->
-					<div class="g5core__gutter-item g5ere__property-item col-xl-4 col-lg-4 col-md-6 col-12 vwd-property-card"
-						data-id="101"
-						data-type="villa"
-						data-location="palm-jumeirah"
-						data-beds="5"
-						data-price="34500000">
-						<div class="g5ere__property-item-inner g5ere__loop-item-inner g5ere__li-bordered g5ere__li-hover-box-shadow bg-white" style="border-radius: 8px; overflow: hidden; transition: transform 0.25s ease, box-shadow 0.25s ease; border: 1px solid #ebebeb; margin-bottom: 30px; display: flex; flex-direction: column; height: calc(100% - 30px);">
-							
-							<!-- Top Title & Address -->
-							<div class="g5ere__property-content-top" style="padding: 18px 20px 10px;">
-								<h3 class="g5ere__loop-property-title" style="font-size: 17px; font-weight: 600; margin-bottom: 4px; line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-									<a href="property-detail.html?id=101" title="Signature Beachfront Villa" style="color: #00265E; text-decoration: none;">Signature Beachfront Villa</a>
-								</h3>
-								<div class="g5ere__loop-property-address" style="font-size: 13px; color: #777; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-									<i class="fal fa-map-marker-alt" style="color: #CFB165; margin-right: 4px;"></i> Frond M, Palm Jumeirah, Dubai
-								</div>
-							</div>
-
-							<!-- Featured Image & Badges -->
-							<div class="g5core__post-featured g5ere__property-featured" style="position: relative; overflow: hidden;">
-								<a href="property-detail.html?id=101" title="Signature Beachfront Villa" class="g5core__entry-thumbnail" style="background-image: url('images/single-property-45.jpg'); background-size: cover; background-position: center; display: block; padding-top: 60%;">
-								</a>
-								<div class="g5ere__loop-property-badge" style="position: absolute; top: 12px; left: 12px; display: flex; gap: 6px;">
-									<span class="g5ere__property-badge" style="background-color: #CFB165; color: #00265E; font-weight: 700; font-size: 10px; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px;">Featured</span>
-									<span class="g5ere__property-badge" style="background-color: #00265E; color: #ffffff; font-weight: 700; font-size: 10px; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px;">For Sale</span>
-								</div>
-								<div class="g5ere__loop-property-actions" style="position: absolute; top: 12px; right: 12px;">
-									<span style="background: rgba(0,0,0,0.65); color: #fff; font-size: 11px; padding: 3px 8px; border-radius: 4px; font-weight: 500;"><i class="fal fa-camera"></i> 12</span>
-								</div>
-							</div>
-
-							<!-- Content, Excerpt, Specs & WhatsApp -->
-							<div class="g5ere__property-content g5ere__loop-content" style="padding: 16px 20px 20px; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
-								<div>
-									<div class="g5ere__lpc-top d-flex flex-wrap align-items-center justify-content-between" style="margin-bottom: 10px; border-bottom: 1px solid #f0f0f0; padding-bottom: 10px;">
-										<span class="g5ere__loop-property-price" style="font-size: 19px; font-weight: 700; color: #00265E;">
-											AED 34,500,000
-										</span>
-										<span style="background: #F7F5F0; color: #00265E; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 4px; text-transform: uppercase;">Villa</span>
-									</div>
-									<p style="font-size: 13px; color: #666; line-height: 1.55; margin-bottom: 15px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-										Ultra-luxury custom beachfront residence on Palm Jumeirah with private infinity pool, direct beach access, private cinema, and expansive skyline views.
-									</p>
-								</div>
-
-								<div class="g5ere__lpc-bottom d-flex align-items-center justify-content-between" style="border-top: 1px solid #f0f0f0; padding-top: 12px;">
-									<ul class="g5ere__loop-property-meta d-flex align-items-center" style="list-style: none; padding: 0; margin: 0; gap: 14px; font-size: 13px; color: #555;">
-										<li><i class="fal fa-bed" style="color: #CFB165; margin-right: 4px;"></i> 5 Br</li>
-										<li><i class="fal fa-bath" style="color: #CFB165; margin-right: 4px;"></i> 6 Ba</li>
-										<li><i class="fal fa-vector-square" style="color: #CFB165; margin-right: 4px;"></i> 7,200 SqFt</li>
-									</ul>
-									<a href="https://wa.me/97148762333?text=Inquiry%20regarding%20Signature%20Beachfront%20Villa%20(AED%2034%2C500%2C000)" target="_blank" class="vwd-wa-btn" title="Inquire on WhatsApp" style="background: #25D366; color: #fff; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; text-decoration: none; box-shadow: 0 2px 6px rgba(37,211,102,0.3); transition: transform 0.2s;">
-										<i class="fab fa-whatsapp"></i>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Property Card 102 -->
-					<div class="g5core__gutter-item g5ere__property-item col-xl-4 col-lg-4 col-md-6 col-12 vwd-property-card"
-						data-id="102"
-						data-type="penthouse"
-						data-location="downtown-dubai"
-						data-beds="4"
-						data-price="28000000">
-						<div class="g5ere__property-item-inner g5ere__loop-item-inner g5ere__li-bordered g5ere__li-hover-box-shadow bg-white" style="border-radius: 8px; overflow: hidden; transition: transform 0.25s ease, box-shadow 0.25s ease; border: 1px solid #ebebeb; margin-bottom: 30px; display: flex; flex-direction: column; height: calc(100% - 30px);">
-							
-							<!-- Top Title & Address -->
-							<div class="g5ere__property-content-top" style="padding: 18px 20px 10px;">
-								<h3 class="g5ere__loop-property-title" style="font-size: 17px; font-weight: 600; margin-bottom: 4px; line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-									<a href="property-detail.html?id=102" title="Opera District Sky Penthouse" style="color: #00265E; text-decoration: none;">Opera District Sky Penthouse</a>
-								</h3>
-								<div class="g5ere__loop-property-address" style="font-size: 13px; color: #777; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-									<i class="fal fa-map-marker-alt" style="color: #CFB165; margin-right: 4px;"></i> Il Primo, Downtown Dubai
-								</div>
-							</div>
-
-							<!-- Featured Image & Badges -->
-							<div class="g5core__post-featured g5ere__property-featured" style="position: relative; overflow: hidden;">
-								<a href="property-detail.html?id=102" title="Opera District Sky Penthouse" class="g5core__entry-thumbnail" style="background-image: url('images/single-property-04.jpg'); background-size: cover; background-position: center; display: block; padding-top: 60%;">
-								</a>
-								<div class="g5ere__loop-property-badge" style="position: absolute; top: 12px; left: 12px; display: flex; gap: 6px;">
-									<span class="g5ere__property-badge" style="background-color: #CFB165; color: #00265E; font-weight: 700; font-size: 10px; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px;">Featured</span>
-									<span class="g5ere__property-badge" style="background-color: #00265E; color: #ffffff; font-weight: 700; font-size: 10px; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px;">For Sale</span>
-								</div>
-								<div class="g5ere__loop-property-actions" style="position: absolute; top: 12px; right: 12px;">
-									<span style="background: rgba(0,0,0,0.65); color: #fff; font-size: 11px; padding: 3px 8px; border-radius: 4px; font-weight: 500;"><i class="fal fa-camera"></i> 12</span>
-								</div>
-							</div>
-
-							<!-- Content, Excerpt, Specs & WhatsApp -->
-							<div class="g5ere__property-content g5ere__loop-content" style="padding: 16px 20px 20px; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
-								<div>
-									<div class="g5ere__lpc-top d-flex flex-wrap align-items-center justify-content-between" style="margin-bottom: 10px; border-bottom: 1px solid #f0f0f0; padding-bottom: 10px;">
-										<span class="g5ere__loop-property-price" style="font-size: 19px; font-weight: 700; color: #00265E;">
-											AED 28,000,000
-										</span>
-										<span style="background: #F7F5F0; color: #00265E; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 4px; text-transform: uppercase;">Penthouse</span>
-									</div>
-									<p style="font-size: 13px; color: #666; line-height: 1.55; margin-bottom: 15px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-										Crown penthouse commanding 360-degree views of Burj Khalifa and the Dubai Fountains. Features private lift lobby, marble finishes, and wraparound terrace.
-									</p>
-								</div>
-
-								<div class="g5ere__lpc-bottom d-flex align-items-center justify-content-between" style="border-top: 1px solid #f0f0f0; padding-top: 12px;">
-									<ul class="g5ere__loop-property-meta d-flex align-items-center" style="list-style: none; padding: 0; margin: 0; gap: 14px; font-size: 13px; color: #555;">
-										<li><i class="fal fa-bed" style="color: #CFB165; margin-right: 4px;"></i> 4 Br</li>
-										<li><i class="fal fa-bath" style="color: #CFB165; margin-right: 4px;"></i> 5 Ba</li>
-										<li><i class="fal fa-vector-square" style="color: #CFB165; margin-right: 4px;"></i> 5,400 SqFt</li>
-									</ul>
-									<a href="https://wa.me/97148762333?text=Inquiry%20regarding%20Opera%20District%20Sky%20Penthouse%20(AED%2028%2C000%2C000)" target="_blank" class="vwd-wa-btn" title="Inquire on WhatsApp" style="background: #25D366; color: #fff; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; text-decoration: none; box-shadow: 0 2px 6px rgba(37,211,102,0.3); transition: transform 0.2s;">
-										<i class="fab fa-whatsapp"></i>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Property Card 103 -->
-					<div class="g5core__gutter-item g5ere__property-item col-xl-4 col-lg-4 col-md-6 col-12 vwd-property-card"
-						data-id="103"
-						data-type="villa"
-						data-location="dubai-hills-estate"
-						data-beds="6"
-						data-price="22500000">
-						<div class="g5ere__property-item-inner g5ere__loop-item-inner g5ere__li-bordered g5ere__li-hover-box-shadow bg-white" style="border-radius: 8px; overflow: hidden; transition: transform 0.25s ease, box-shadow 0.25s ease; border: 1px solid #ebebeb; margin-bottom: 30px; display: flex; flex-direction: column; height: calc(100% - 30px);">
-							
-							<!-- Top Title & Address -->
-							<div class="g5ere__property-content-top" style="padding: 18px 20px 10px;">
-								<h3 class="g5ere__loop-property-title" style="font-size: 17px; font-weight: 600; margin-bottom: 4px; line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-									<a href="property-detail.html?id=103" title="Fairway Contemporary Mansion" style="color: #00265E; text-decoration: none;">Fairway Contemporary Mansion</a>
-								</h3>
-								<div class="g5ere__loop-property-address" style="font-size: 13px; color: #777; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-									<i class="fal fa-map-marker-alt" style="color: #CFB165; margin-right: 4px;"></i> Fairway Vistas, Dubai Hills Estate
-								</div>
-							</div>
-
-							<!-- Featured Image & Badges -->
-							<div class="g5core__post-featured g5ere__property-featured" style="position: relative; overflow: hidden;">
-								<a href="property-detail.html?id=103" title="Fairway Contemporary Mansion" class="g5core__entry-thumbnail" style="background-image: url('images/single-property-07.jpg'); background-size: cover; background-position: center; display: block; padding-top: 60%;">
-								</a>
-								<div class="g5ere__loop-property-badge" style="position: absolute; top: 12px; left: 12px; display: flex; gap: 6px;">
-									<span class="g5ere__property-badge" style="background-color: #CFB165; color: #00265E; font-weight: 700; font-size: 10px; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px;">Featured</span>
-									<span class="g5ere__property-badge" style="background-color: #00265E; color: #ffffff; font-weight: 700; font-size: 10px; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px;">For Sale</span>
-								</div>
-								<div class="g5ere__loop-property-actions" style="position: absolute; top: 12px; right: 12px;">
-									<span style="background: rgba(0,0,0,0.65); color: #fff; font-size: 11px; padding: 3px 8px; border-radius: 4px; font-weight: 500;"><i class="fal fa-camera"></i> 12</span>
-								</div>
-							</div>
-
-							<!-- Content, Excerpt, Specs & WhatsApp -->
-							<div class="g5ere__property-content g5ere__loop-content" style="padding: 16px 20px 20px; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
-								<div>
-									<div class="g5ere__lpc-top d-flex flex-wrap align-items-center justify-content-between" style="margin-bottom: 10px; border-bottom: 1px solid #f0f0f0; padding-bottom: 10px;">
-										<span class="g5ere__loop-property-price" style="font-size: 19px; font-weight: 700; color: #00265E;">
-											AED 22,500,000
-										</span>
-										<span style="background: #F7F5F0; color: #00265E; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 4px; text-transform: uppercase;">Villa</span>
-									</div>
-									<p style="font-size: 13px; color: #666; line-height: 1.55; margin-bottom: 15px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-										Modern architectural masterpiece situated directly on the championship 18-hole golf course with rooftop entertainment terrace and smart automation.
-									</p>
-								</div>
-
-								<div class="g5ere__lpc-bottom d-flex align-items-center justify-content-between" style="border-top: 1px solid #f0f0f0; padding-top: 12px;">
-									<ul class="g5ere__loop-property-meta d-flex align-items-center" style="list-style: none; padding: 0; margin: 0; gap: 14px; font-size: 13px; color: #555;">
-										<li><i class="fal fa-bed" style="color: #CFB165; margin-right: 4px;"></i> 6 Br</li>
-										<li><i class="fal fa-bath" style="color: #CFB165; margin-right: 4px;"></i> 7 Ba</li>
-										<li><i class="fal fa-vector-square" style="color: #CFB165; margin-right: 4px;"></i> 8,500 SqFt</li>
-									</ul>
-									<a href="https://wa.me/97148762333?text=Inquiry%20regarding%20Fairway%20Contemporary%20Mansion%20(AED%2022%2C500%2C000)" target="_blank" class="vwd-wa-btn" title="Inquire on WhatsApp" style="background: #25D366; color: #fff; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; text-decoration: none; box-shadow: 0 2px 6px rgba(37,211,102,0.3); transition: transform 0.2s;">
-										<i class="fab fa-whatsapp"></i>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Property Card 104 -->
-					<div class="g5core__gutter-item g5ere__property-item col-xl-4 col-lg-4 col-md-6 col-12 vwd-property-card"
-						data-id="104"
-						data-type="apartment"
-						data-location="emaar-beachfront"
-						data-beds="3"
-						data-price="7200000">
-						<div class="g5ere__property-item-inner g5ere__loop-item-inner g5ere__li-bordered g5ere__li-hover-box-shadow bg-white" style="border-radius: 8px; overflow: hidden; transition: transform 0.25s ease, box-shadow 0.25s ease; border: 1px solid #ebebeb; margin-bottom: 30px; display: flex; flex-direction: column; height: calc(100% - 30px);">
-							
-							<!-- Top Title & Address -->
-							<div class="g5ere__property-content-top" style="padding: 18px 20px 10px;">
-								<h3 class="g5ere__loop-property-title" style="font-size: 17px; font-weight: 600; margin-bottom: 4px; line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-									<a href="property-detail.html?id=104" title="Seafront Luxury Apartment" style="color: #00265E; text-decoration: none;">Seafront Luxury Apartment</a>
-								</h3>
-								<div class="g5ere__loop-property-address" style="font-size: 13px; color: #777; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-									<i class="fal fa-map-marker-alt" style="color: #CFB165; margin-right: 4px;"></i> Beach Isle, Emaar Beachfront
-								</div>
-							</div>
-
-							<!-- Featured Image & Badges -->
-							<div class="g5core__post-featured g5ere__property-featured" style="position: relative; overflow: hidden;">
-								<a href="property-detail.html?id=104" title="Seafront Luxury Apartment" class="g5core__entry-thumbnail" style="background-image: url('images/single-property-42.jpg'); background-size: cover; background-position: center; display: block; padding-top: 60%;">
-								</a>
-								<div class="g5ere__loop-property-badge" style="position: absolute; top: 12px; left: 12px; display: flex; gap: 6px;">
-									<span class="g5ere__property-badge" style="background-color: #CFB165; color: #00265E; font-weight: 700; font-size: 10px; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px;">Featured</span>
-									<span class="g5ere__property-badge" style="background-color: #00265E; color: #ffffff; font-weight: 700; font-size: 10px; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px;">For Sale</span>
-								</div>
-								<div class="g5ere__loop-property-actions" style="position: absolute; top: 12px; right: 12px;">
-									<span style="background: rgba(0,0,0,0.65); color: #fff; font-size: 11px; padding: 3px 8px; border-radius: 4px; font-weight: 500;"><i class="fal fa-camera"></i> 12</span>
-								</div>
-							</div>
-
-							<!-- Content, Excerpt, Specs & WhatsApp -->
-							<div class="g5ere__property-content g5ere__loop-content" style="padding: 16px 20px 20px; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
-								<div>
-									<div class="g5ere__lpc-top d-flex flex-wrap align-items-center justify-content-between" style="margin-bottom: 10px; border-bottom: 1px solid #f0f0f0; padding-bottom: 10px;">
-										<span class="g5ere__loop-property-price" style="font-size: 19px; font-weight: 700; color: #00265E;">
-											AED 7,200,000
-										</span>
-										<span style="background: #F7F5F0; color: #00265E; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 4px; text-transform: uppercase;">Apartment</span>
-									</div>
-									<p style="font-size: 13px; color: #666; line-height: 1.55; margin-bottom: 15px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-										Miami-style waterfront living with panoramic views of Palm Jumeirah and the Arabian Gulf. Private beach access and resort-style amenities.
-									</p>
-								</div>
-
-								<div class="g5ere__lpc-bottom d-flex align-items-center justify-content-between" style="border-top: 1px solid #f0f0f0; padding-top: 12px;">
-									<ul class="g5ere__loop-property-meta d-flex align-items-center" style="list-style: none; padding: 0; margin: 0; gap: 14px; font-size: 13px; color: #555;">
-										<li><i class="fal fa-bed" style="color: #CFB165; margin-right: 4px;"></i> 3 Br</li>
-										<li><i class="fal fa-bath" style="color: #CFB165; margin-right: 4px;"></i> 3 Ba</li>
-										<li><i class="fal fa-vector-square" style="color: #CFB165; margin-right: 4px;"></i> 2,100 SqFt</li>
-									</ul>
-									<a href="https://wa.me/97148762333?text=Inquiry%20regarding%20Seafront%20Luxury%20Apartment%20(AED%207%2C200%2C000)" target="_blank" class="vwd-wa-btn" title="Inquire on WhatsApp" style="background: #25D366; color: #fff; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; text-decoration: none; box-shadow: 0 2px 6px rgba(37,211,102,0.3); transition: transform 0.2s;">
-										<i class="fab fa-whatsapp"></i>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Property Card 105 -->
-					<div class="g5core__gutter-item g5ere__property-item col-xl-4 col-lg-4 col-md-6 col-12 vwd-property-card"
-						data-id="105"
-						data-type="apartment"
-						data-location="dubai-creek-harbour"
-						data-beds="2"
-						data-price="4850000">
-						<div class="g5ere__property-item-inner g5ere__loop-item-inner g5ere__li-bordered g5ere__li-hover-box-shadow bg-white" style="border-radius: 8px; overflow: hidden; transition: transform 0.25s ease, box-shadow 0.25s ease; border: 1px solid #ebebeb; margin-bottom: 30px; display: flex; flex-direction: column; height: calc(100% - 30px);">
-							
-							<!-- Top Title & Address -->
-							<div class="g5ere__property-content-top" style="padding: 18px 20px 10px;">
-								<h3 class="g5ere__loop-property-title" style="font-size: 17px; font-weight: 600; margin-bottom: 4px; line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-									<a href="property-detail.html?id=105" title="Waterfront Sunset Residence" style="color: #00265E; text-decoration: none;">Waterfront Sunset Residence</a>
-								</h3>
-								<div class="g5ere__loop-property-address" style="font-size: 13px; color: #777; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-									<i class="fal fa-map-marker-alt" style="color: #CFB165; margin-right: 4px;"></i> Creek Horizon, Dubai Creek Harbour
-								</div>
-							</div>
-
-							<!-- Featured Image & Badges -->
-							<div class="g5core__post-featured g5ere__property-featured" style="position: relative; overflow: hidden;">
-								<a href="property-detail.html?id=105" title="Waterfront Sunset Residence" class="g5core__entry-thumbnail" style="background-image: url('images/single-property-43.jpg'); background-size: cover; background-position: center; display: block; padding-top: 60%;">
-								</a>
-								<div class="g5ere__loop-property-badge" style="position: absolute; top: 12px; left: 12px; display: flex; gap: 6px;">
-									<span class="g5ere__property-badge" style="background-color: #CFB165; color: #00265E; font-weight: 700; font-size: 10px; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px;">Featured</span>
-									<span class="g5ere__property-badge" style="background-color: #00265E; color: #ffffff; font-weight: 700; font-size: 10px; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px;">For Sale</span>
-								</div>
-								<div class="g5ere__loop-property-actions" style="position: absolute; top: 12px; right: 12px;">
-									<span style="background: rgba(0,0,0,0.65); color: #fff; font-size: 11px; padding: 3px 8px; border-radius: 4px; font-weight: 500;"><i class="fal fa-camera"></i> 12</span>
-								</div>
-							</div>
-
-							<!-- Content, Excerpt, Specs & WhatsApp -->
-							<div class="g5ere__property-content g5ere__loop-content" style="padding: 16px 20px 20px; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
-								<div>
-									<div class="g5ere__lpc-top d-flex flex-wrap align-items-center justify-content-between" style="margin-bottom: 10px; border-bottom: 1px solid #f0f0f0; padding-bottom: 10px;">
-										<span class="g5ere__loop-property-price" style="font-size: 19px; font-weight: 700; color: #00265E;">
-											AED 4,850,000
-										</span>
-										<span style="background: #F7F5F0; color: #00265E; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 4px; text-transform: uppercase;">Apartment</span>
-									</div>
-									<p style="font-size: 13px; color: #666; line-height: 1.55; margin-bottom: 15px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-										Prime corner apartment overlooking Ras Al Khor wildlife sanctuary and Downtown Dubai skyline. Direct promenade access and world-class marina.
-									</p>
-								</div>
-
-								<div class="g5ere__lpc-bottom d-flex align-items-center justify-content-between" style="border-top: 1px solid #f0f0f0; padding-top: 12px;">
-									<ul class="g5ere__loop-property-meta d-flex align-items-center" style="list-style: none; padding: 0; margin: 0; gap: 14px; font-size: 13px; color: #555;">
-										<li><i class="fal fa-bed" style="color: #CFB165; margin-right: 4px;"></i> 2 Br</li>
-										<li><i class="fal fa-bath" style="color: #CFB165; margin-right: 4px;"></i> 3 Ba</li>
-										<li><i class="fal fa-vector-square" style="color: #CFB165; margin-right: 4px;"></i> 1,650 SqFt</li>
-									</ul>
-									<a href="https://wa.me/97148762333?text=Inquiry%20regarding%20Waterfront%20Sunset%20Residence%20(AED%204%2C850%2C000)" target="_blank" class="vwd-wa-btn" title="Inquire on WhatsApp" style="background: #25D366; color: #fff; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; text-decoration: none; box-shadow: 0 2px 6px rgba(37,211,102,0.3); transition: transform 0.2s;">
-										<i class="fab fa-whatsapp"></i>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Property Card 106 -->
-					<div class="g5core__gutter-item g5ere__property-item col-xl-4 col-lg-4 col-md-6 col-12 vwd-property-card"
-						data-id="106"
-						data-type="villa"
-						data-location="jumeirah-golf-estates"
-						data-beds="5"
-						data-price="18900000">
-						<div class="g5ere__property-item-inner g5ere__loop-item-inner g5ere__li-bordered g5ere__li-hover-box-shadow bg-white" style="border-radius: 8px; overflow: hidden; transition: transform 0.25s ease, box-shadow 0.25s ease; border: 1px solid #ebebeb; margin-bottom: 30px; display: flex; flex-direction: column; height: calc(100% - 30px);">
-							
-							<!-- Top Title & Address -->
-							<div class="g5ere__property-content-top" style="padding: 18px 20px 10px;">
-								<h3 class="g5ere__loop-property-title" style="font-size: 17px; font-weight: 600; margin-bottom: 4px; line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-									<a href="property-detail.html?id=106" title="Championship Golf Villa" style="color: #00265E; text-decoration: none;">Championship Golf Villa</a>
-								</h3>
-								<div class="g5ere__loop-property-address" style="font-size: 13px; color: #777; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-									<i class="fal fa-map-marker-alt" style="color: #CFB165; margin-right: 4px;"></i> Wildflower, Jumeirah Golf Estates
-								</div>
-							</div>
-
-							<!-- Featured Image & Badges -->
-							<div class="g5core__post-featured g5ere__property-featured" style="position: relative; overflow: hidden;">
-								<a href="property-detail.html?id=106" title="Championship Golf Villa" class="g5core__entry-thumbnail" style="background-image: url('images/single-property-40.jpg'); background-size: cover; background-position: center; display: block; padding-top: 60%;">
-								</a>
-								<div class="g5ere__loop-property-badge" style="position: absolute; top: 12px; left: 12px; display: flex; gap: 6px;">
-									<span class="g5ere__property-badge" style="background-color: #CFB165; color: #00265E; font-weight: 700; font-size: 10px; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px;">Featured</span>
-									<span class="g5ere__property-badge" style="background-color: #00265E; color: #ffffff; font-weight: 700; font-size: 10px; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px;">For Sale</span>
-								</div>
-								<div class="g5ere__loop-property-actions" style="position: absolute; top: 12px; right: 12px;">
-									<span style="background: rgba(0,0,0,0.65); color: #fff; font-size: 11px; padding: 3px 8px; border-radius: 4px; font-weight: 500;"><i class="fal fa-camera"></i> 12</span>
-								</div>
-							</div>
-
-							<!-- Content, Excerpt, Specs & WhatsApp -->
-							<div class="g5ere__property-content g5ere__loop-content" style="padding: 16px 20px 20px; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
-								<div>
-									<div class="g5ere__lpc-top d-flex flex-wrap align-items-center justify-content-between" style="margin-bottom: 10px; border-bottom: 1px solid #f0f0f0; padding-bottom: 10px;">
-										<span class="g5ere__loop-property-price" style="font-size: 19px; font-weight: 700; color: #00265E;">
-											AED 18,900,000
-										</span>
-										<span style="background: #F7F5F0; color: #00265E; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 4px; text-transform: uppercase;">Villa</span>
-									</div>
-									<p style="font-size: 13px; color: #666; line-height: 1.55; margin-bottom: 15px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-										Prestigious custom-built Mediterranean villa fronting the Earth Course. Expansive landscaped gardens, temperature-controlled pool, and maid's quarters.
-									</p>
-								</div>
-
-								<div class="g5ere__lpc-bottom d-flex align-items-center justify-content-between" style="border-top: 1px solid #f0f0f0; padding-top: 12px;">
-									<ul class="g5ere__loop-property-meta d-flex align-items-center" style="list-style: none; padding: 0; margin: 0; gap: 14px; font-size: 13px; color: #555;">
-										<li><i class="fal fa-bed" style="color: #CFB165; margin-right: 4px;"></i> 5 Br</li>
-										<li><i class="fal fa-bath" style="color: #CFB165; margin-right: 4px;"></i> 6 Ba</li>
-										<li><i class="fal fa-vector-square" style="color: #CFB165; margin-right: 4px;"></i> 6,800 SqFt</li>
-									</ul>
-									<a href="https://wa.me/97148762333?text=Inquiry%20regarding%20Championship%20Golf%20Villa%20(AED%2018%2C900%2C000)" target="_blank" class="vwd-wa-btn" title="Inquire on WhatsApp" style="background: #25D366; color: #fff; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; text-decoration: none; box-shadow: 0 2px 6px rgba(37,211,102,0.3); transition: transform 0.2s;">
-										<i class="fab fa-whatsapp"></i>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Property Card 107 -->
-					<div class="g5core__gutter-item g5ere__property-item col-xl-4 col-lg-4 col-md-6 col-12 vwd-property-card"
-						data-id="107"
-						data-type="apartment"
-						data-location="business-bay"
-						data-beds="2"
-						data-price="3600000">
-						<div class="g5ere__property-item-inner g5ere__loop-item-inner g5ere__li-bordered g5ere__li-hover-box-shadow bg-white" style="border-radius: 8px; overflow: hidden; transition: transform 0.25s ease, box-shadow 0.25s ease; border: 1px solid #ebebeb; margin-bottom: 30px; display: flex; flex-direction: column; height: calc(100% - 30px);">
-							
-							<!-- Top Title & Address -->
-							<div class="g5ere__property-content-top" style="padding: 18px 20px 10px;">
-								<h3 class="g5ere__loop-property-title" style="font-size: 17px; font-weight: 600; margin-bottom: 4px; line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-									<a href="property-detail.html?id=107" title="Canal View Luxury Residence" style="color: #00265E; text-decoration: none;">Canal View Luxury Residence</a>
-								</h3>
-								<div class="g5ere__loop-property-address" style="font-size: 13px; color: #777; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-									<i class="fal fa-map-marker-alt" style="color: #CFB165; margin-right: 4px;"></i> Marasi Drive, Business Bay, Dubai
-								</div>
-							</div>
-
-							<!-- Featured Image & Badges -->
-							<div class="g5core__post-featured g5ere__property-featured" style="position: relative; overflow: hidden;">
-								<a href="property-detail.html?id=107" title="Canal View Luxury Residence" class="g5core__entry-thumbnail" style="background-image: url('images/single-property-37.jpg'); background-size: cover; background-position: center; display: block; padding-top: 60%;">
-								</a>
-								<div class="g5ere__loop-property-badge" style="position: absolute; top: 12px; left: 12px; display: flex; gap: 6px;">
-									<span class="g5ere__property-badge" style="background-color: #CFB165; color: #00265E; font-weight: 700; font-size: 10px; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px;">Featured</span>
-									<span class="g5ere__property-badge" style="background-color: #00265E; color: #ffffff; font-weight: 700; font-size: 10px; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px;">For Sale</span>
-								</div>
-								<div class="g5ere__loop-property-actions" style="position: absolute; top: 12px; right: 12px;">
-									<span style="background: rgba(0,0,0,0.65); color: #fff; font-size: 11px; padding: 3px 8px; border-radius: 4px; font-weight: 500;"><i class="fal fa-camera"></i> 12</span>
-								</div>
-							</div>
-
-							<!-- Content, Excerpt, Specs & WhatsApp -->
-							<div class="g5ere__property-content g5ere__loop-content" style="padding: 16px 20px 20px; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
-								<div>
-									<div class="g5ere__lpc-top d-flex flex-wrap align-items-center justify-content-between" style="margin-bottom: 10px; border-bottom: 1px solid #f0f0f0; padding-bottom: 10px;">
-										<span class="g5ere__loop-property-price" style="font-size: 19px; font-weight: 700; color: #00265E;">
-											AED 3,600,000
-										</span>
-										<span style="background: #F7F5F0; color: #00265E; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 4px; text-transform: uppercase;">Apartment</span>
-									</div>
-									<p style="font-size: 13px; color: #666; line-height: 1.55; margin-bottom: 15px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-										Sleek designer residence fronting Dubai Water Canal with floor-to-ceiling glass, Italian kitchen fittings, and walking distance to Downtown Dubai.
-									</p>
-								</div>
-
-								<div class="g5ere__lpc-bottom d-flex align-items-center justify-content-between" style="border-top: 1px solid #f0f0f0; padding-top: 12px;">
-									<ul class="g5ere__loop-property-meta d-flex align-items-center" style="list-style: none; padding: 0; margin: 0; gap: 14px; font-size: 13px; color: #555;">
-										<li><i class="fal fa-bed" style="color: #CFB165; margin-right: 4px;"></i> 2 Br</li>
-										<li><i class="fal fa-bath" style="color: #CFB165; margin-right: 4px;"></i> 2 Ba</li>
-										<li><i class="fal fa-vector-square" style="color: #CFB165; margin-right: 4px;"></i> 1,450 SqFt</li>
-									</ul>
-									<a href="https://wa.me/97148762333?text=Inquiry%20regarding%20Canal%20View%20Luxury%20Residence%20(AED%203%2C600%2C000)" target="_blank" class="vwd-wa-btn" title="Inquire on WhatsApp" style="background: #25D366; color: #fff; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; text-decoration: none; box-shadow: 0 2px 6px rgba(37,211,102,0.3); transition: transform 0.2s;">
-										<i class="fab fa-whatsapp"></i>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Property Card 108 -->
-					<div class="g5core__gutter-item g5ere__property-item col-xl-4 col-lg-4 col-md-6 col-12 vwd-property-card"
-						data-id="108"
-						data-type="villa"
-						data-location="tilal-al-ghaf"
-						data-beds="6"
-						data-price="26000000">
-						<div class="g5ere__property-item-inner g5ere__loop-item-inner g5ere__li-bordered g5ere__li-hover-box-shadow bg-white" style="border-radius: 8px; overflow: hidden; transition: transform 0.25s ease, box-shadow 0.25s ease; border: 1px solid #ebebeb; margin-bottom: 30px; display: flex; flex-direction: column; height: calc(100% - 30px);">
-							
-							<!-- Top Title & Address -->
-							<div class="g5ere__property-content-top" style="padding: 18px 20px 10px;">
-								<h3 class="g5ere__loop-property-title" style="font-size: 17px; font-weight: 600; margin-bottom: 4px; line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-									<a href="property-detail.html?id=108" title="Ultra-Luxury Lagoon Mansion" style="color: #00265E; text-decoration: none;">Ultra-Luxury Lagoon Mansion</a>
-								</h3>
-								<div class="g5ere__loop-property-address" style="font-size: 13px; color: #777; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-									<i class="fal fa-map-marker-alt" style="color: #CFB165; margin-right: 4px;"></i> Elysian Mansions, Tilal Al Ghaf
-								</div>
-							</div>
-
-							<!-- Featured Image & Badges -->
-							<div class="g5core__post-featured g5ere__property-featured" style="position: relative; overflow: hidden;">
-								<a href="property-detail.html?id=108" title="Ultra-Luxury Lagoon Mansion" class="g5core__entry-thumbnail" style="background-image: url('images/single-property-26.jpg'); background-size: cover; background-position: center; display: block; padding-top: 60%;">
-								</a>
-								<div class="g5ere__loop-property-badge" style="position: absolute; top: 12px; left: 12px; display: flex; gap: 6px;">
-									<span class="g5ere__property-badge" style="background-color: #CFB165; color: #00265E; font-weight: 700; font-size: 10px; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px;">Featured</span>
-									<span class="g5ere__property-badge" style="background-color: #00265E; color: #ffffff; font-weight: 700; font-size: 10px; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px;">For Sale</span>
-								</div>
-								<div class="g5ere__loop-property-actions" style="position: absolute; top: 12px; right: 12px;">
-									<span style="background: rgba(0,0,0,0.65); color: #fff; font-size: 11px; padding: 3px 8px; border-radius: 4px; font-weight: 500;"><i class="fal fa-camera"></i> 12</span>
-								</div>
-							</div>
-
-							<!-- Content, Excerpt, Specs & WhatsApp -->
-							<div class="g5ere__property-content g5ere__loop-content" style="padding: 16px 20px 20px; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
-								<div>
-									<div class="g5ere__lpc-top d-flex flex-wrap align-items-center justify-content-between" style="margin-bottom: 10px; border-bottom: 1px solid #f0f0f0; padding-bottom: 10px;">
-										<span class="g5ere__loop-property-price" style="font-size: 19px; font-weight: 700; color: #00265E;">
-											AED 26,000,000
-										</span>
-										<span style="background: #F7F5F0; color: #00265E; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 4px; text-transform: uppercase;">Villa</span>
-									</div>
-									<p style="font-size: 13px; color: #666; line-height: 1.55; margin-bottom: 15px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-										Signature lagoon-front estate featuring private elevator, subterranean car gallery, private spa, and exclusive access to the Crystal Lagoon beach.
-									</p>
-								</div>
-
-								<div class="g5ere__lpc-bottom d-flex align-items-center justify-content-between" style="border-top: 1px solid #f0f0f0; padding-top: 12px;">
-									<ul class="g5ere__loop-property-meta d-flex align-items-center" style="list-style: none; padding: 0; margin: 0; gap: 14px; font-size: 13px; color: #555;">
-										<li><i class="fal fa-bed" style="color: #CFB165; margin-right: 4px;"></i> 6 Br</li>
-										<li><i class="fal fa-bath" style="color: #CFB165; margin-right: 4px;"></i> 7 Ba</li>
-										<li><i class="fal fa-vector-square" style="color: #CFB165; margin-right: 4px;"></i> 9,200 SqFt</li>
-									</ul>
-									<a href="https://wa.me/97148762333?text=Inquiry%20regarding%20Ultra-Luxury%20Lagoon%20Mansion%20(AED%2026%2C000%2C000)" target="_blank" class="vwd-wa-btn" title="Inquire on WhatsApp" style="background: #25D366; color: #fff; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; text-decoration: none; box-shadow: 0 2px 6px rgba(37,211,102,0.3); transition: transform 0.2s;">
-										<i class="fab fa-whatsapp"></i>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Property Card 109 -->
-					<div class="g5core__gutter-item g5ere__property-item col-xl-4 col-lg-4 col-md-6 col-12 vwd-property-card"
-						data-id="109"
-						data-type="apartment"
-						data-location="dubai-marina"
-						data-beds="2"
-						data-price="5400000">
-						<div class="g5ere__property-item-inner g5ere__loop-item-inner g5ere__li-bordered g5ere__li-hover-box-shadow bg-white" style="border-radius: 8px; overflow: hidden; transition: transform 0.25s ease, box-shadow 0.25s ease; border: 1px solid #ebebeb; margin-bottom: 30px; display: flex; flex-direction: column; height: calc(100% - 30px);">
-							
-							<!-- Top Title & Address -->
-							<div class="g5ere__property-content-top" style="padding: 18px 20px 10px;">
-								<h3 class="g5ere__loop-property-title" style="font-size: 17px; font-weight: 600; margin-bottom: 4px; line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-									<a href="property-detail.html?id=109" title="Marina View High-Floor Suite" style="color: #00265E; text-decoration: none;">Marina View High-Floor Suite</a>
-								</h3>
-								<div class="g5ere__loop-property-address" style="font-size: 13px; color: #777; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-									<i class="fal fa-map-marker-alt" style="color: #CFB165; margin-right: 4px;"></i> Marina Gate, Dubai Marina
-								</div>
-							</div>
-
-							<!-- Featured Image & Badges -->
-							<div class="g5core__post-featured g5ere__property-featured" style="position: relative; overflow: hidden;">
-								<a href="property-detail.html?id=109" title="Marina View High-Floor Suite" class="g5core__entry-thumbnail" style="background-image: url('images/single-property-39.jpg'); background-size: cover; background-position: center; display: block; padding-top: 60%;">
-								</a>
-								<div class="g5ere__loop-property-badge" style="position: absolute; top: 12px; left: 12px; display: flex; gap: 6px;">
-									<span class="g5ere__property-badge" style="background-color: #CFB165; color: #00265E; font-weight: 700; font-size: 10px; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px;">Featured</span>
-									<span class="g5ere__property-badge" style="background-color: #00265E; color: #ffffff; font-weight: 700; font-size: 10px; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px;">For Sale</span>
-								</div>
-								<div class="g5ere__loop-property-actions" style="position: absolute; top: 12px; right: 12px;">
-									<span style="background: rgba(0,0,0,0.65); color: #fff; font-size: 11px; padding: 3px 8px; border-radius: 4px; font-weight: 500;"><i class="fal fa-camera"></i> 12</span>
-								</div>
-							</div>
-
-							<!-- Content, Excerpt, Specs & WhatsApp -->
-							<div class="g5ere__property-content g5ere__loop-content" style="padding: 16px 20px 20px; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
-								<div>
-									<div class="g5ere__lpc-top d-flex flex-wrap align-items-center justify-content-between" style="margin-bottom: 10px; border-bottom: 1px solid #f0f0f0; padding-bottom: 10px;">
-										<span class="g5ere__loop-property-price" style="font-size: 19px; font-weight: 700; color: #00265E;">
-											AED 5,400,000
-										</span>
-										<span style="background: #F7F5F0; color: #00265E; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 4px; text-transform: uppercase;">Apartment</span>
-									</div>
-									<p style="font-size: 13px; color: #666; line-height: 1.55; margin-bottom: 15px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-										High-floor luxury corner apartment with dual balconies overlooking the full marina and yachts. Includes infinity pool and private gym access.
-									</p>
-								</div>
-
-								<div class="g5ere__lpc-bottom d-flex align-items-center justify-content-between" style="border-top: 1px solid #f0f0f0; padding-top: 12px;">
-									<ul class="g5ere__loop-property-meta d-flex align-items-center" style="list-style: none; padding: 0; margin: 0; gap: 14px; font-size: 13px; color: #555;">
-										<li><i class="fal fa-bed" style="color: #CFB165; margin-right: 4px;"></i> 2 Br</li>
-										<li><i class="fal fa-bath" style="color: #CFB165; margin-right: 4px;"></i> 3 Ba</li>
-										<li><i class="fal fa-vector-square" style="color: #CFB165; margin-right: 4px;"></i> 1,800 SqFt</li>
-									</ul>
-									<a href="https://wa.me/97148762333?text=Inquiry%20regarding%20Marina%20View%20High-Floor%20Suite%20(AED%205%2C400%2C000)" target="_blank" class="vwd-wa-btn" title="Inquire on WhatsApp" style="background: #25D366; color: #fff; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; text-decoration: none; box-shadow: 0 2px 6px rgba(37,211,102,0.3); transition: transform 0.2s;">
-										<i class="fab fa-whatsapp"></i>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Property Card 110 -->
-					<div class="g5core__gutter-item g5ere__property-item col-xl-4 col-lg-4 col-md-6 col-12 vwd-property-card"
-						data-id="110"
-						data-type="villa"
-						data-location="arabian-ranches"
-						data-beds="5"
-						data-price="12500000">
-						<div class="g5ere__property-item-inner g5ere__loop-item-inner g5ere__li-bordered g5ere__li-hover-box-shadow bg-white" style="border-radius: 8px; overflow: hidden; transition: transform 0.25s ease, box-shadow 0.25s ease; border: 1px solid #ebebeb; margin-bottom: 30px; display: flex; flex-direction: column; height: calc(100% - 30px);">
-							
-							<!-- Top Title & Address -->
-							<div class="g5ere__property-content-top" style="padding: 18px 20px 10px;">
-								<h3 class="g5ere__loop-property-title" style="font-size: 17px; font-weight: 600; margin-bottom: 4px; line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-									<a href="property-detail.html?id=110" title="Exclusive Spanish Family Villa" style="color: #00265E; text-decoration: none;">Exclusive Spanish Family Villa</a>
-								</h3>
-								<div class="g5ere__loop-property-address" style="font-size: 13px; color: #777; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-									<i class="fal fa-map-marker-alt" style="color: #CFB165; margin-right: 4px;"></i> Polo Homes, Arabian Ranches
-								</div>
-							</div>
-
-							<!-- Featured Image & Badges -->
-							<div class="g5core__post-featured g5ere__property-featured" style="position: relative; overflow: hidden;">
-								<a href="property-detail.html?id=110" title="Exclusive Spanish Family Villa" class="g5core__entry-thumbnail" style="background-image: url('images/single-property-34.jpg'); background-size: cover; background-position: center; display: block; padding-top: 60%;">
-								</a>
-								<div class="g5ere__loop-property-badge" style="position: absolute; top: 12px; left: 12px; display: flex; gap: 6px;">
-									<span class="g5ere__property-badge" style="background-color: #CFB165; color: #00265E; font-weight: 700; font-size: 10px; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px;">Featured</span>
-									<span class="g5ere__property-badge" style="background-color: #00265E; color: #ffffff; font-weight: 700; font-size: 10px; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px;">For Sale</span>
-								</div>
-								<div class="g5ere__loop-property-actions" style="position: absolute; top: 12px; right: 12px;">
-									<span style="background: rgba(0,0,0,0.65); color: #fff; font-size: 11px; padding: 3px 8px; border-radius: 4px; font-weight: 500;"><i class="fal fa-camera"></i> 12</span>
-								</div>
-							</div>
-
-							<!-- Content, Excerpt, Specs & WhatsApp -->
-							<div class="g5ere__property-content g5ere__loop-content" style="padding: 16px 20px 20px; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
-								<div>
-									<div class="g5ere__lpc-top d-flex flex-wrap align-items-center justify-content-between" style="margin-bottom: 10px; border-bottom: 1px solid #f0f0f0; padding-bottom: 10px;">
-										<span class="g5ere__loop-property-price" style="font-size: 19px; font-weight: 700; color: #00265E;">
-											AED 12,500,000
-										</span>
-										<span style="background: #F7F5F0; color: #00265E; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 4px; text-transform: uppercase;">Villa</span>
-									</div>
-									<p style="font-size: 13px; color: #666; line-height: 1.55; margin-bottom: 15px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-										Classic Spanish colonial villa situated within an exclusive equestrian enclave. Manicured private grounds, gazebo, pool, and staff quarters.
-									</p>
-								</div>
-
-								<div class="g5ere__lpc-bottom d-flex align-items-center justify-content-between" style="border-top: 1px solid #f0f0f0; padding-top: 12px;">
-									<ul class="g5ere__loop-property-meta d-flex align-items-center" style="list-style: none; padding: 0; margin: 0; gap: 14px; font-size: 13px; color: #555;">
-										<li><i class="fal fa-bed" style="color: #CFB165; margin-right: 4px;"></i> 5 Br</li>
-										<li><i class="fal fa-bath" style="color: #CFB165; margin-right: 4px;"></i> 6 Ba</li>
-										<li><i class="fal fa-vector-square" style="color: #CFB165; margin-right: 4px;"></i> 6,400 SqFt</li>
-									</ul>
-									<a href="https://wa.me/97148762333?text=Inquiry%20regarding%20Exclusive%20Spanish%20Family%20Villa%20(AED%2012%2C500%2C000)" target="_blank" class="vwd-wa-btn" title="Inquire on WhatsApp" style="background: #25D366; color: #fff; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; text-decoration: none; box-shadow: 0 2px 6px rgba(37,211,102,0.3); transition: transform 0.2s;">
-										<i class="fab fa-whatsapp"></i>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Property Card 111 -->
-					<div class="g5core__gutter-item g5ere__property-item col-xl-4 col-lg-4 col-md-6 col-12 vwd-property-card"
-						data-id="111"
-						data-type="penthouse"
-						data-location="palm-jumeirah"
-						data-beds="4"
-						data-price="45000000">
-						<div class="g5ere__property-item-inner g5ere__loop-item-inner g5ere__li-bordered g5ere__li-hover-box-shadow bg-white" style="border-radius: 8px; overflow: hidden; transition: transform 0.25s ease, box-shadow 0.25s ease; border: 1px solid #ebebeb; margin-bottom: 30px; display: flex; flex-direction: column; height: calc(100% - 30px);">
-							
-							<!-- Top Title & Address -->
-							<div class="g5ere__property-content-top" style="padding: 18px 20px 10px;">
-								<h3 class="g5ere__loop-property-title" style="font-size: 17px; font-weight: 600; margin-bottom: 4px; line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-									<a href="property-detail.html?id=111" title="Dorchester Collection Sky Mansion" style="color: #00265E; text-decoration: none;">Dorchester Collection Sky Mansion</a>
-								</h3>
-								<div class="g5ere__loop-property-address" style="font-size: 13px; color: #777; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-									<i class="fal fa-map-marker-alt" style="color: #CFB165; margin-right: 4px;"></i> One Palm, Palm Jumeirah, Dubai
-								</div>
-							</div>
-
-							<!-- Featured Image & Badges -->
-							<div class="g5core__post-featured g5ere__property-featured" style="position: relative; overflow: hidden;">
-								<a href="property-detail.html?id=111" title="Dorchester Collection Sky Mansion" class="g5core__entry-thumbnail" style="background-image: url('images/single-property-02.jpg'); background-size: cover; background-position: center; display: block; padding-top: 60%;">
-								</a>
-								<div class="g5ere__loop-property-badge" style="position: absolute; top: 12px; left: 12px; display: flex; gap: 6px;">
-									<span class="g5ere__property-badge" style="background-color: #CFB165; color: #00265E; font-weight: 700; font-size: 10px; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px;">Featured</span>
-									<span class="g5ere__property-badge" style="background-color: #00265E; color: #ffffff; font-weight: 700; font-size: 10px; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px;">For Sale</span>
-								</div>
-								<div class="g5ere__loop-property-actions" style="position: absolute; top: 12px; right: 12px;">
-									<span style="background: rgba(0,0,0,0.65); color: #fff; font-size: 11px; padding: 3px 8px; border-radius: 4px; font-weight: 500;"><i class="fal fa-camera"></i> 12</span>
-								</div>
-							</div>
-
-							<!-- Content, Excerpt, Specs & WhatsApp -->
-							<div class="g5ere__property-content g5ere__loop-content" style="padding: 16px 20px 20px; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
-								<div>
-									<div class="g5ere__lpc-top d-flex flex-wrap align-items-center justify-content-between" style="margin-bottom: 10px; border-bottom: 1px solid #f0f0f0; padding-bottom: 10px;">
-										<span class="g5ere__loop-property-price" style="font-size: 19px; font-weight: 700; color: #00265E;">
-											AED 45,000,000
-										</span>
-										<span style="background: #F7F5F0; color: #00265E; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 4px; text-transform: uppercase;">Penthouse</span>
-									</div>
-									<p style="font-size: 13px; color: #666; line-height: 1.55; margin-bottom: 15px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-										One of Dubai's most celebrated sky residences managed by Dorchester Collection. Private jetty, dual lap pools, and unmatched ocean views.
-									</p>
-								</div>
-
-								<div class="g5ere__lpc-bottom d-flex align-items-center justify-content-between" style="border-top: 1px solid #f0f0f0; padding-top: 12px;">
-									<ul class="g5ere__loop-property-meta d-flex align-items-center" style="list-style: none; padding: 0; margin: 0; gap: 14px; font-size: 13px; color: #555;">
-										<li><i class="fal fa-bed" style="color: #CFB165; margin-right: 4px;"></i> 4 Br</li>
-										<li><i class="fal fa-bath" style="color: #CFB165; margin-right: 4px;"></i> 5 Ba</li>
-										<li><i class="fal fa-vector-square" style="color: #CFB165; margin-right: 4px;"></i> 6,200 SqFt</li>
-									</ul>
-									<a href="https://wa.me/97148762333?text=Inquiry%20regarding%20Dorchester%20Collection%20Sky%20Mansion%20(AED%2045%2C000%2C000)" target="_blank" class="vwd-wa-btn" title="Inquire on WhatsApp" style="background: #25D366; color: #fff; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; text-decoration: none; box-shadow: 0 2px 6px rgba(37,211,102,0.3); transition: transform 0.2s;">
-										<i class="fab fa-whatsapp"></i>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Property Card 112 -->
-					<div class="g5core__gutter-item g5ere__property-item col-xl-4 col-lg-4 col-md-6 col-12 vwd-property-card"
-						data-id="112"
-						data-type="apartment"
-						data-location="downtown-dubai"
-						data-beds="3"
-						data-price="6800000">
-						<div class="g5ere__property-item-inner g5ere__loop-item-inner g5ere__li-bordered g5ere__li-hover-box-shadow bg-white" style="border-radius: 8px; overflow: hidden; transition: transform 0.25s ease, box-shadow 0.25s ease; border: 1px solid #ebebeb; margin-bottom: 30px; display: flex; flex-direction: column; height: calc(100% - 30px);">
-							
-							<!-- Top Title & Address -->
-							<div class="g5ere__property-content-top" style="padding: 18px 20px 10px;">
-								<h3 class="g5ere__loop-property-title" style="font-size: 17px; font-weight: 600; margin-bottom: 4px; line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-									<a href="property-detail.html?id=112" title="Downtown Boulevard Executive Suite" style="color: #00265E; text-decoration: none;">Downtown Boulevard Executive Suite</a>
-								</h3>
-								<div class="g5ere__loop-property-address" style="font-size: 13px; color: #777; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-									<i class="fal fa-map-marker-alt" style="color: #CFB165; margin-right: 4px;"></i> Address Boulevard, Downtown Dubai
-								</div>
-							</div>
-
-							<!-- Featured Image & Badges -->
-							<div class="g5core__post-featured g5ere__property-featured" style="position: relative; overflow: hidden;">
-								<a href="property-detail.html?id=112" title="Downtown Boulevard Executive Suite" class="g5core__entry-thumbnail" style="background-image: url('images/single-property-38.jpg'); background-size: cover; background-position: center; display: block; padding-top: 60%;">
-								</a>
-								<div class="g5ere__loop-property-badge" style="position: absolute; top: 12px; left: 12px; display: flex; gap: 6px;">
-									<span class="g5ere__property-badge" style="background-color: #CFB165; color: #00265E; font-weight: 700; font-size: 10px; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px;">Featured</span>
-									<span class="g5ere__property-badge" style="background-color: #00265E; color: #ffffff; font-weight: 700; font-size: 10px; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px;">For Sale</span>
-								</div>
-								<div class="g5ere__loop-property-actions" style="position: absolute; top: 12px; right: 12px;">
-									<span style="background: rgba(0,0,0,0.65); color: #fff; font-size: 11px; padding: 3px 8px; border-radius: 4px; font-weight: 500;"><i class="fal fa-camera"></i> 12</span>
-								</div>
-							</div>
-
-							<!-- Content, Excerpt, Specs & WhatsApp -->
-							<div class="g5ere__property-content g5ere__loop-content" style="padding: 16px 20px 20px; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
-								<div>
-									<div class="g5ere__lpc-top d-flex flex-wrap align-items-center justify-content-between" style="margin-bottom: 10px; border-bottom: 1px solid #f0f0f0; padding-bottom: 10px;">
-										<span class="g5ere__loop-property-price" style="font-size: 19px; font-weight: 700; color: #00265E;">
-											AED 6,800,000
-										</span>
-										<span style="background: #F7F5F0; color: #00265E; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 4px; text-transform: uppercase;">Apartment</span>
-									</div>
-									<p style="font-size: 13px; color: #666; line-height: 1.55; margin-bottom: 15px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-										Fully serviced 5-star residence with direct air-conditioned skybridge connection to Dubai Mall. Private hotel pool, spa, and 24/7 concierge.
-									</p>
-								</div>
-
-								<div class="g5ere__lpc-bottom d-flex align-items-center justify-content-between" style="border-top: 1px solid #f0f0f0; padding-top: 12px;">
-									<ul class="g5ere__loop-property-meta d-flex align-items-center" style="list-style: none; padding: 0; margin: 0; gap: 14px; font-size: 13px; color: #555;">
-										<li><i class="fal fa-bed" style="color: #CFB165; margin-right: 4px;"></i> 3 Br</li>
-										<li><i class="fal fa-bath" style="color: #CFB165; margin-right: 4px;"></i> 3 Ba</li>
-										<li><i class="fal fa-vector-square" style="color: #CFB165; margin-right: 4px;"></i> 1,950 SqFt</li>
-									</ul>
-									<a href="https://wa.me/97148762333?text=Inquiry%20regarding%20Downtown%20Boulevard%20Executive%20Suite%20(AED%206%2C800%2C000)" target="_blank" class="vwd-wa-btn" title="Inquire on WhatsApp" style="background: #25D366; color: #fff; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; text-decoration: none; box-shadow: 0 2px 6px rgba(37,211,102,0.3); transition: transform 0.2s;">
-										<i class="fab fa-whatsapp"></i>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-
-				<!-- Empty Results Fallback (hidden by default) -->
-				<div id="vwd-no-results" style="display: none; text-align: center; padding: 60px 20px; background: #fff; border-radius: 8px; border: 1px solid #eee; margin-top: 20px;">
-					<i class="fal fa-search" style="font-size: 42px; color: #CFB165; margin-bottom: 15px; display: block;"></i>
-					<h3 style="color: #00265E; font-size: 20px; font-weight: 600; margin-bottom: 8px;">No Properties Match Your Search</h3>
-					<p style="color: #777; font-size: 14px; max-width: 480px; margin: 0 auto 20px;">Try adjusting your bedroom filter, price range, or selecting "All Communities" to view more luxury listings.</p>
-					<button type="button" onclick="document.getElementById('vwd-reset-btn').click();" class="btn" style="background: #00265E; color: #CFB165; font-weight: 600; padding: 10px 24px; border-radius: 4px;">
-						Reset Search Filters
-					</button>
-				</div>
-
-				<!-- Pagination Bar -->
-				<div class="vwd-pagination-wrap text-center" style="margin-top: 40px;">
-					<nav>
-						<ul class="pagination justify-content-center" style="gap: 6px; margin: 0;">
-							<li class="page-item active"><a class="page-link" href="#" style="background-color: #00265E; border-color: #00265E; color: #CFB165; border-radius: 4px; font-weight: 600; min-width: 40px; text-align: center;">1</a></li>
-							<li class="page-item"><a class="page-link" href="#" style="background-color: #fff; border-color: #ddd; color: #00265E; border-radius: 4px; font-weight: 600; min-width: 40px; text-align: center;">2</a></li>
-							<li class="page-item"><a class="page-link" href="#" style="background-color: #fff; border-color: #ddd; color: #00265E; border-radius: 4px; font-weight: 600; min-width: 40px; text-align: center;">3</a></li>
-							<li class="page-item"><a class="page-link" href="#" style="background-color: #fff; border-color: #ddd; color: #00265E; border-radius: 4px; min-width: 40px; text-align: center;"><i class="fas fa-chevron-right"></i></a></li>
-						</ul>
-					</nav>
-				</div>
-
 			</div>
 		</div>
 
-		<!-- Interactive Client-side Filter, Sort & View Switcher Engine -->
+		<!-- Client-Side Filter & Sort Script -->
 		<script>
 		document.addEventListener('DOMContentLoaded', function() {
 			var filterType = document.getElementById('filter-type');
@@ -1165,34 +1278,27 @@
 			var noResults = document.getElementById('vwd-no-results');
 			var cards = Array.from(document.querySelectorAll('.vwd-property-card'));
 
-			// Parse URL Query parameters on page load (e.g., ?type=villa or ?location=palm-jumeirah)
+			// URL query parameter support
 			var params = new URLSearchParams(window.location.search);
 			if (params.has('type')) {
-				var tVal = params.get('type').toLowerCase();
+				var t = params.get('type').toLowerCase();
 				for (var i = 0; i < filterType.options.length; i++) {
-					if (filterType.options[i].value === tVal) {
-						filterType.selectedIndex = i;
-						break;
-					}
+					if (filterType.options[i].value === t) { filterType.selectedIndex = i; break; }
 				}
 			}
 			if (params.has('location')) {
-				var lVal = params.get('location').toLowerCase();
+				var loc = params.get('location').toLowerCase();
 				for (var j = 0; j < filterLocation.options.length; j++) {
-					if (filterLocation.options[j].value === lVal) {
-						filterLocation.selectedIndex = j;
-						break;
-					}
+					if (filterLocation.options[j].value === loc) { filterLocation.selectedIndex = j; break; }
 				}
 			}
 
-			// Filter Function
 			function applyFilters() {
 				var selType = filterType.value;
 				var selLoc = filterLocation.value;
 				var selBeds = filterBeds.value;
 				var selPrice = filterPrice.value;
-				var visibleCount = 0;
+				var count = 0;
 
 				cards.forEach(function(card) {
 					var cType = card.getAttribute('data-type');
@@ -1207,21 +1313,16 @@
 
 					if (matchType && matchLoc && matchBeds && matchPrice) {
 						card.style.display = '';
-						visibleCount++;
+						count++;
 					} else {
 						card.style.display = 'none';
 					}
 				});
 
-				countShowing.textContent = visibleCount;
-				if (visibleCount === 0) {
-					noResults.style.display = 'block';
-				} else {
-					noResults.style.display = 'none';
-				}
+				countShowing.textContent = count;
+				noResults.style.display = (count === 0) ? 'block' : 'none';
 			}
 
-			// Sorting Function
 			function applySorting() {
 				var val = sortOrder.value;
 				var sorted = cards.slice(0);
@@ -1245,7 +1346,6 @@
 				});
 			}
 
-			// Event listeners
 			filterType.addEventListener('change', applyFilters);
 			filterLocation.addEventListener('change', applyFilters);
 			filterBeds.addEventListener('change', applyFilters);
@@ -1263,40 +1363,23 @@
 
 			sortOrder.addEventListener('change', applySorting);
 
-			// Grid vs List view switcher
+			// Grid vs List View toggle
 			btnGrid.addEventListener('click', function() {
 				btnGrid.classList.add('active');
-				btnGrid.style.background = '#00265E';
-				btnGrid.style.color = '#CFB165';
-				btnGrid.style.borderColor = '#00265E';
-
 				btnList.classList.remove('active');
-				btnList.style.background = '#fff';
-				btnList.style.color = '#555';
-				btnList.style.borderColor = '#ddd';
-
 				cards.forEach(function(c) {
-					c.className = 'g5core__gutter-item g5ere__property-item col-xl-4 col-lg-4 col-md-6 col-12 vwd-property-card';
+					c.className = 'g5core__gutter-item g5ere__property-item g5ere__property-skin-02 g5ere__property-item-1 g5ere__property-item-featured g5ere__has-image-featured post-' + c.getAttribute('data-id') + ' property type-property status-publish has-post-thumbnail hentry property-type-' + c.getAttribute('data-type') + ' property-status-for-sale property-city-dubai col-xl-4 col-lg-4 col-md-6 col-12 vwd-property-card';
 				});
 			});
 
 			btnList.addEventListener('click', function() {
 				btnList.classList.add('active');
-				btnList.style.background = '#00265E';
-				btnList.style.color = '#CFB165';
-				btnList.style.borderColor = '#00265E';
-
 				btnGrid.classList.remove('active');
-				btnGrid.style.background = '#fff';
-				btnGrid.style.color = '#555';
-				btnGrid.style.borderColor = '#ddd';
-
 				cards.forEach(function(c) {
-					c.className = 'g5core__gutter-item g5ere__property-item col-12 vwd-property-card';
+					c.className = 'g5core__gutter-item g5ere__property-item g5ere__property-skin-02 g5ere__property-item-1 g5ere__property-item-featured g5ere__has-image-featured post-' + c.getAttribute('data-id') + ' property type-property status-publish has-post-thumbnail hentry property-type-' + c.getAttribute('data-type') + ' property-status-for-sale property-city-dubai col-12 vwd-property-card';
 				});
 			});
 
-			// Initial filter execution (in case query params exist)
 			applyFilters();
 		});
 		</script>
