@@ -244,6 +244,34 @@ The entire 250+ page inventory mapped from the competitor audit is structured in
     - **Total Upfront Cash Required (Down Payment + Government & Registration Fees).**
 - **Lead Capture:** Direct *"Get Pre-Approved with VWD Advisors"* WhatsApp & callback trigger.
 
+### 7.4 `PropertyDetailTemplate` (`property-detail.html`)
+- **Authentic HomeID Architecture:** Built directly on HomeID Single Property Layout 3 (`g5ere__single-property-layout-3` with `g5ere__sph-layout-3` and `g5ere__spg-wrap-metro-4`). 100% matched to homepage Poppins typography (300/400/500/600/700) with zero AI-style wrappers.
+- **Solid Interior Header & Footer:** Verbatim VWD 6-pillar header (solid white background, navy drawer toggle, gold active states, and `READ OUR OUTLOOK` CTA) plus standard RERA/DED compliance footer.
+- **5-Photo Metro Mosaic Gallery (`g5ere__spg-metro-4`):**
+  - Hero landscape photo (66% left) with fullscreen overlay trigger.
+  - 4 squared mosaic thumbnails (33% right) with a `+19 Photos` badge overlay.
+  - Integrated with Magnific Popup lightbox for high-resolution responsive viewing with zoom animations and multi-photo slide progression.
+  - Gallery tabs: Photos (24), Location Map (coordinates & neighborhood badge), and 360° Matterport Virtual Tour launcher.
+- **Main Information Stream (Left 67%):**
+  - **Overview Specs Grid:** Bedrooms (en-suite), Bathrooms, Built-up Area (Sq.Ft), Plot Size, Covered Parking, Completion Year, DLD Permit Number, and Freehold Status.
+  - **Editorial Description:** Institutional luxury property narrative highlighting architecture, joinery, and Gulf views.
+  - **Luxury Amenities Checklist:** 16 verified Dubai amenities (private beach, infinity pool, Lutron automation, Schindler elevator, dual show/prep kitchens, staff quarters, private cinema, sauna).
+  - **Interactive Floor Plans Accordion:** Multi-level collapsible architectural floor plans (Ground Floor, First Floor, Rooftop Sunset Deck).
+  - **4K Drone Video Showcase:** 4K video tour thumbnail with cinematic play modal trigger.
+  - **Location & Driving Times:** Key Dubai commutes (DXB Airport 25m, Downtown 20m, Marina 10m, Nakheel Mall 5m).
+  - **Downloadable Property Factsheet:** Direct PDF brochure download trigger.
+- **Sticky Broker Sidebar (`sidebar-sticky` Right 33%):**
+  - Senior Director profile card (Alexander Vance, RERA BRN: 48921, ORN: 30124).
+  - High-impact direct triggers: WhatsApp Broker Directly (`wa.me` pre-filled message), Schedule Private Viewing modal trigger, and direct call trigger.
+  - Quick instant inquiry lead form.
+  - **Embedded CBUAE Mortgage Calculator:** Live monthly repayment estimator based on purchase price, down payment (min 20%), tenure (15–25 years), and interest rate.
+  - **Upfront Government & Brokerage Fees Schedule:** DLD 4%, Trustee Fee, Admin, and 2% Brokerage + VAT.
+- **Dynamic URL Parameter Hydration Engine:**
+  - Client-side data dictionary matching all 12 properties for sale and 12 properties for rent.
+  - Passing `?id=102`, `?id=103`, `?id=201`, etc. dynamically updates page title, breadcrumb trail, pricing, specs, images, description, and WhatsApp links.
+  - Defaults to the flagship Palm Jumeirah Signature Beachfront Villa (AED 34,500,000) when visited directly.
+- **Mobile Fixed Bottom Bar:** Fixed-bottom quick action bar (`WhatsApp` + `Book Viewing`) on viewports `< 992px`.
+
 ---
 
 ## 8. Financial Algorithms (Dubai Real Estate Standards)
@@ -292,7 +320,8 @@ $$\text{Net Rental Yield (\%)} = \left(\frac{\text{Annual Rental Income} - \text
 | **Milestone 5.4** | Step 4 — Footer Localization & Compliance: Dubai HQ (Control Tower, Motor City), RERA ORN: 30124 & DED licenses, structured Properties & Advisory menus, Market Intelligence newsletter, 2026 legal copyright. | **COMPLETED** | Commit `d9ed402` |
 | **Milestone 5.5** | Master Stylesheet & Responsive Architecture: Consolidated 3,000+ lines into `css/style.css` with DOM placeholder hooks, single-row header actions, 95% stretched container rule across 992px+, and tablet/laptop hero scaling. | **COMPLETED** | Verified in `index.html` & `css/style.css` |
 | **Milestone 6.1** | Secondary Interior Templates (Sales & Rentals): Implemented authentic HomeID `properties-for-sale.html` and `properties-for-rent.html` matching reference typography (Poppins), official skin-02 cards, native page titles & breadcrumbs, boxed toolbar, scroll reveal animations (`.g5core__btt`), and zero AI inline wrappers. | **COMPLETED** | Verified & Tested in both files |
-| **Milestone 6.2** | Secondary Interior Templates (Off-Plan): `off-plan.html` with master developer logo filters (Emaar, Nakheel, DAMAC, Sobha, Meraas), handover timelines, payment plan badges (80/20, 60/40), and Golden Visa advisory banner. | **NEXT** | Ready for Kickoff |
+| **Milestone 6.2** | Property Detail Template (`property-detail.html`): Implemented authentic HomeID Single Property Layout 3 (`g5ere__single-property-layout-3`), 5-photo metro mosaic gallery with Magnific Popup lightbox, 3 tabs (Photos, Map, Virtual Tour), quick specs grid, luxury amenities, floor plan accordions, 4K video showcase, sticky broker sidebar, live CBUAE mortgage calculator, upfront fees schedule, and dynamic `?id=` client-side hydration engine. | **COMPLETED** | Verified in `property-detail.html` |
+| **Milestone 6.3** | Secondary Interior Templates (Off-Plan): `off-plan.html` with master developer logo filters (Emaar, Nakheel, DAMAC, Sobha, Meraas), handover timelines, payment plan badges (80/20, 60/40), and Golden Visa advisory banner. | **NEXT** | Ready for Kickoff |
 | **Milestone 7** | Interactive Financial Tools: Dedicated Dubai Mortgage & Net Rental Yield Calculators. | **QUEUED** | Spec Finalized |
 | **Milestone 8** | Dubai Community Guides (42 Locations) & Team Directory (140+ Broker Profiles). | **QUEUED** | Spec Finalized |
 | **Milestone 9** | Lead Generation: WhatsApp direct integrations, Valuation Request funnels, and CRM Webhooks. | **QUEUED** | Spec Finalized |
