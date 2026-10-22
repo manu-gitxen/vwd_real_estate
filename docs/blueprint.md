@@ -86,6 +86,10 @@ graph LR
 - **Off-Canvas Drawer Toggle (`☰`)**: Full-height drawer for quick mobile/tablet access and extended brand directories.
 - **Language Indicator (`🇬🇧`)**: English locale indicator prepared for future multi-language expansion (Arabic / Russian).
 
+### 2.4 Header Presentation Modes (Homepage Floating vs. Interior Solid Header)
+- **Homepage (`index.html`)**: Features `.header-float` over the full-screen hero image rotator. In this unscrolled state, the header has a transparent background (`rgba(255, 255, 255, 0)`) and white navigation links (`#ffffff`). When the user scrolls, it transitions into `.sticky` with a solid white background and dark charcoal text (`#333333`).
+- **Interior Pages (`properties-for-sale.html`, `properties-for-rent.html`, etc.)**: Interior pages do NOT use `.header-float`. The header sits in natural document flow with a crisp white background (`#ffffff`), subtle border bottom (`#ebebeb`), high-contrast Poppins typography (`#1a1a1a`), active pillar gold highlight (`#CFB165`), deep navy drawer toggle (`#00265E`), and the transparent SVG vector logo (`VWD_logo_transparent.svg`), perfectly separating the header from the page title and breadcrumbs below.
+
 ### 2.3 Header Responsive Architecture & Stretched Container Alignment
 
 To guarantee pixel-perfect presentation and symmetric outer margins across all screen resolutions (from ultrawide 2560px down to laptop 992px):
