@@ -3224,3 +3224,52 @@ input[type=submit].btn-accent:hover,
 .ere-recaptcha-wrap {
 	display: none !important;
 }
+
+/* ==========================================================================
+   Section 13: VWD Property Card Action Button Alignments (WhatsApp Centering)
+   ========================================================================== */
+.g5ere__lpa-rounded a.vwd-wa-btn,
+.g5ere__lpa-rounded .vwd-wa-btn {
+	display: inline-flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	width: 40px !important;
+	height: 40px !important;
+	line-height: 1 !important;
+	text-align: center !important;
+	border-radius: 50% !important;
+	color: #25D366 !important;
+	border: 1px solid #eee !important;
+	background-color: transparent !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	vertical-align: middle !important;
+	text-decoration: none !important;
+	transition: all 0.25s ease !important;
+}
+
+.g5ere__lpa-rounded a.vwd-wa-btn i,
+.g5ere__lpa-rounded .vwd-wa-btn i {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	font-size: 18px !important;
+	line-height: 1 !important;
+	width: 100% !important;
+	height: 100% !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	text-align: center !important;
+}
+
+.g5ere__lpa-rounded a.vwd-wa-btn:hover,
+.g5ere__lpa-rounded .vwd-wa-btn:hover {
+	background-color: #25D366 !important;
+	border-color: #25D366 !important;
+	color: #ffffff !important;
+}
+
+.g5ere__lpa-rounded a.vwd-wa-btn:hover i,
+.g5ere__lpa-rounded .vwd-wa-btn:hover i {
+	color: #ffffff !important;
+}
