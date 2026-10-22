@@ -301,21 +301,21 @@
 							<div data-archive-wrapper="" class="g5ere__listing-wrap g5ere__property_layout-grid">
 								
 								<!-- Native Horizontal Search & Filter Bar (Matching Theme Styling) -->
-								<div class="g5ere__search-form g5ere__sf-layout-layout-01 custom-ere-search-01" style="background: #ffffff; padding: 20px 24px; border: 1px solid #ebebeb; border-radius: 6px; margin-bottom: 25px;">
+								<div class="g5ere__search-form g5ere__sf-layout-layout-01 custom-ere-search-01" style="background: #ffffff; padding: 22px 24px; border: 1px solid #ebebeb; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.03); margin-bottom: 28px;">
 									<form id="vwd-filter-form" method="get" autocomplete="off" onsubmit="return false;">
 										<div class="row align-items-end">
-											<div class="col-lg-3 col-md-6 col-12 mb-2 mb-lg-0">
-												<label class="g5ere__s-label" style="font-size: 13px; font-weight: 600; margin-bottom: 5px; color: #333;">Property Type</label>
-												<select id="filter-type" name="type" class="form-control" style="height: 42px; font-size: 14px; border-color: #ddd;">
+											<div class="col-lg-3 col-md-6 col-12 mb-3 mb-lg-0">
+												<label class="g5ere__s-label" style="font-size: 13px; font-weight: 600; margin-bottom: 6px; color: #222; display: block;">Property Type</label>
+												<select id="filter-type" name="type" class="form-control" style="height: 44px; font-size: 14px; border-color: #ddd; border-radius: 4px; padding: 0 12px; color: #333; background-color: #fff;">
 													<option value="all" selected="selected">All Property Types</option>
 													<option value="villa">Luxury Villas</option>
 													<option value="penthouse">Penthouses</option>
 													<option value="apartment">Apartments</option>
 												</select>
 											</div>
-											<div class="col-lg-3 col-md-6 col-12 mb-2 mb-lg-0">
-												<label class="g5ere__s-label" style="font-size: 13px; font-weight: 600; margin-bottom: 5px; color: #333;">Community</label>
-												<select id="filter-location" name="location" class="form-control" style="height: 42px; font-size: 14px; border-color: #ddd;">
+											<div class="col-lg-3 col-md-6 col-12 mb-3 mb-lg-0">
+												<label class="g5ere__s-label" style="font-size: 13px; font-weight: 600; margin-bottom: 6px; color: #222; display: block;">Community</label>
+												<select id="filter-location" name="location" class="form-control" style="height: 44px; font-size: 14px; border-color: #ddd; border-radius: 4px; padding: 0 12px; color: #333; background-color: #fff;">
 													<option value="all" selected="selected">All Dubai Communities</option>
 													<option value="palm-jumeirah">Palm Jumeirah</option>
 													<option value="downtown-dubai">Downtown Dubai</option>
@@ -329,9 +329,9 @@
 													<option value="arabian-ranches">Arabian Ranches</option>
 												</select>
 											</div>
-											<div class="col-lg-2 col-md-4 col-12 mb-2 mb-lg-0">
-												<label class="g5ere__s-label" style="font-size: 13px; font-weight: 600; margin-bottom: 5px; color: #333;">Bedrooms</label>
-												<select id="filter-beds" name="bedrooms" class="form-control" style="height: 42px; font-size: 14px; border-color: #ddd;">
+											<div class="col-lg-2 col-md-4 col-12 mb-3 mb-lg-0">
+												<label class="g5ere__s-label" style="font-size: 13px; font-weight: 600; margin-bottom: 6px; color: #222; display: block;">Bedrooms</label>
+												<select id="filter-beds" name="bedrooms" class="form-control" style="height: 44px; font-size: 14px; border-color: #ddd; border-radius: 4px; padding: 0 12px; color: #333; background-color: #fff;">
 													<option value="all" selected="selected">Any Beds</option>
 													<option value="2">2 Bedrooms</option>
 													<option value="3">3 Bedrooms</option>
@@ -340,20 +340,20 @@
 													<option value="6">6+ Bedrooms</option>
 												</select>
 											</div>
-											<div class="col-lg-2 col-md-4 col-12 mb-2 mb-lg-0">
-												<label class="g5ere__s-label" style="font-size: 13px; font-weight: 600; margin-bottom: 5px; color: #333;">Max Rent / Year</label>
-												<select id="filter-price" name="price" class="form-control" style="height: 42px; font-size: 14px; border-color: #ddd;">
-													
-      <option value="all" selected="selected">Any Rent</option>
-      <option value="250000">Up to AED 250,000</option>
-      <option value="400000">Up to AED 400,000</option>
-      <option value="600000">Up to AED 600,000</option>
-      <option value="1000000">Up to AED 1,000,000</option>
-      <option value="1500000">Up to AED 1,500,000</option>
+											<div class="col-lg-2 col-md-4 col-12 mb-3 mb-lg-0">
+												<label class="g5ere__s-label" style="font-size: 13px; font-weight: 600; margin-bottom: 6px; color: #222; display: block;">Max Rent / Year (AED)</label>
+												<select id="filter-price" name="price" class="form-control" style="height: 44px; font-size: 14px; border-color: #ddd; border-radius: 4px; padding: 0 12px; color: #333; background-color: #fff;">
+													<option value="all" selected="selected">Any Rent</option>
+													<option value="250000">Up to AED 250,000</option>
+													<option value="400000">Up to AED 400,000</option>
+													<option value="600000">Up to AED 600,000</option>
+													<option value="1000000">Up to AED 1,000,000</option>
+													<option value="1500000">Up to AED 1,500,000</option>
 												</select>
 											</div>
-											<div class="col-lg-2 col-md-4 col-12">
-												<button id="vwd-reset-btn" type="button" class="btn btn-block" style="background-color: #00265E; color: #CFB165; font-weight: 600; height: 42px; border-radius: 4px; font-size: 13px; text-transform: uppercase;">
+											<div class="col-lg-2 col-md-4 col-12 mb-3 mb-lg-0">
+												<label class="d-none d-lg-block" style="font-size: 13px; margin-bottom: 6px; visibility: hidden; line-height: 1.2;">&nbsp;</label>
+												<button id="vwd-reset-btn" type="button" class="btn btn-block" style="background-color: #00265E; color: #CFB165; font-weight: 600; height: 44px; border-radius: 4px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; border: 1px solid #00265E; display: flex; align-items: center; justify-content: center; width: 100%; transition: all 0.3s ease;">
 													Reset Filters
 												</button>
 											</div>
@@ -361,42 +361,44 @@
 									</form>
 								</div>
 
-								<!-- Official HomeID Toolbar (Results Count, Sorting, View Switcher) -->
-								<div class="g5ere__toolbar g5ere__property-toolbar boxed">
-									<div class="g5ere__toolbar-inner">
-										<div class="g5ere__toolbar-desktop">
-											<div class="container" style="padding: 0;">
-												<div class="g5ere__toolbar-content-inner d-flex align-items-center justify-content-between">
-													<div class="g5ere__toolbar-left">
-														<ul class="g5ere__toolbar-list">
-															<li>
-																<p class="g5ere__result-count">
-																	Showing <span id="vwd-showing-count">12</span> of <span id="vwd-total-count">12</span> results
-																</p>
-															</li>
-														</ul>
-													</div>
-													<div class="g5ere__toolbar-right d-flex align-items-center" style="gap: 15px;">
-														<ul class="g5ere__toolbar-list d-flex align-items-center mb-0">
-															<li style="margin-right: 15px;">
-																<form class="g5ere__ordering" method="get">
-																	<select id="vwd-sort-order" name="orderby" class="g5ere__orderby form-control" style="height: 38px; font-size: 13px; border-color: #ddd; padding: 4px 10px; width: auto; display: inline-block;">
-																		<option value="default" selected="selected">Default sorting</option>
-																		<option value="featured">Sort by featured First</option>
-																		<option value="price-asc">Sort by price: low to high</option>
-																		<option value="price-desc">Sort by price: high to low</option>
-																		<option value="beds-desc">Sort by bedrooms: most first</option>
-																	</select>
-																</form>
-															</li>
-															<li>
-																<div class="g5ere__switch-layout">
-																	<a id="vwd-btn-list" class="" href="javascript:void(0)" title="List View" data-layout="list"><i class="fas fa-list-ul"></i></a>
-																	<a id="vwd-btn-grid" class="active" href="javascript:void(0)" title="Grid View" data-layout="grid"><i class="fas fa-th-large"></i></a>
-																</div>
-															</li>
-														</ul>
-													</div>
+								<!-- Official HomeID Toolbar (Results Count on Left, Sorting & View Switch on Right) -->
+								<div class="g5ere__toolbar g5ere__property-toolbar boxed" style="margin-bottom: 28px; width: 100%;">
+									<div class="g5ere__toolbar-inner" style="width: 100%;">
+										<div class="g5ere__toolbar-desktop" style="display: block; width: 100%;">
+											<div class="g5ere__toolbar-content-inner d-flex align-items-center justify-content-between" style="width: 100%;">
+												<div class="g5ere__toolbar-left">
+													<ul class="g5ere__toolbar-list mb-0" style="padding-left: 0; list-style: none;">
+														<li>
+															<p class="g5ere__result-count mb-0" style="font-size: 14px; font-weight: 500; color: #696969;">
+																Showing <span id="vwd-showing-count" style="font-weight: 700; color: #CFB165;">12</span> of <span id="vwd-total-count" style="font-weight: 700; color: #00265E;">12</span> results
+															</p>
+														</li>
+													</ul>
+												</div>
+												<div class="g5ere__toolbar-right">
+													<ul class="g5ere__toolbar-list d-flex align-items-center mb-0" style="list-style: none; padding-left: 0; gap: 15px;">
+														<li style="margin-right: 15px;">
+															<form class="g5ere__ordering mb-0" method="get">
+																<select id="vwd-sort-order" name="orderby" class="g5ere__orderby form-control" style="height: 40px; font-size: 13px; font-weight: 600; border-color: #ddd; border-radius: 4px; padding: 6px 14px; width: 220px; display: inline-block; background-color: #fff; color: #333;">
+																	<option value="default" selected="selected">Default sorting</option>
+																	<option value="featured">Sort by Featured First</option>
+																	<option value="price-asc">Sort by Price: Low to High</option>
+																	<option value="price-desc">Sort by Price: High to Low</option>
+																	<option value="beds-desc">Sort by Bedrooms: Most First</option>
+																</select>
+															</form>
+														</li>
+														<li>
+															<div class="g5ere__switch-layout d-flex align-items-center" style="gap: 8px;">
+																<a id="vwd-btn-grid" class="active" href="javascript:void(0)" title="Grid View" data-layout="grid" style="display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 4px; border: 1px solid #00265E; color: #CFB165; background: #00265E; font-size: 15px; text-decoration: none; transition: all 0.2s ease;">
+																	<i class="fas fa-th-large"></i>
+																</a>
+																<a id="vwd-btn-list" class="" href="javascript:void(0)" title="List View" data-layout="list" style="display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 4px; border: 1px solid #ddd; color: #888; background: #fff; font-size: 15px; text-decoration: none; transition: all 0.2s ease;">
+																	<i class="fas fa-list-ul"></i>
+																</a>
+															</div>
+														</li>
+													</ul>
 												</div>
 											</div>
 										</div>

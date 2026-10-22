@@ -3120,3 +3120,27 @@ img.wp-smiley,
 .wpb_animate_when_almost_visible {
 	opacity: 1;
 }
+
+/* ==========================================================================
+   Section 10: VWD Filter Bar & Toolbar Architecture
+   ========================================================================== */
+#vwd-reset-btn:hover {
+	background-color: #CFB165 !important;
+	color: #00265E !important;
+	border-color: #CFB165 !important;
+}
+.g5ere__toolbar.boxed .g5ere__toolbar-inner,
+.g5ere__toolbar.boxed .g5ere__toolbar-desktop {
+	width: 100% !important;
+	display: block !important;
+}
+.g5ere__toolbar.boxed .g5ere__toolbar-content-inner {
+	display: flex !important;
+	justify-content: space-between !important;
+	align-items: center !important;
+	width: 100% !important;
+}
+.g5ere__switch-layout a:hover {
+	border-color: #CFB165 !important;
+	color: #CFB165 !important;
+}
