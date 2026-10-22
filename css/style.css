@@ -3144,3 +3144,14 @@ img.wp-smiley,
 	border-color: #CFB165 !important;
 	color: #CFB165 !important;
 }
+
+/* ==========================================================================
+   Section 11: Optimized Listing Spacing (Eliminate 80px Empty Gap)
+   ========================================================================== */
+#primary-content.vwd-listing-content {
+	padding-top: 25px !important;
+	padding-bottom: 70px !important;
+}
+.vwd-listing-content .g5ere__search-form {
+	margin-top: 0 !important;
+}
