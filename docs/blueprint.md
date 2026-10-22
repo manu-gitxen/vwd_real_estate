@@ -245,32 +245,48 @@ The entire 250+ page inventory mapped from the competitor audit is structured in
 - **Lead Capture:** Direct *"Get Pre-Approved with VWD Advisors"* WhatsApp & callback trigger.
 
 ### 7.4 `PropertyDetailTemplate` (`property-detail.html`)
-- **Authentic HomeID Architecture:** Built directly on HomeID Single Property Layout 3 (`g5ere__single-property-layout-3` with `g5ere__sph-layout-3` and `g5ere__spg-wrap-metro-4`). 100% matched to homepage Poppins typography (300/400/500/600/700) with zero AI-style wrappers.
+- **Authentic HomeID Architecture:** Built directly from the official HomeID Single Property Layout 3 (`C:\Users\manuj\Downloads\vwdproperty_detail_page\index.html`), maintaining 100% theme fidelity (`g5ere__single-property-layout-3`, `g5ere__sph-layout-3`, and `g5ere__spg-wrap-metro-4`) with zero custom "AI" wrapper classes.
+- **Dedicated Layout Assets:** Integrated `css/c258d1e8a5b55d5a407daa8ac0fd32f6.css` (Layout 3 stylesheet), `js/mortgage-calculator.min.js`, and `js/comment-reply.min.js`, preserving all 67 official theme scripts and inline SVG icon `<defs>` (`g5ere_garage`, `g5ere_bed`, `g5ere_bath`, `g5ere_house-plan`, `g5ere_real-estate`, `g5ere_interface`).
+- **Brand Palette Elimination of Skyblue / Cyan:**
+  - Systematically replaced all instances of theme cyan/skyblue (`#0ec6d5`, `#0ca5b1`, `#0b9aa5`, `#3de5f2`, `#25e1f1`, `#eff6f7`, `#bcd9de`) across HTML, `c258d1e8a5b55d5a407daa8ac0fd32f6.css`, and `style.css`.
+  - **Overview Icons:** Deep Luxury Navy (`#00265E`) with warm champagne background (`rgba(207, 177, 101, 0.1)`) and gold border (`rgba(207, 177, 101, 0.4)`). Transitions to Gold (`#CFB165`) on card hover.
+  - **Action Buttons ("Open on Google Maps", "Send message"):** Solid Luxury Navy (`#00265E`) with white text; transitions smoothly to Gold (`#CFB165`) with Navy text on hover.
+  - **Form Sanitization:** Hid broken demo localhost Google reCAPTCHA widget (`display: none !important;`) to eliminate red error banners.
+- **Full Dubai Market Localization:**
+  - **Address Block:** Country (*United Arab Emirates*), Province/State (*Dubai*), City/Town (*Dubai*), Neighborhood (*Palm Jumeirah*).
+  - **Overview & Details Specs:** 5 Bedrooms, 6 Bathrooms, 4 Covered Garages, 8,500 Sq.Ft Built-Up Area, 11,200 Sq.Ft Beachfront Plot, Year Built 2024.
+  - **Currency & Pricing:** All monetary values converted to AED (`AED 34,500,000`, `AED 4,058 / sq.ft`).
+  - **Embedded Mortgage Calculator:** Currency updated to `AED` with pre-filled default values (`AED 34,500,000` price, `AED 6,900,000` 20% down payment).
 - **Solid Interior Header & Footer:** Verbatim VWD 6-pillar header (solid white background, navy drawer toggle, gold active states, and `READ OUR OUTLOOK` CTA) plus standard RERA/DED compliance footer.
 - **5-Photo Metro Mosaic Gallery (`g5ere__spg-metro-4`):**
   - Hero landscape photo (66% left) with fullscreen overlay trigger.
-  - 4 squared mosaic thumbnails (33% right) with a `+19 Photos` badge overlay.
+  - 4 squared mosaic thumbnails (33% right) with native pill tab controls (Photos, Location Map, 360° Virtual Tour).
   - Integrated with Magnific Popup lightbox for high-resolution responsive viewing with zoom animations and multi-photo slide progression.
-  - Gallery tabs: Photos (24), Location Map (coordinates & neighborhood badge), and 360° Matterport Virtual Tour launcher.
 - **Main Information Stream (Left 67%):**
   - **Overview Specs Grid:** Bedrooms (en-suite), Bathrooms, Built-up Area (Sq.Ft), Plot Size, Covered Parking, Completion Year, DLD Permit Number, and Freehold Status.
   - **Editorial Description:** Institutional luxury property narrative highlighting architecture, joinery, and Gulf views.
   - **Luxury Amenities Checklist:** 16 verified Dubai amenities (private beach, infinity pool, Lutron automation, Schindler elevator, dual show/prep kitchens, staff quarters, private cinema, sauna).
   - **Interactive Floor Plans Accordion:** Multi-level collapsible architectural floor plans (Ground Floor, First Floor, Rooftop Sunset Deck).
   - **4K Drone Video Showcase:** 4K video tour thumbnail with cinematic play modal trigger.
-  - **Location & Driving Times:** Key Dubai commutes (DXB Airport 25m, Downtown 20m, Marina 10m, Nakheel Mall 5m).
-  - **Downloadable Property Factsheet:** Direct PDF brochure download trigger.
+  - **Clean Information Architecture:** Pruned extraneous demo components (removed mock Attachments download card, Yelp API rate-limited Nearby Places block, and legacy Rating & Reviews widget).
+  - **Similar Properties Showcase:** Handpicked luxury residences carousel following the floor plans and media streams.
 - **Sticky Broker Sidebar (`sidebar-sticky` Right 33%):**
   - Senior Director profile card (Alexander Vance, RERA BRN: 48921, ORN: 30124).
-  - High-impact direct triggers: WhatsApp Broker Directly (`wa.me` pre-filled message), Schedule Private Viewing modal trigger, and direct call trigger.
+  - Direct triggers: WhatsApp Broker Directly (`wa.me` pre-filled message), Schedule Private Viewing modal trigger, and direct call trigger.
   - Quick instant inquiry lead form.
-  - **Embedded CBUAE Mortgage Calculator:** Live monthly repayment estimator based on purchase price, down payment (min 20%), tenure (15–25 years), and interest rate.
-  - **Upfront Government & Brokerage Fees Schedule:** DLD 4%, Trustee Fee, Admin, and 2% Brokerage + VAT.
+  - Embedded CBUAE Mortgage Calculator and Upfront Government & Brokerage Fees Schedule (DLD 4%, Trustee Fee, Admin, 2% Brokerage + VAT).
 - **Dynamic URL Parameter Hydration Engine:**
   - Client-side data dictionary matching all 12 properties for sale and 12 properties for rent.
   - Passing `?id=102`, `?id=103`, `?id=201`, etc. dynamically updates page title, breadcrumb trail, pricing, specs, images, description, and WhatsApp links.
   - Defaults to the flagship Palm Jumeirah Signature Beachfront Villa (AED 34,500,000) when visited directly.
 - **Mobile Fixed Bottom Bar:** Fixed-bottom quick action bar (`WhatsApp` + `Book Viewing`) on viewports `< 992px`.
+
+### 7.5 Card Action Button Alignment & Spacing Policy
+- **Circular Action Button Geometry (`.g5ere__lpa-rounded a.vwd-wa-btn`):**
+  - Enforced `display: inline-flex !important; align-items: center !important; justify-content: center !important;` to lock the WhatsApp icon to the exact mathematical center of the 40px circular boundary.
+  - Set `line-height: 1 !important; padding: 0 !important;` to prevent baseline shifting.
+  - Removed asymmetrical inline `margin-right: 10px;` on the WhatsApp button to establish uniform 10px gaps between all three circular triggers: `[WhatsApp] 10px [Favorite] 10px [Compare]`.
+  - Configured high-contrast hover state (`background-color: #25D366; color: #ffffff`).
 
 ---
 
@@ -320,7 +336,7 @@ $$\text{Net Rental Yield (\%)} = \left(\frac{\text{Annual Rental Income} - \text
 | **Milestone 5.4** | Step 4 — Footer Localization & Compliance: Dubai HQ (Control Tower, Motor City), RERA ORN: 30124 & DED licenses, structured Properties & Advisory menus, Market Intelligence newsletter, 2026 legal copyright. | **COMPLETED** | Commit `d9ed402` |
 | **Milestone 5.5** | Master Stylesheet & Responsive Architecture: Consolidated 3,000+ lines into `css/style.css` with DOM placeholder hooks, single-row header actions, 95% stretched container rule across 992px+, and tablet/laptop hero scaling. | **COMPLETED** | Verified in `index.html` & `css/style.css` |
 | **Milestone 6.1** | Secondary Interior Templates (Sales & Rentals): Implemented authentic HomeID `properties-for-sale.html` and `properties-for-rent.html` matching reference typography (Poppins), official skin-02 cards, native page titles & breadcrumbs, boxed toolbar, scroll reveal animations (`.g5core__btt`), and zero AI inline wrappers. | **COMPLETED** | Verified & Tested in both files |
-| **Milestone 6.2** | Property Detail Template (`property-detail.html`): Implemented authentic HomeID Single Property Layout 3 (`g5ere__single-property-layout-3`), 5-photo metro mosaic gallery with Magnific Popup lightbox, 3 tabs (Photos, Map, Virtual Tour), quick specs grid, luxury amenities, floor plan accordions, 4K video showcase, sticky broker sidebar, live CBUAE mortgage calculator, upfront fees schedule, and dynamic `?id=` client-side hydration engine. | **COMPLETED** | Verified in `property-detail.html` |
+| **Milestone 6.2** | Property Detail Template (`property-detail.html`): Built directly from official HomeID Single Property Layout 3 (`g5ere__single-property-layout-3`), integrated `c258d1e8a5b55d5a407daa8ac0fd32f6.css` & scripts, eliminated all skyblue/cyan theme accents in favor of VWD Navy (`#00265E`) and Gold (`#CFB165`), localized address/specs to Dubai UAE, centered card WhatsApp triggers, and hid demo reCAPTCHA. | **COMPLETED** | Verified in `property-detail.html` & `css/style.css` |
 | **Milestone 6.3** | Secondary Interior Templates (Off-Plan): `off-plan.html` with master developer logo filters (Emaar, Nakheel, DAMAC, Sobha, Meraas), handover timelines, payment plan badges (80/20, 60/40), and Golden Visa advisory banner. | **NEXT** | Ready for Kickoff |
 | **Milestone 7** | Interactive Financial Tools: Dedicated Dubai Mortgage & Net Rental Yield Calculators. | **QUEUED** | Spec Finalized |
 | **Milestone 8** | Dubai Community Guides (42 Locations) & Team Directory (140+ Broker Profiles). | **QUEUED** | Spec Finalized |
