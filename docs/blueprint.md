@@ -42,7 +42,6 @@ graph LR
     Nav --> About["ABOUT"]
     Actions["Header Utility CTAs"] --> Outlook["READ OUR OUTLOOK"]
     Actions --> Drawer["Off-Canvas Drawer (☰)"]
-    Actions --> Lang["Language (🇬🇧)"]
 ```
 
 ### 2.1 Navigation Pillars & Taxonomies
@@ -83,8 +82,8 @@ graph LR
 ### 2.2 Header Action Utilities
 
 - **`READ OUR OUTLOOK` CTA Button**: High-visibility glassmorphism button (`rgba(0, 38, 94, 0.45)` with gold hover `#CFB165`) driving traffic directly to institutional research reports (`market-reports.html`).
-- **Off-Canvas Drawer Toggle (`☰`)**: Full-height drawer for quick mobile/tablet access and extended brand directories.
-- **Language Indicator (`🇬🇧`)**: English locale indicator prepared for future multi-language expansion (Arabic / Russian).
+- **Enlarged Off-Canvas Drawer Toggle (`☰`)**: Scaled up to `26px` font icon with luxury hover micro-transition (`transform: scale(1.08)` and `#CFB165` gold accent) on `.vwd-header-drawer-toggle`. Mobile header toggle bars thickened to `2.5px` (`26px × 20px`) for effortless finger taps.
+- **Flag Removal**: Demo language selector item (`🇬🇧`) completely eliminated across desktop and mobile headers on all site templates for clean, unencumbered luxury presentation.
 
 ### 2.4 Header Presentation Modes (Homepage Floating vs. Interior Solid Header)
 - **Homepage (`index.html`)**: Features `.header-float` over the full-screen hero image rotator. In this unscrolled state, the header has a transparent background (`rgba(255, 255, 255, 0)`) and white navigation links (`#ffffff`). When the user scrolls, it transitions into `.sticky` with a solid white background and dark charcoal text (`#333333`).
@@ -93,10 +92,10 @@ graph LR
 ### 2.3 Header Responsive Architecture & Stretched Container Alignment
 
 To guarantee pixel-perfect presentation and symmetric outer margins across all screen resolutions (from ultrawide 2560px down to laptop 992px):
-- **Single-Row Flexbox Locking:** `.g5core-header-customize-inner` enforces `flex-wrap: nowrap !important; display: flex !important; align-items: center !important;`, preventing the drawer toggle (`☰`) and UK flag (`🇬🇧`) from dropping underneath the button.
+- **Single-Row Flexbox Locking:** `.g5core-header-customize-inner` enforces `flex-wrap: nowrap !important; display: flex !important; align-items: center !important;`, preventing the drawer toggle (`☰`) from dropping underneath the button.
 - **Button Text Integrity:** `.vwd-btn-outlook` incorporates `white-space: nowrap !important;`, ensuring the CTA text never breaks onto multiple lines.
 - **Laptop Viewport Adaptability (992px – 1250px):** Menu link horizontal padding adjusts to `7px` with `font-size: 12px`, and button padding adjusts to `6px 11px` (`font-size: 11px`), providing smooth clearance for all 6 pillars.
-- **Symmetric 95% Stretched Container Rule (992px+):** Legacy theme styles clamped `.container` to a rigid `960px` below 1200px, causing the right edge (after the UK flag) to collapse to 0 margin at 1119px while the left edge retained outer spacing. This was resolved by extending `.header-layout-stretched .container { max-width: 95% !important; padding: 0 20px !important; }` across all viewports $\ge 992\text{px}$, guaranteeing completely symmetric outer margins on both sides.
+- **Symmetric 95% Stretched Container Rule (992px+):** Legacy theme styles clamped `.container` to a rigid `960px` below 1200px, causing the right edge to collapse to 0 margin at 1119px while the left edge retained outer spacing. This was resolved by extending `.header-layout-stretched .container { max-width: 95% !important; padding: 0 20px !important; }` across all viewports $\ge 992\text{px}$, guaranteeing completely symmetric outer margins on both sides.
 
 ---
 
@@ -288,6 +287,39 @@ The entire 250+ page inventory mapped from the competitor audit is structured in
   - Removed asymmetrical inline `margin-right: 10px;` on the WhatsApp button to establish uniform 10px gaps between all three circular triggers: `[WhatsApp] 10px [Favorite] 10px [Compare]`.
   - Configured high-contrast hover state (`background-color: #25D366; color: #ffffff`).
 
+### 7.6 `OffPlanDetailTemplate` (`off-plan-detail.html`)
+- **Authentic HomeID Architecture:** Built directly from the official HomeID Single Property Layout 2 (`g5ere__single-property-layout-2`) with Metro-1 5-photo collage gallery (`g5ere__spg-metro-1`), matching user-provided layout in `C:\Users\manuj\Downloads\offplanvwd`.
+- **Hero Showcase & Metro Gallery:**
+  - Featured flagship rendering (Emaar Creek Waters, Dubai Creek Harbour).
+  - 5-photo responsive collage with hover effects, native media badges, and full-screen lightbox trigger.
+- **Milestone Payment Plan:** Standardized 70/30 Dubai off-plan investor payment structure:
+  - 10% Down Payment (On Booking).
+  - 60% During Construction (Milestones 1–6).
+  - 30% Upon Handover (100% Completion).
+- **Pruned Unwanted Demo Blocks:** Pruned extraneous demo widgets to eliminate console errors and maintain institutional quality:
+  - Removed mock Attachments download card.
+  - Removed Yelp API-dependent Nearby Places block (preventing 404/API quota errors).
+  - Removed legacy Rating & Reviews widget with generic demo comments.
+- **Solid Interior Header:** Non-floating solid white header (`.g5core-site-header:not(.header-float)`) with deep navy branding, enlarged 26px drawer toggle, and clean navigation flow.
+
+### 7.7 Universal 4-Column Footer Architecture (All 7 Site Templates)
+- **CSS Grid Centered Alignment:** Replaced the legacy asymmetrical footer with a clean, symmetric 4-column CSS grid (`.vwd-footer-grid`) centered inside `.vwd-footer-container` (`max-width: 1320px`), completely eliminating right-side white space gaps across all screen widths:
+  - **Column 1 (Corporate Identity):** Official VWD Real Estate LLC SVG logo, Dubai Land Department (DLD) licensing info, RERA ORN: 30124, DED License: 1124589, and luxury gold social icons.
+  - **Column 2 (Dubai Portfolios):** Quick links to Properties for Sale, Rental Residences, Off-Plan Launches, Commercial Spaces, and Private Penthouses.
+  - **Column 3 (Advisory & Services):** Private Office Advisory, UAE 10-Year Golden Visa Consultation, Mortgage & Conveyancing, Market Research Reports, and Instant Property Valuation.
+  - **Column 4 (Headquarters & Contact):** Suite 1402, Control Tower, Motor City, Dubai, UAE; direct phone (+971 4 876 5432), email (`contact@vwdrealestate.com`), WhatsApp trigger, and RERA certified brokerage badge.
+- **Uniform Legal Bar:** Bottom row with symmetrical privacy policy, terms of service, and sitemap links paired with official copyright notice (`© 2026 VWD Real Estate LLC. All Rights Reserved.`).
+- **Synchronized Deployment:** Implemented uniformly across all 7 production templates: `index.html`, `off-plan.html`, `off-plan-detail.html`, `off-plan-properties.html`, `properties-for-sale.html`, `properties-for-rent.html`, and `property-detail.html`.
+
+### 7.8 Typography & Theme Integrity Policy
+- **Strict Website Default Font Enforcement:**
+  - All site templates must strictly use the website's default font family (`Poppins, sans-serif` via `font-family: inherit !important;`).
+  - Strict ban on unrequested external Google Fonts (e.g. Playfair Display, Plus Jakarta Sans) to preserve brand cohesion, fast page load times, and authentic theme typography.
+- **Institutional Market Intelligence Section (`index.html`):**
+  - Section background retained in deep VWD brand navy (`#00265E`).
+  - Typography styled using native theme inheritance with balanced scales (`34px` title, `18px` card titles, `14px` body).
+  - Category badges use crisp rectangular luxury tags (`border-radius: 2px`) rather than rounded 20px AI pill capsules.
+
 ---
 
 ## 8. Financial Algorithms (Dubai Real Estate Standards)
@@ -337,7 +369,10 @@ $$\text{Net Rental Yield (\%)} = \left(\frac{\text{Annual Rental Income} - \text
 | **Milestone 5.5** | Master Stylesheet & Responsive Architecture: Consolidated 3,000+ lines into `css/style.css` with DOM placeholder hooks, single-row header actions, 95% stretched container rule across 992px+, and tablet/laptop hero scaling. | **COMPLETED** | Verified in `index.html` & `css/style.css` |
 | **Milestone 6.1** | Secondary Interior Templates (Sales & Rentals): Implemented authentic HomeID `properties-for-sale.html` and `properties-for-rent.html` matching reference typography (Poppins), official skin-02 cards, native page titles & breadcrumbs, boxed toolbar, scroll reveal animations (`.g5core__btt`), and zero AI inline wrappers. | **COMPLETED** | Verified & Tested in both files |
 | **Milestone 6.2** | Property Detail Template (`property-detail.html`): Built directly from official HomeID Single Property Layout 3 (`g5ere__single-property-layout-3`), integrated `c258d1e8a5b55d5a407daa8ac0fd32f6.css` & scripts, eliminated all skyblue/cyan theme accents in favor of VWD Navy (`#00265E`) and Gold (`#CFB165`), localized address/specs to Dubai UAE, centered card WhatsApp triggers, and hid demo reCAPTCHA. | **COMPLETED** | Verified in `property-detail.html` & `css/style.css` |
-| **Milestone 6.3** | Secondary Interior Templates (Off-Plan): `off-plan.html` with master developer logo filters (Emaar, Nakheel, DAMAC, Sobha, Meraas), handover timelines, payment plan badges (80/20, 60/40), and Golden Visa advisory banner. | **NEXT** | Ready for Kickoff |
+| **Milestone 6.3** | Secondary Interior Templates (Off-Plan Investment System): Architected White & Co-matching 2-tier ecosystem: (1) **Off-Plan Investment Hub (`off-plan.html`)** featuring cinematic hero with user-uploaded sunset terrace image, 3 investment budget tiers (Entry < AED 2M, Mid-Tier AED 2M-5M, Luxury AED 5M+), 6-card "Explore by Area" destination grid with interactive hover zooms, 8-card "Explore by Developer" master partner directory, VWD by The Numbers stats, and DLD Escrow/Golden Visa investor intelligence; (2) **Off-Plan Projects Directory (`off-plan-properties.html`)** featuring multi-facet filter bar (developer, location, handover, max price), live reactive card filtering, view toggle, and URL query support (`?tier=entry`, `?location=`, `?developer=`). | **COMPLETED** | Verified across `off-plan.html`, `off-plan-properties.html`, and `css/style.css` |
+| **Milestone 6.4** | Off-Plan Detail Template (`off-plan-detail.html`): Built directly from official HomeID Single Property Layout 2 (`g5ere__single-property-layout-2`) with Metro-1 5-photo collage gallery (`g5ere__spg-metro-1`), Emaar Creek Waters project showcase, 70/30 milestone payment plan, non-floating solid header, and pruned Yelp/review demo blocks. | **COMPLETED** | Verified in `off-plan-detail.html` |
+| **Milestone 6.5** | Universal Footer & Global Header Refinement: Rebuilt footer into clean 4-column symmetric grid (`.vwd-footer-grid`) centered in `1320px` container across all 7 pages; removed UK flag language toggle (`🇬🇧`); enlarged hamburger drawer toggle to `26px` with luxury hover micro-interactions. | **COMPLETED** | Verified across all 7 HTML files & `css/style.css` |
+| **Milestone 6.6** | Typography & Theme Integrity Policy: Enforced website default font (`Poppins, sans-serif` via `inherit`) across all custom sections, preserved VWD navy background (`#00265E`) on Market Intelligence section, and eliminated unrequested foreign font imports. | **COMPLETED** | Verified in `index.html` & `css/style.css` |
 | **Milestone 7** | Interactive Financial Tools: Dedicated Dubai Mortgage & Net Rental Yield Calculators. | **QUEUED** | Spec Finalized |
 | **Milestone 8** | Dubai Community Guides (42 Locations) & Team Directory (140+ Broker Profiles). | **QUEUED** | Spec Finalized |
 | **Milestone 9** | Lead Generation: WhatsApp direct integrations, Valuation Request funnels, and CRM Webhooks. | **QUEUED** | Spec Finalized |

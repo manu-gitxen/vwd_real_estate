@@ -2840,23 +2840,41 @@ img.wp-smiley,
 			color: #00265E !important;
 		}
 		.vwd-header-drawer-toggle {
-			font-size: 20px;
+			font-size: 26px !important;
 			color: #ffffff;
 			cursor: pointer;
 			margin-left: 0 !important;
-			transition: color 0.3s ease;
+			transition: color 0.3s ease, transform 0.2s ease;
 			display: inline-flex;
 			align-items: center;
+			justify-content: center;
 			text-decoration: none !important;
+			line-height: 1 !important;
+			padding: 4px 6px !important;
+		}
+		.vwd-header-drawer-toggle i {
+			font-size: 26px !important;
+			line-height: 1 !important;
 		}
 		.vwd-header-drawer-toggle:hover {
-			color: #CFB165;
+			color: #CFB165 !important;
+			transform: scale(1.08);
 		}
 		.sticky-area-wrap.sticky .vwd-header-drawer-toggle {
-			color: #00265E;
+			color: #00265E !important;
+			font-size: 26px !important;
 		}
 		.sticky-area-wrap.sticky .vwd-header-drawer-toggle:hover {
-			color: #CFB165;
+			color: #CFB165 !important;
+		}
+		.menu-mobile-toggle .toggle-icon {
+			width: 26px !important;
+			height: 20px !important;
+		}
+		.menu-mobile-toggle .toggle-icon span,
+		.menu-mobile-toggle .toggle-icon span:before,
+		.menu-mobile-toggle .toggle-icon span:after {
+			height: 2.5px !important;
 		}
 		.vwd-header-lang {
 			font-size: 18px;
@@ -2894,6 +2912,7 @@ img.wp-smiley,
 		}
 		.g5core-site-header:not(.header-float) .vwd-header-drawer-toggle {
 			color: #00265E !important;
+			font-size: 26px !important;
 		}
 		.g5core-site-header:not(.header-float) .vwd-header-drawer-toggle:hover {
 			color: #CFB165 !important;
@@ -3272,4 +3291,955 @@ input[type=submit].btn-accent:hover,
 .g5ere__lpa-rounded a.vwd-wa-btn:hover i,
 .g5ere__lpa-rounded .vwd-wa-btn:hover i {
 	color: #ffffff !important;
+}
+
+/* ==========================================================================
+   Section 14: VWD Off-Plan Hero Section (White & Co Benchmark Architecture)
+   ========================================================================== */
+.vwd-offplan-hero {
+	position: relative;
+	background-size: cover !important;
+	background-position: center center !important;
+	background-repeat: no-repeat !important;
+	min-height: 500px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.vwd-offplan-hero-title {
+	font-family: inherit !important;
+	font-weight: 600 !important;
+	color: #ffffff !important;
+	letter-spacing: normal !important;
+	text-shadow: none !important;
+}
+
+.vwd-offplan-hero-subtitle {
+	font-family: inherit !important;
+	font-weight: 400 !important;
+	color: rgba(255, 255, 255, 0.88) !important;
+	letter-spacing: normal !important;
+	text-shadow: none !important;
+}
+
+@media (max-width: 991px) {
+	.vwd-offplan-hero {
+		min-height: 420px !important;
+	}
+	.vwd-offplan-hero .container {
+		padding: 140px 15px 65px 15px !important;
+	}
+	.vwd-offplan-hero-title {
+		font-size: 38px !important;
+	}
+}
+
+@media (max-width: 767px) {
+	.vwd-offplan-hero {
+		min-height: 360px !important;
+	}
+	.vwd-offplan-hero .container {
+		padding: 125px 15px 50px 15px !important;
+	}
+	.vwd-offplan-hero-title {
+		font-size: 30px !important;
+	}
+	.vwd-offplan-hero-subtitle {
+		font-size: 14px !important;
+		line-height: 1.55 !important;
+	}
+}
+
+/* ==========================================================================
+   Section 15: VWD Explore by Area (White & Co Benchmark Architecture)
+   ========================================================================== */
+.vwd-explore-areas-section {
+	position: relative;
+	background-color: #fcfbfa;
+}
+
+.vwd-area-card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	height: 380px;
+	overflow: hidden;
+	background: #00265E;
+	text-decoration: none !important;
+	color: #ffffff !important;
+	border-radius: 8px;
+	isolation: isolate;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+	transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.vwd-area-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 10px 28px rgba(0, 38, 94, 0.22);
+}
+
+.vwd-area-media {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+}
+
+.vwd-area-media img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.9s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.vwd-area-card:hover .vwd-area-media img {
+	transform: scale(1.06);
+}
+
+.vwd-area-shade {
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	background: linear-gradient(to top, rgba(0, 38, 94, 0.94) 0%, rgba(0, 38, 94, 0.52) 36%, rgba(0, 38, 94, 0) 65%, rgba(0, 38, 94, 0.25) 100%);
+}
+
+.vwd-area-view {
+	position: absolute;
+	top: 26px;
+	right: 26px;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	color: #CFB165;
+	z-index: 3;
+	opacity: 0;
+	transform: translateY(-6px);
+	transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.vwd-area-card:hover .vwd-area-view {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.vwd-area-line {
+	display: block;
+	width: 45px;
+	height: 1.5px;
+	background: #CFB165;
+	transition: width 0.35s ease;
+}
+
+.vwd-area-card:hover .vwd-area-line {
+	width: 60px;
+}
+
+.vwd-area-body {
+	position: relative;
+	z-index: 2;
+	padding: 24px 26px;
+}
+
+.vwd-area-name {
+	font-family: inherit !important;
+	font-size: 22px;
+	font-weight: 600;
+	color: #ffffff !important;
+	margin: 0 0 6px 0;
+	line-height: 1.25;
+}
+
+.vwd-area-desc {
+	font-family: inherit !important;
+	font-size: 13px;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 0.82) !important;
+	margin: 0;
+	line-height: 1.5;
+}
+
+.vwd-see-all-areas-btn {
+	transition: color 0.25s ease;
+}
+
+.vwd-see-all-areas-btn:hover {
+	color: #CFB165 !important;
+}
+
+.vwd-see-all-areas-btn:hover i {
+	transform: translateX(5px);
+}
+
+/* ==========================================================================
+   Section 16: White & Co Exact Off-Plan Card & Developer System
+   ========================================================================== */
+
+/* Hero Buttons */
+.vwd-hub-hero-actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 14px;
+	margin-top: 28px;
+}
+
+.vwd-hub-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	padding: 13px 28px;
+	font-family: inherit;
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	border-radius: 4px;
+	text-decoration: none !important;
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+
+.vwd-hub-btn-primary {
+	background: #CFB165;
+	color: #00265E !important;
+	border: 1.5px solid #CFB165;
+}
+
+.vwd-hub-btn-primary:hover {
+	background: #ffffff;
+	border-color: #ffffff;
+	color: #00265E !important;
+	transform: translateY(-2px);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.vwd-hub-btn-outline {
+	background: rgba(255, 255, 255, 0.08);
+	color: #ffffff !important;
+	border: 1.5px solid rgba(255, 255, 255, 0.5);
+	backdrop-filter: blur(4px);
+}
+
+.vwd-hub-btn-outline:hover {
+	background: rgba(255, 255, 255, 0.95);
+	border-color: #ffffff;
+	color: #00265E !important;
+	transform: translateY(-2px);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* White & Co Authentic opa-card Grid System */
+.rly-sim-grid {
+	--opa-ink: #00265E;
+	--opa-accent: #00265E;
+	--opa-muted: #76776F;
+	--opa-line: rgba(17,18,15,.12);
+	--opa-line-soft: rgba(17,18,15,.07);
+	--opa-r: 14px;
+	--opa-ease: cubic-bezier(.22,.61,.36,1);
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 22px;
+	margin-bottom: 50px;
+}
+
+@media (max-width: 991px) {
+	.rly-sim-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 575px) {
+	.rly-sim-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+.opa-card {
+	background: #fff;
+	border: 1px solid var(--opa-line);
+	border-radius: var(--opa-r);
+	overflow: hidden;
+	box-shadow: 0 1px 2px rgba(17,18,15,.04), 0 18px 40px -24px rgba(17,18,15,.22);
+	transition: transform .4s var(--opa-ease), box-shadow .4s var(--opa-ease);
+	display: block;
+	text-decoration: none !important;
+	color: inherit !important;
+}
+
+.opa-card:hover {
+	transform: translateY(-6px);
+	box-shadow: 0 30px 70px -30px rgba(17,18,15,.40);
+}
+
+.opa-card-img {
+	aspect-ratio: 4 / 2.5;
+	overflow: hidden;
+	position: relative;
+	background: #00265E;
+}
+
+.opa-card-img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform .9s var(--opa-ease);
+}
+
+.opa-card:hover .opa-card-img img {
+	transform: scale(1.07);
+}
+
+.opa-card-badge {
+	position: absolute;
+	top: 14px;
+	left: 14px;
+	background: rgba(255, 255, 255, .95);
+	color: var(--opa-ink);
+	font-size: 13px;
+	font-weight: 600;
+	padding: 6px 14px;
+	border-radius: 999px;
+	display: inline-block;
+	z-index: 1;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.opa-card-body {
+	padding: 22px 20px;
+}
+
+.opa-card-dev {
+	font-size: 13px;
+	letter-spacing: .12em;
+	text-transform: uppercase;
+	color: var(--opa-muted);
+	font-weight: 600;
+	line-height: 1.3;
+}
+
+.opa-card-name {
+	font-size: 22px;
+	font-weight: 600;
+	margin: 6px 0 6px;
+	color: var(--opa-ink);
+	line-height: 1.25;
+}
+
+.opa-card-area {
+	color: #686868;
+	font-size: 15px;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	margin-bottom: 8px;
+}
+
+.opa-card-meta {
+	display: flex;
+	gap: 16px;
+	margin-top: 10px;
+}
+
+.opa-card-pill {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	color: #686868;
+	font-size: 13.5px;
+}
+
+.opa-card-footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 16px;
+	padding-top: 16px;
+	border-top: 1px solid var(--opa-line-soft);
+}
+
+.opa-card-price {
+	font-weight: 700;
+	color: var(--opa-ink);
+	font-size: 16px;
+}
+
+.opa-card-arr {
+	color: var(--opa-ink);
+	transition: transform .3s;
+	font-size: 18px;
+}
+
+.opa-card:hover .opa-card-arr {
+	transform: translateX(5px);
+}
+
+/* Category Headings & Clean See All Link */
+.vwd-tier-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 22px;
+}
+
+.vwd-tier-title {
+	font-size: 32px;
+	font-weight: 600;
+	color: #00265E;
+	margin: 0;
+}
+
+.vwd-tier-see-all {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 13.5px;
+	font-weight: 600;
+	color: #00265E;
+	text-decoration: none !important;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	transition: color 0.25s ease;
+}
+
+.vwd-tier-see-all:hover {
+	color: #CFB165;
+}
+
+.vwd-tier-see-all svg,
+.vwd-tier-see-all i {
+	transition: transform 0.25s ease;
+}
+
+.vwd-tier-see-all:hover svg,
+.vwd-tier-see-all:hover i {
+	transform: translateX(4px);
+}
+
+/* Developer Showcase Grid (White & Co Matching) */
+.rly-dev-grid {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 16px;
+	margin-top: 24px;
+}
+
+@media (max-width: 991px) {
+	.rly-dev-grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (max-width: 575px) {
+	.rly-dev-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.rly-dev-card {
+	height: 110px;
+	border: 1px solid rgba(17,18,15,.12);
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none !important;
+	background: #ffffff;
+	box-shadow: 0 1px 2px rgba(17,18,15,.04);
+	transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+	padding: 16px;
+	text-align: center;
+}
+
+.rly-dev-card:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 8px 24px -8px rgba(17,18,15,.18);
+	border-color: #00265E;
+}
+
+.rly-dev-name {
+	font-size: 15px;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	color: #00265E;
+	text-transform: uppercase;
+}
+
+/* VWD by The Numbers (White & Co Matching) */
+.vwd-numbers-section {
+	background: #00265E;
+	color: #ffffff;
+	position: relative;
+	overflow: hidden;
+}
+
+.vwd-counter-card {
+	padding: 24px 16px;
+	text-align: center;
+}
+
+.vwd-counter-num {
+	font-size: 46px;
+	font-weight: 700;
+	color: #ffffff;
+	line-height: 1.1;
+	margin-bottom: 8px;
+}
+
+.vwd-counter-label {
+	font-size: 13.5px;
+	font-weight: 500;
+	color: rgba(255, 255, 255, 0.75);
+	text-transform: uppercase;
+	letter-spacing: 1.2px;
+}
+
+
+/* ==========================================================================
+   Section 17: VWD Universal Luxury 4-Column Footer (Symmetric & Centered)
+   ========================================================================== */
+#site-footer.g5core-site-footer,
+.vwd-main-footer {
+	background-color: #14171c !important;
+	color: #9ea3ae !important;
+	width: 100% !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+	position: relative !important;
+	box-sizing: border-box !important;
+}
+
+.vwd-footer-container {
+	max-width: 1320px !important;
+	margin: 0 auto !important;
+	padding: 75px 24px 35px 24px !important;
+	box-sizing: border-box !important;
+}
+
+/* 4-Column Symmetrical Grid */
+.vwd-footer-grid {
+	display: grid !important;
+	grid-template-columns: 1.25fr 1fr 1fr 1.35fr !important;
+	gap: 40px !important;
+	margin-bottom: 50px !important;
+	align-items: start !important;
+}
+
+@media (max-width: 1199px) {
+	.vwd-footer-grid {
+		grid-template-columns: 1fr 1fr !important;
+		gap: 35px 40px !important;
+	}
+}
+
+@media (max-width: 575px) {
+	.vwd-footer-grid {
+		grid-template-columns: 1fr !important;
+		gap: 30px !important;
+	}
+}
+
+/* Column 1: Brand */
+.vwd-footer-logo-link {
+	display: inline-block !important;
+	margin-bottom: 18px !important;
+}
+
+.vwd-footer-logo {
+	height: 38px !important;
+	width: auto !important;
+	display: block !important;
+}
+
+.vwd-footer-company-name {
+	font-size: 15px !important;
+	font-weight: 600 !important;
+	color: #ffffff !important;
+	margin: 0 0 6px 0 !important;
+}
+
+.vwd-footer-address {
+	font-size: 13.5px !important;
+	line-height: 1.6 !important;
+	color: #9ea3ae !important;
+	margin: 0 0 8px 0 !important;
+}
+
+.vwd-footer-contact {
+	font-size: 13.5px !important;
+	line-height: 1.8 !important;
+	margin: 0 0 12px 0 !important;
+}
+
+.vwd-footer-contact a {
+	color: #9ea3ae !important;
+	text-decoration: none !important;
+	transition: color 0.2s ease !important;
+}
+
+.vwd-footer-contact a:hover {
+	color: #CFB165 !important;
+}
+
+.vwd-footer-phone {
+	color: #CFB165 !important;
+	font-weight: 600 !important;
+	font-size: 14.5px !important;
+}
+
+.vwd-footer-regulatory {
+	font-size: 12px !important;
+	line-height: 1.6 !important;
+	color: #727783 !important;
+}
+
+/* Columns 2, 3, 4: Titles */
+.vwd-footer-col-title {
+	font-family: inherit !important;
+	font-size: 14px !important;
+	font-weight: 700 !important;
+	text-transform: uppercase !important;
+	letter-spacing: 1.2px !important;
+	color: #ffffff !important;
+	margin: 0 0 20px 0 !important;
+	position: relative !important;
+	padding-bottom: 10px !important;
+}
+
+.vwd-footer-col-title::after {
+	content: '' !important;
+	position: absolute !important;
+	left: 0 !important;
+	bottom: 0 !important;
+	width: 28px !important;
+	height: 2px !important;
+	background: #CFB165 !important;
+}
+
+/* Menus */
+.vwd-footer-menu {
+	list-style: none !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+.vwd-footer-menu li {
+	margin-bottom: 10px !important;
+}
+
+.vwd-footer-menu li a {
+	color: #9ea3ae !important;
+	font-size: 13.5px !important;
+	text-decoration: none !important;
+	transition: all 0.2s ease !important;
+	display: inline-block !important;
+}
+
+.vwd-footer-menu li a:hover {
+	color: #CFB165 !important;
+	transform: translateX(3px) !important;
+}
+
+/* Column 4: Newsletter */
+.vwd-footer-newsletter-desc {
+	font-size: 13.5px !important;
+	line-height: 1.6 !important;
+	color: #9ea3ae !important;
+	margin: 0 0 16px 0 !important;
+}
+
+.vwd-footer-input-group {
+	display: flex !important;
+	border-radius: 4px !important;
+	overflow: hidden !important;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15) !important;
+	margin-bottom: 20px !important;
+}
+
+.vwd-footer-input-group input {
+	flex: 1 !important;
+	background: #ffffff !important;
+	border: none !important;
+	padding: 12px 16px !important;
+	font-size: 13.5px !important;
+	color: #111111 !important;
+	outline: none !important;
+	min-width: 0 !important;
+}
+
+.vwd-footer-input-group input::placeholder {
+	color: #888888 !important;
+}
+
+.vwd-footer-input-group button {
+	background: #CFB165 !important;
+	color: #00265E !important;
+	border: none !important;
+	padding: 12px 22px !important;
+	font-size: 13.5px !important;
+	font-weight: 700 !important;
+	letter-spacing: 0.3px !important;
+	cursor: pointer !important;
+	transition: background 0.2s ease, color 0.2s ease !important;
+	white-space: nowrap !important;
+}
+
+.vwd-footer-input-group button:hover {
+	background: #bfa153 !important;
+	color: #ffffff !important;
+}
+
+/* Socials */
+.vwd-footer-socials {
+	display: flex !important;
+	gap: 12px !important;
+}
+
+.vwd-footer-socials a {
+	width: 36px !important;
+	height: 36px !important;
+	border-radius: 50% !important;
+	background: rgba(255, 255, 255, 0.06) !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	color: #9ea3ae !important;
+	font-size: 14px !important;
+	text-decoration: none !important;
+	transition: all 0.25s ease !important;
+}
+
+.vwd-footer-socials a:hover {
+	background: #CFB165 !important;
+	color: #00265E !important;
+	transform: translateY(-3px) !important;
+}
+
+/* Bottom Bar */
+.vwd-footer-bottom {
+	border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+	padding-top: 25px !important;
+	display: flex !important;
+	flex-wrap: wrap !important;
+	justify-content: space-between !important;
+	align-items: center !important;
+	gap: 15px !important;
+	font-size: 13px !important;
+	color: #727783 !important;
+}
+
+.vwd-footer-legal-links {
+	display: flex !important;
+	align-items: center !important;
+	gap: 12px !important;
+}
+
+.vwd-footer-legal-links a {
+	color: #727783 !important;
+	text-decoration: none !important;
+	transition: color 0.2s ease !important;
+}
+
+.vwd-footer-legal-links a:hover {
+	color: #CFB165 !important;
+}
+
+.vwd-footer-sep {
+	color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.vwd-footer-copyright {
+	color: #727783 !important;
+}
+
+@media (max-width: 767px) {
+	.vwd-footer-bottom {
+		flex-direction: column !important;
+		text-align: center !important;
+	}
+	.vwd-footer-legal-links {
+		justify-content: center !important;
+	}
+}
+
+
+/* ==========================================================================
+   VWD Market Intelligence & Institutional Research (Default Website Font)
+   ========================================================================== */
+.vwd-market-reports-section {
+	background-color: #00265E !important;
+	border-top: none !important;
+	border-bottom: none !important;
+}
+
+/* Kicker */
+.vwd-market-kicker {
+	font-family: inherit !important;
+	color: #CFB165 !important;
+	text-transform: uppercase !important;
+	letter-spacing: 2px !important;
+	font-weight: 600 !important;
+	font-size: 13px !important;
+	margin-bottom: 12px !important;
+	line-height: 1.4 !important;
+}
+
+/* Main Title */
+.vwd-market-title {
+	font-family: inherit !important;
+	color: #ffffff !important;
+	font-size: 34px !important;
+	font-weight: 600 !important;
+	letter-spacing: normal !important;
+	line-height: 1.3 !important;
+	margin-bottom: 16px !important;
+}
+
+@media (max-width: 767px) {
+	.vwd-market-title {
+		font-size: 26px !important;
+	}
+}
+
+/* Gold Separator */
+.vwd-market-sep {
+	margin: 0 auto 18px auto !important;
+	background-color: #CFB165 !important;
+	width: 50px !important;
+	height: 2px !important;
+}
+
+/* Subtitle Description */
+.vwd-market-desc {
+	font-family: inherit !important;
+	color: rgba(255, 255, 255, 0.75) !important;
+	max-width: 680px !important;
+	margin: 0 auto !important;
+	font-size: 15px !important;
+	font-weight: 400 !important;
+	line-height: 1.65 !important;
+}
+
+/* Blue Report Cards */
+.vwd-report-card {
+	background: rgba(255, 255, 255, 0.04) !important;
+	border: 1px solid rgba(207, 177, 101, 0.25) !important;
+	border-radius: 4px !important;
+	padding: 32px 28px !important;
+	height: 100% !important;
+	display: flex !important;
+	flex-direction: column !important;
+	justify-content: space-between !important;
+	transition: all 0.35s ease !important;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+}
+.vwd-report-card:hover {
+	transform: translateY(-6px) !important;
+	background: rgba(255, 255, 255, 0.07) !important;
+	border-color: #CFB165 !important;
+	box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Category Badge */
+.vwd-report-badge {
+	font-family: inherit !important;
+	background: rgba(207, 177, 101, 0.15) !important;
+	color: #CFB165 !important;
+	border: 1px solid rgba(207, 177, 101, 0.4) !important;
+	font-size: 11px !important;
+	font-weight: 600 !important;
+	text-transform: uppercase !important;
+	letter-spacing: 1px !important;
+	padding: 4px 10px !important;
+	border-radius: 2px !important;
+	line-height: 1.3 !important;
+	display: inline-block !important;
+}
+
+/* Report Date */
+.vwd-report-date {
+	font-family: inherit !important;
+	color: rgba(255, 255, 255, 0.55) !important;
+	font-size: 12px !important;
+	font-weight: 500 !important;
+}
+
+/* Card Headline */
+.vwd-report-card-title {
+	font-family: inherit !important;
+	color: #ffffff !important;
+	font-size: 18px !important;
+	font-weight: 600 !important;
+	line-height: 1.45 !important;
+	margin-top: 14px !important;
+	margin-bottom: 14px !important;
+	transition: color 0.3s ease !important;
+}
+.vwd-report-card:hover .vwd-report-card-title {
+	color: #CFB165 !important;
+}
+
+/* Card Body Paragraph */
+.vwd-report-card-text {
+	font-family: inherit !important;
+	color: rgba(255, 255, 255, 0.65) !important;
+	font-size: 14px !important;
+	font-weight: 400 !important;
+	line-height: 1.65 !important;
+	margin-bottom: 24px !important;
+}
+
+/* Action Link */
+.vwd-report-link {
+	font-family: inherit !important;
+	color: #CFB165 !important;
+	font-weight: 600 !important;
+	font-size: 12px !important;
+	letter-spacing: 1px !important;
+	text-transform: uppercase !important;
+	text-decoration: none !important;
+	display: inline-flex !important;
+	align-items: center !important;
+	transition: all 0.3s ease !important;
+}
+.vwd-report-link i {
+	font-size: 12px !important;
+	transition: transform 0.25s ease !important;
+}
+.vwd-report-card:hover .vwd-report-link i {
+	transform: translateX(5px) !important;
+}
+
+/* Bottom Outlook Report CTA Button */
+.vwd-btn-outlook-report {
+	font-family: inherit !important;
+	background: transparent !important;
+	color: #ffffff !important;
+	border: 1.5px solid #CFB165 !important;
+	padding: 13px 36px !important;
+	font-weight: 600 !important;
+	font-size: 12px !important;
+	letter-spacing: 1px !important;
+	text-transform: uppercase !important;
+	border-radius: 2px !important;
+	display: inline-block !important;
+	transition: all 0.3s ease !important;
+	text-decoration: none !important;
+}
+.vwd-btn-outlook-report:hover {
+	background: #CFB165 !important;
+	border-color: #CFB165 !important;
+	color: #00265E !important;
+}
+.vwd-btn-outlook-report:hover i {
+	color: #00265E !important;
 }
