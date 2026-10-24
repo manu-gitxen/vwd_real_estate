@@ -339,6 +339,22 @@ The entire 250+ page inventory mapped from the competitor audit is structured in
 - **Client-Side Reactive Engine:** Multi-parameter filter engine with URL query string parsing (`?type=`, `?jurisdiction=`, `?condition=`, `?location=`), sorting by price and size (asc/desc), responsive grid/list switcher, result counters, and pre-filled direct WhatsApp inquiry buttons (`wa.me/97148762333`).
 - **Mapbox Secret Sanitization:** Strict placeholder configuration (`"accessToken": "pk.placeholder_mapbox_token"`).
 
+### 7.10 Seller Lead Engine & Instant Property Valuation (`list-a-property.html`)
+- **Master Shell & Header Highlight:** Inherits solid white interior master header with active navigation highlight on `SELL` (`#menu-item-vwd-3`), 26px enlarged hamburger drawer toggle, and unified symmetric 4-column footer (`.vwd-footer-grid` in `max-width: 1320px`).
+- **Priority Property Listing Form (`#list-form`):** Prominent above-the-fold lead capture funnel engineered for high-intent property owners and landlords:
+  - **Intent Selector Pills:** Dynamic switching between *Sell My Property*, *Rent / Lease Out*, and *Free Valuation Only*.
+  - **Structured Field Capture:** Full Name, Phone / WhatsApp with international country code selector, Email, Community dropdown (Palm Jumeirah, Downtown, Dubai Hills, etc.), Property Type (Villa, Penthouse, Apartment, Commercial), Bedrooms (Studio to 5+), Building/Project Name, and Expected Asking Price.
+  - **Luxury Staging Option:** Checkbox for complimentary 4K HDR media, licensed drone aerials, and 3D Matterport staging.
+  - **Client-Side Validation & Feedback:** Instant form validation, auto-generated submission reference code (`#VWD-LST-XXXX`), and 1-click WhatsApp fast-track routing with pre-filled property details.
+- **Interactive 3-Step Instant Valuation Tool (`#valuation`):**
+  - **Step 1 (Property Details):** Location / Community selector (Palm Jumeirah, Downtown Dubai, Dubai Hills, Emirates Hills, Business Bay, etc.), Property Type (Villa, Penthouse, Apartment, Townhouse), Bedrooms (Studio to 6+), and Built-Up Area slider (500 to 15,000+ SqFt).
+  - **Step 2 (Condition & Views):** Property condition selector (Brand New, Fully Upgraded, Well-Maintained, Vacant on Transfer, Tenanted), primary view aspect (Sea/Waterfront, Burj Khalifa, Championship Golf), and luxury features (Private Pool, Smart Automation, Extra Parking).
+  - **Step 3 (Dynamic Valuation & Lead Capture):** Real-time client-side calculation delivering estimated market valuation range in AED, average SqFt price, estimated gross rental yield, and active cash buyers pool; lead capture form for a formal 12-page RERA Comparative Market Analysis (CMA) report.
+- **Why Sell With VWD (Performance Metrics):** 4 White & Co-matching proof cards: *21 Days Average on Market, 98.4% Asking Price Achieved, 40+ Global Portals, and AED 4.2B+ Gross Sales Volume*.
+- **The Seller's Journey (5-Step Roadmap):** Visual step-by-step conveyancing process: (1) Data-Driven Valuation & Strategy, (2) RERA Form A & Trakheesi Permit, (3) 4K Staging & 40+ Portal Syndication, (4) Pre-Screened Viewings & Negotiation, (5) DLD Form F (MOU) to Final Title Deed Transfer.
+- **Landlord & Property Management (`#landlord`):** 3 core asset management services for resident & overseas owners: (1) Tenant Vetting & Ejari Registration, (2) Automated Rent Collection & Escrow Accounting, (3) 24/7 Facility Maintenance & RDSC Representation.
+- **Interactive Seller FAQ Accordion:** 5 collapsible panels addressing Dubai legal documents, sales timelines, seller fees, tenanted sales, and off-plan resales.
+
 ## 8. Financial Algorithms (Dubai Real Estate Standards)
 
 ### 8.1 Dubai Mortgage Payment Formula
@@ -391,6 +407,7 @@ $$\text{Net Rental Yield (\%)} = \left(\frac{\text{Annual Rental Income} - \text
 | **Milestone 6.5** | Universal Footer & Global Header Refinement: Rebuilt footer into clean 4-column symmetric grid (`.vwd-footer-grid`) centered in `1320px` container across all 7 pages; removed UK flag language toggle (`🇬🇧`); enlarged hamburger drawer toggle to `26px` with luxury hover micro-interactions. | **COMPLETED** | Verified across all 7 HTML files & `css/style.css` |
 | **Milestone 6.6** | Typography & Theme Integrity Policy: Enforced website default font (`Poppins, sans-serif` via `inherit`) across all custom sections, preserved VWD navy background (`#00265E`) on Market Intelligence section, and eliminated unrequested foreign font imports. | **COMPLETED** | Verified in `index.html` & `css/style.css` |
 | **Milestone 6.7** | Commercial Real Estate Portal (`commercial-properties.html`): Built luxury Grade-A commercial portal featuring 12 premier Dubai commercial assets (ICD Brookfield Place, The Opus, Emaar Square, Uptown Tower, City Walk retail, Dubai South logistics, Bay Square full building), commercial filter bar (Type, Jurisdiction, Fit-out, Hub, Max Price), commercial metrics (SqFt, Fit-Out, Parking Ratio), grid/list switcher, and site-wide footer link synchronization (`commercial-properties.html`). | **COMPLETED** | Verified in `commercial-properties.html` & browser |
+| **Milestone 6.8** | Pillar 3: SELL / List A Property (`list-a-property.html`): Implemented White & Co-matching seller portal with 3-step interactive Dubai property valuation estimator, performance metrics (21 days, 98.4% asking price), 5-step Seller's Journey roadmap, Landlord & Property Management services, and interactive FAQ accordion. | **COMPLETED** | Verified in `list-a-property.html` & browser |
 | **Milestone 7** | Interactive Financial Tools: Dedicated Dubai Mortgage & Net Rental Yield Calculators. | **QUEUED** | Spec Finalized |
 | **Milestone 8** | Dubai Community Guides (42 Locations) & Team Directory (140+ Broker Profiles). | **QUEUED** | Spec Finalized |
 | **Milestone 9** | Lead Generation: WhatsApp direct integrations, Valuation Request funnels, and CRM Webhooks. | **QUEUED** | Spec Finalized |
