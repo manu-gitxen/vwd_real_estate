@@ -4243,3 +4243,110 @@ input[type=submit].btn-accent:hover,
 .vwd-btn-outlook-report:hover i {
 	color: #00265E !important;
 }
+
+/* ==========================================================================
+   VWD Commercial Properties Custom Styling
+   ========================================================================== */
+.vwd-commercial-badge-jurisdiction {
+	background-color: #00265E !important;
+	color: #CFB165 !important;
+	font-weight: 600 !important;
+	font-size: 11px !important;
+	letter-spacing: 0.5px !important;
+	border-radius: 2px !important;
+	padding: 3px 8px !important;
+}
+
+.vwd-commercial-badge-condition {
+	background-color: #CFB165 !important;
+	color: #00265E !important;
+	font-weight: 700 !important;
+	font-size: 11px !important;
+	border-radius: 2px !important;
+	padding: 3px 8px !important;
+}
+
+.vwd-commercial-meta-val {
+	font-weight: 500 !important;
+	color: #444 !important;
+}
+
+/* ==========================================================================
+   VWD Commercial & Master Property Card Uniform Dimensions
+   ========================================================================== */
+.vwd-property-card .g5ere__property-item-inner {
+	display: flex !important;
+	flex-direction: column !important;
+	height: 100% !important;
+}
+
+.vwd-property-card .g5ere__property-content {
+	display: flex !important;
+	flex-direction: column !important;
+	flex: 1 1 auto !important;
+	justify-content: space-between !important;
+}
+
+.vwd-property-card .g5ere__loop-property-title {
+	min-height: 48px !important;
+	margin-bottom: 6px !important;
+	display: -webkit-box !important;
+	-webkit-line-clamp: 2 !important;
+	-webkit-box-orient: vertical !important;
+	overflow: hidden !important;
+	line-height: 1.4 !important;
+}
+
+.vwd-property-card .g5ere__loop-property-address {
+	white-space: nowrap !important;
+	overflow: hidden !important;
+	text-overflow: ellipsis !important;
+	margin-bottom: 12px !important;
+}
+
+.vwd-property-card .g5ere__loop-property-meta {
+	display: flex !important;
+	flex-wrap: nowrap !important;
+	align-items: center !important;
+	justify-content: flex-start !important;
+	gap: 14px !important;
+	padding-left: 0 !important;
+	margin-bottom: 14px !important;
+}
+
+.vwd-property-card .g5ere__loop-property-meta li {
+	display: inline-flex !important;
+	align-items: center !important;
+	font-size: 13px !important;
+	white-space: nowrap !important;
+	margin-right: 0 !important;
+}
+
+/* Optional List Mode when specifically toggled */
+#vwd-property-container.vwd-is-list-view .vwd-property-card {
+	margin-bottom: 25px !important;
+}
+
+#vwd-property-container.vwd-is-list-view .vwd-property-card .g5ere__property-item-inner {
+	flex-direction: row !important;
+}
+
+#vwd-property-container.vwd-is-list-view .vwd-property-card .g5core__post-featured {
+	flex: 0 0 360px !important;
+	max-width: 360px !important;
+}
+
+#vwd-property-container.vwd-is-list-view .vwd-property-card .g5ere__property-content {
+	flex: 1 1 auto !important;
+	padding: 24px 28px !important;
+}
+
+@media (max-width: 767px) {
+	#vwd-property-container.vwd-is-list-view .vwd-property-card .g5ere__property-item-inner {
+		flex-direction: column !important;
+	}
+	#vwd-property-container.vwd-is-list-view .vwd-property-card .g5core__post-featured {
+		flex: 0 0 100% !important;
+		max-width: 100% !important;
+	}
+}

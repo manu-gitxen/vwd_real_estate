@@ -67,7 +67,7 @@ graph LR
    - High-ROI Investment Hotspots
    - Flexible Payment Plans Guide
    - Capital Appreciation & Yield Forecasts
-5. **COMMERCIAL (`commercial.html`)**:
+5. **COMMERCIAL (`commercial-properties.html`)**:
    - Grade-A Corporate Offices
    - Prime Retail & Showroom Spaces
    - Logistics, Warehouses & Industrial
@@ -181,7 +181,7 @@ The entire 250+ page inventory mapped from the competitor audit is structured in
 | ID | Master Template | Applied Views | Core Features |
 | :--- | :--- | :--- | :--- |
 | **T-01** | `HomeTemplate` | `index.html` | Hero search tabs (Buy/Rent/Off-Plan), animated rotator, 4-column carousels, communities showcase, value pillars, institutional market reports, compliance footer. |
-| **T-02** | `ListingGridTemplate` | `properties-for-sale.html`, `properties-for-rent.html`, `commercial.html` | Multi-facet horizontal filter bar (Type, Community, Beds, Price in AED), sort controls, 3-column Bootstrap card grid, badge overlays, pagination. |
+| **T-02** | `ListingGridTemplate` | `properties-for-sale.html`, `properties-for-rent.html`, `commercial-properties.html` | Multi-facet horizontal filter bar (Type, Community, Beds, Price in AED), sort controls, 3-column Bootstrap card grid, badge overlays, pagination. |
 | **T-03** | `PropertyDetailTemplate` | `property-detail.html` (Dynamic `/property/:id`) | High-res image gallery, quick specs (bed/bath/sqft), amenities grid, mortgage calculator embed, sticky WhatsApp contact bar. |
 | **T-04** | `ServiceDetailTemplate` | `services-sell.html`, `services-mortgages.html`, `services-property-management.html` | Value propositions, step-by-step process accordion, instant valuation inquiry form, client testimonials. |
 | **T-05** | `CommunityDirectoryTemplate` | `communities.html` | 42 Dubai community cards categorized by lifestyle tags (Beachfront, Golf, Urban, Family). |
@@ -322,6 +322,23 @@ The entire 250+ page inventory mapped from the competitor audit is structured in
 
 ---
 
+### 7.9 Commercial Real Estate Architecture (`commercial-properties.html`)
+- **Master Shell & Header Highlight:** Inherits solid white interior master header with active navigation highlight on `COMMERCIAL` (`#menu-item-vwd-5`), 26px enlarged hamburger drawer toggle, and unified symmetric 4-column footer (`.vwd-footer-grid` in `max-width: 1320px`).
+- **Commercial-Specific Filter Toolbar:**
+  - Property Type: All Commercial Types, Grade-A Offices, Retail & Showrooms, Logistics & Warehouses, Full Buildings.
+  - Jurisdiction: All Jurisdictions, DIFC Freezone, Freezone (DMCC/DWC/DWTC), DED Mainland (Onshore).
+  - Fit-Out Condition: All Fit-Outs, Fully Furnished, Fitted / Turnkey, Semi-Fitted, Shell & Core.
+  - Commercial Hub: All Commercial Hubs, DIFC, Business Bay, Downtown Dubai / SZR, JLT (DMCC), Dubai South / DWC, Al Quoz Creative Zone.
+  - Max Price / Value: Any Price, AED 10M, AED 20M, AED 30M, AED 50M.
+  - Reset Filters button.
+- **Commercial Card Metrics vs. Residential:** Instead of standard residential bedroom/bathroom counts, cards showcase commercial metadata:
+  - Built-Up Area in SqFt (`g5ere__loop-property-size`).
+  - Fit-Out Condition badge and spec (Turnkey Fitted, Shell & Core, Fully Furnished).
+  - Dedicated Parking Allocation / Ratio (e.g. `1:500 (37 Bays)`).
+  - Multi-tag luxury badges: Category (`Grade-A Prime`), Jurisdiction (`DIFC Freezone`, `DED Mainland`, `DMCC Freezone`), and Fit-Out.
+- **Client-Side Reactive Engine:** Multi-parameter filter engine with URL query string parsing (`?type=`, `?jurisdiction=`, `?condition=`, `?location=`), sorting by price and size (asc/desc), responsive grid/list switcher, result counters, and pre-filled direct WhatsApp inquiry buttons (`wa.me/97148762333`).
+- **Mapbox Secret Sanitization:** Strict placeholder configuration (`"accessToken": "pk.placeholder_mapbox_token"`).
+
 ## 8. Financial Algorithms (Dubai Real Estate Standards)
 
 ### 8.1 Dubai Mortgage Payment Formula
@@ -373,6 +390,7 @@ $$\text{Net Rental Yield (\%)} = \left(\frac{\text{Annual Rental Income} - \text
 | **Milestone 6.4** | Off-Plan Detail Template (`off-plan-detail.html`): Built directly from official HomeID Single Property Layout 2 (`g5ere__single-property-layout-2`) with Metro-1 5-photo collage gallery (`g5ere__spg-metro-1`), Emaar Creek Waters project showcase, 70/30 milestone payment plan, non-floating solid header, and pruned Yelp/review demo blocks. | **COMPLETED** | Verified in `off-plan-detail.html` |
 | **Milestone 6.5** | Universal Footer & Global Header Refinement: Rebuilt footer into clean 4-column symmetric grid (`.vwd-footer-grid`) centered in `1320px` container across all 7 pages; removed UK flag language toggle (`🇬🇧`); enlarged hamburger drawer toggle to `26px` with luxury hover micro-interactions. | **COMPLETED** | Verified across all 7 HTML files & `css/style.css` |
 | **Milestone 6.6** | Typography & Theme Integrity Policy: Enforced website default font (`Poppins, sans-serif` via `inherit`) across all custom sections, preserved VWD navy background (`#00265E`) on Market Intelligence section, and eliminated unrequested foreign font imports. | **COMPLETED** | Verified in `index.html` & `css/style.css` |
+| **Milestone 6.7** | Commercial Real Estate Portal (`commercial-properties.html`): Built luxury Grade-A commercial portal featuring 12 premier Dubai commercial assets (ICD Brookfield Place, The Opus, Emaar Square, Uptown Tower, City Walk retail, Dubai South logistics, Bay Square full building), commercial filter bar (Type, Jurisdiction, Fit-out, Hub, Max Price), commercial metrics (SqFt, Fit-Out, Parking Ratio), grid/list switcher, and site-wide footer link synchronization (`commercial-properties.html`). | **COMPLETED** | Verified in `commercial-properties.html` & browser |
 | **Milestone 7** | Interactive Financial Tools: Dedicated Dubai Mortgage & Net Rental Yield Calculators. | **QUEUED** | Spec Finalized |
 | **Milestone 8** | Dubai Community Guides (42 Locations) & Team Directory (140+ Broker Profiles). | **QUEUED** | Spec Finalized |
 | **Milestone 9** | Lead Generation: WhatsApp direct integrations, Valuation Request funnels, and CRM Webhooks. | **QUEUED** | Spec Finalized |
