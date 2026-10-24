@@ -355,6 +355,22 @@ The entire 250+ page inventory mapped from the competitor audit is structured in
 - **Landlord & Property Management (`#landlord`):** 3 core asset management services for resident & overseas owners: (1) Tenant Vetting & Ejari Registration, (2) Automated Rent Collection & Escrow Accounting, (3) 24/7 Facility Maintenance & RDSC Representation.
 - **Interactive Seller FAQ Accordion:** 5 collapsible panels addressing Dubai legal documents, sales timelines, seller fees, tenanted sales, and off-plan resales.
 
+
+### 7.11 Leadership & Broker Directory (`meet-the-team.html`)
+- **Master Shell & Header Highlight:** Inherits solid white interior master header with active navigation highlight on `ABOUT` (`#menu-item-vwd-6`) and `Leadership & Team` (`#menu-item-vwd-6-2`), 26px enlarged hamburger drawer toggle, and unified symmetric 4-column footer (`.vwd-footer-grid` in `max-width: 1320px`).
+- **Interactive Department Filter Toolbar:**
+  - Department filter pills: *All Specialists, Executive Leadership, Luxury Residential, Prime Commercial, Off-Plan Investments*.
+  - Live client-side instant search input querying broker names, community specializations, and languages spoken.
+  - Dynamic broker counter and zero-results state with one-click filter reset.
+- **Broker Profile Architecture (12 Specialized Profiles):**
+  - High-resolution luxury headshot portrait with department tag.
+  - Full Name, Official Title, and Verified Dubai Land Department License (`RERA BRN: XXXXX`).
+  - Community / Area Specialization (Palm Jumeirah, Downtown, Dubai Hills, DIFC, etc.).
+  - Languages spoken (English, Arabic, Russian, French, German, Swedish, Hindi, Spanish).
+  - Direct Dual Contact Triggers: Direct telephone dial (`tel:`) and pre-filled WhatsApp routing (`wa.me/97148762333`).
+- **The VWD Broker Advantage (Institutional Trust Pillars):** 4 proof cards highlighting 100% RERA certification, hyper-localized community assignments, multilingual advisory across 12+ tongues, and in-house conveyancing legal support.
+- **Careers & Join Our Team CTA Banner:** Direct recruitment funnel for licensed Dubai brokers with up to 70% commission splits, in-house 4K drone media production, and direct HR WhatsApp routing.
+
 ## 8. Financial Algorithms (Dubai Real Estate Standards)
 
 ### 8.1 Dubai Mortgage Payment Formula
@@ -408,6 +424,7 @@ $$\text{Net Rental Yield (\%)} = \left(\frac{\text{Annual Rental Income} - \text
 | **Milestone 6.6** | Typography & Theme Integrity Policy: Enforced website default font (`Poppins, sans-serif` via `inherit`) across all custom sections, preserved VWD navy background (`#00265E`) on Market Intelligence section, and eliminated unrequested foreign font imports. | **COMPLETED** | Verified in `index.html` & `css/style.css` |
 | **Milestone 6.7** | Commercial Real Estate Portal (`commercial-properties.html`): Built luxury Grade-A commercial portal featuring 12 premier Dubai commercial assets (ICD Brookfield Place, The Opus, Emaar Square, Uptown Tower, City Walk retail, Dubai South logistics, Bay Square full building), commercial filter bar (Type, Jurisdiction, Fit-out, Hub, Max Price), commercial metrics (SqFt, Fit-Out, Parking Ratio), grid/list switcher, and site-wide footer link synchronization (`commercial-properties.html`). | **COMPLETED** | Verified in `commercial-properties.html` & browser |
 | **Milestone 6.8** | Pillar 3: SELL / List A Property (`list-a-property.html`): Implemented White & Co-matching seller portal with 3-step interactive Dubai property valuation estimator, performance metrics (21 days, 98.4% asking price), 5-step Seller's Journey roadmap, Landlord & Property Management services, and interactive FAQ accordion. | **COMPLETED** | Verified in `list-a-property.html` & browser |
+| **Milestone 6.9** | Pillar 6: Leadership & Team Directory (`meet-the-team.html`): Built White & Co-matching broker directory featuring 12 licensed Dubai specialist profiles (Executive Leadership, Luxury Residential, Prime Commercial, Off-Plan), interactive department filter tabs, live multi-keyword search, verified RERA BRN licenses, direct WhatsApp/Call triggers, 4-pillar broker trust section, and Careers CTA. | **COMPLETED** | Verified in `meet-the-team.html` & browser |
 | **Milestone 7** | Interactive Financial Tools: Dedicated Dubai Mortgage & Net Rental Yield Calculators. | **QUEUED** | Spec Finalized |
 | **Milestone 8** | Dubai Community Guides (42 Locations) & Team Directory (140+ Broker Profiles). | **QUEUED** | Spec Finalized |
 | **Milestone 9** | Lead Generation: WhatsApp direct integrations, Valuation Request funnels, and CRM Webhooks. | **QUEUED** | Spec Finalized |
