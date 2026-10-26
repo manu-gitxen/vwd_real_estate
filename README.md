@@ -164,6 +164,7 @@ The corporate narrative, governance, team directory, and institutional intellige
 | **13** | `market-reports.html` | Market Reports & Outlook | Flagship Q1 2026 Outlook, 4 sector reports, 8-community DLD table, PDF download lead modal. |
 | **14** | `contact-us.html` | Contact Us & Headquarters | Suite 1402 Control Tower Motor City, interactive location map, multi-department inquiry routing. |
 | **15** | `property-detail.html` | Single Property Layout 3 | HomeID Layout 3, Metro-4 mosaic gallery, Dubai specs, embedded mortgage calculator. |
+| **16** | `mortgage-calculator.html` | Dubai Mortgage & ROI Calculator | CBUAE amortization sliders, upfront Dubai purchase cost breakdown (DLD 4%, trustee, agency), Net Yield estimator, pre-approval WhatsApp funnel. |
 
 ---
 
@@ -218,7 +219,7 @@ python -m http.server 5501
 # Verify all pages return HTTP 200 OK
 python -c "
 import urllib.request
-pages = ['index.html', 'properties-for-sale.html', 'properties-for-rent.html', 'off-plan.html', 'off-plan-properties.html', 'off-plan-detail.html', 'commercial-properties.html', 'list-a-property.html', 'about-us.html', 'meet-the-team.html', 'market-reports.html', 'contact-us.html', 'dubai-communities.html', 'property-detail.html']
+pages = ['index.html', 'properties-for-sale.html', 'properties-for-rent.html', 'off-plan.html', 'off-plan-properties.html', 'off-plan-detail.html', 'commercial-properties.html', 'list-a-property.html', 'about-us.html', 'meet-the-team.html', 'market-reports.html', 'contact-us.html', 'dubai-communities.html', 'dubai-communities.htm', 'property-detail.html', 'mortgage-calculator.html']
 for p in pages:
     with urllib.request.urlopen('http://127.0.0.1:5501/' + p) as r:
         print(f'{p}: {r.status}')
@@ -230,92 +231,64 @@ Per project governance, changes are staged cleanly and committed with descriptiv
 
 ```powershell
 git status --short
-git add css/style.css docs/blueprint.md README.md
-git commit -m "docs: create authoritative README with complete sub-navigation architecture and live page directory"
+git add .
+git commit -m "feat: link property type carousel to internal listing filters and finalize frontend handover documentation"
 ```
 
 ---
 
-## 📋 Leftover / Remaining Work to Finish Frontend (100% White & Co Parity)
+## 📋 Leftover Frontend Work (Developer Handover Scope)
 
-To achieve complete feature and architectural parity with [White & Co Real Estate](https://whiteandcogroup.com/) and finalize the frontend for production, the following leftover deliverables are scheduled:
+> [!IMPORTANT]
+> This section lists **strictly the remaining FRONTEND deliverables** for developer handover to achieve 100% architectural and layout parity with [White & Co Real Estate](https://whiteandcogroup.com/). Backend CRM webhooks, API leads, and production SEO/OG tags are excluded from this handover scope per project instructions.
 
-### 1. Dedicated Mortgage & Net ROI Calculator (`mortgage-calculator.html`) — *Milestone 7*
-* **UAE Central Bank (CBUAE) Lending Regulations Calculator:**
-  * Minimum legal down payment enforcement based on buyer profile:
-    * *UAE National:* 15% minimum down payment.
-    * *UAE Resident / Expatriate:* 20% minimum down payment.
-    * *Non-Resident International Investor:* 35% minimum down payment.
-  * Interactive range sliders:
-    * Property Purchase Price: AED 1,000,000 to AED 50,000,000 (with quick presets).
-    * Loan Tenure: 5 to 25 Years.
-    * Annual Interest Rate: 3.99% to 6.50%.
-* **Comprehensive Dubai Upfront Purchasing Cost Schedule:**
-  * DLD Land Department Transfer Fee: 4% of purchase price + AED 4,300 administrative fee.
-  * Dubai Property Registration Trustee Fee: AED 4,200 (+ 5% VAT).
-  * Real Estate Brokerage Commission: 2% (+ 5% VAT).
-  * Bank Mortgage Valuation Fee: ~AED 3,000.
-  * Mortgage Registration Fee: 0.25% of loan amount + AED 290.
-  * **Total Upfront Cash Required (Down payment + all legal and administrative fees).**
-* **Net Rental Yield & Cash Flow Calculator:**
-  * Input fields: Gross Annual Rental Income, Service Charges (AED/SqFt), Annual Maintenance, and Monthly Mortgage installments.
-  * Instant calculation of **Gross Yield %** vs. **True Net ROI %**.
-* **Direct Pre-Approval Lead Funnel:**
-  * One-click WhatsApp and callback inquiry triggers routed directly to VWD's in-house mortgage advisory desk.
+The following **3 frontend modules (4 templates)** are remaining to complete the frontend:
 
----
-
-### 2. Blog, News & Market Insights Portal (`blog.html` & `blog-detail.html`)
+### 1. Blog, News & Market Insights Portal (`blog.html` & `blog-detail.html`)
 * **`blog.html` (Editorial Magazine Hub):**
-  * Interactive category filter pills:
+  * **Hero Spotlight Article:** Large featured article with publication badge, reading time, and direct click-through to detail view.
+  * **Interactive Category Filter Pills:**
     * *All Articles*
     * *Market News & Trends*
     * *Buyer & Investor Guides*
     * *Seller Advice*
     * *UAE Golden Visa & DLD Regulations*
     * *Dubai Neighborhood & Lifestyle Spotlights*
-  * High-impact hero feature article with prominent reading badge.
-  * 6 to 9 curated Dubai property advisory articles with reading times, publication dates, and author badges (*Alexander Vance, Managing Director*).
-  * Newsletter & market dispatch subscription card.
+  * **Article Grid Layout:** 6 to 9 curated Dubai property advisory cards styled with HomeID native card layout (1px `#ebebeb` borders, 4px border-radius, author credentials, read time).
+  * **Newsletter Lead Card:** Integrated email newsletter subscription box.
 * **`blog-detail.html` (Single Article Reading Template):**
-  * Elegant editorial layout with responsive sidebar.
-  * Interactive Table of Contents with jump links.
-  * Author credentials and bio card with direct contact triggers.
-  * Social share buttons (WhatsApp, LinkedIn, X/Twitter, Email).
-  * Related articles carousel and advisory lead capture box.
+  * Editorial typography adhering to theme's native Poppins font hierarchy.
+  * **Interactive Table of Contents:** Sticky or sidebar jump links to article sections.
+  * **Author Profile Card:** Author credentials (e.g. *Alexander Vance, Managing Director*), DLD license reference, and direct WhatsApp advisory trigger.
+  * **Social Share Bar:** Quick sharing triggers for WhatsApp, LinkedIn, X (Twitter), and Email.
+  * **Related Insights Carousel:** 3 related articles at the foot of the page.
 
 ---
 
-### 3. Single Community In-Depth Guide Template (`community-detail.html`)
-* Deep-dive enclave landing page (e.g. *Palm Jumeirah Master Community Guide*):
-  * Interactive sub-community breakdown (e.g. Fronds A–P vs. The Crescent vs. The Trunk).
-  * Commute time index: DXB International Airport, Downtown Dubai, DIFC, and Dubai Marina.
-  * Educational and healthcare catchments: Top nearby British/IB schools, nurseries, and international hospitals.
-  * Beach clubs, Michelin dining, and shopping amenities.
-  * Live reactive feed of available properties for sale and rent within that specific community.
+### 2. Single Community In-Depth Guide Template (`community-detail.html`)
+* **Purpose:** Provides a deep-dive enclave showcase linked from `dubai-communities.html` (e.g., *Palm Jumeirah Master Community Guide*, *Downtown Dubai Guide*).
+* **Architecture & Sections:**
+  * **Enclave Hero:** Cinematic header banner with community tags (Waterfront, Freehold, DLD Permit ID).
+  * **Sub-Community Enclave Breakdown:** Detailed sub-zones (e.g., Fronds A–P, The Crescent, The Trunk).
+  * **Lifestyle & Commute Distance Matrix:** Quick-glance drive times to DXB Airport, Downtown Dubai, DIFC, and Dubai Marina.
+  * **Catchment Amenities:** Top international schools (British & IB curricula), private healthcare clinics, beach clubs, and retail hubs.
+  * **DLD Enclave Price & Rental Yield Index:** Historical average price per sq.ft. and current rental yield benchmarks.
+  * **Active Listings Feed:** Reactive grid of available properties for sale and rent within this community.
+  * **Private Chauffeur Tour Lead Modal / CTA:** Booking funnel to schedule an in-person enclave consultation.
 
 ---
 
-### 4. Dedicated Careers & Broker Recruitment Portal (`careers.html`)
-* White & Co relies heavily on continuous broker recruitment to power its 140+ agent team.
-* **Key Architecture & Features:**
-  * Competitive commission split model (up to 70% commission tiers).
-  * In-house 4K drone videography, digital media studio, and lead generation support.
-  * UAE residency visa sponsorship and RERA Broker License facilitation.
-  * Broker Academy training program for international and experienced agents.
-  * Interactive Agent Application Form with resume/CV attachment and direct WhatsApp HR routing.
-
----
-
-### 5. Universal Lead Capture Backend & Webhook Integration — *Milestone 9*
-* Connect all client-side inquiry forms (`contact-us.html`, `list-a-property.html` valuation, `market-reports.html` PDF access, `careers.html` applications, and footer newsletter) to live endpoints (Formspree / Google Sheets / Webhook) so leads are dispatched directly to `leads@vwdrealestate.com`.
-
----
-
-### 6. Production SEO Sanitization & Social Meta
-* Batch-replace all residual demo URLs (`homeid.g5plus.net`) in `<head>` tags with official `https://vwdrealestate.com/`.
-* Inject OpenGraph (`og:title`, `og:image`, `og:description`, `og:url`) and Twitter Card metadata across all HTML templates for rich social previews on WhatsApp and LinkedIn.
-* Generate production `sitemap.xml` and `robots.txt`.
+### 3. Dedicated Careers & Broker Recruitment Portal (`careers.html`)
+* **Purpose:** Broker talent acquisition hub matching White & Co's recruitment engine for hiring licensed agents.
+* **Architecture & Sections:**
+  * **Recruitment Hero:** "Build Your Real Estate Career With VWD" value proposition.
+  * **The VWD Advantage (4 Key Pillars):**
+    * *High-Tier Commission Structure:* Tiered splits up to 70%.
+    * *In-House Digital Media & Marketing Studio:* Dedicated 4K drone videographers, professional photography, and active lead distribution.
+    * *Legal & Regulatory Sponsorship:* Full UAE residency visa sponsorship and RERA Broker Card (BRN) facilitation.
+    * *VWD Training Academy:* Comprehensive mentorship program covering DLD escrow laws, contract drafting, and high-net-worth client advisory.
+  * **Current Open Roles Grid:** Expandable accordion or cards for *Off-Plan Investment Specialist*, *Prime Residential Broker*, *Commercial Property Consultant*, and *Client Relations Executive*.
+  * **Interactive Agent Application Form:** Multi-field application with resume/CV upload, RERA license status dropdown, and instant HR WhatsApp link.
 
 ---
 
@@ -324,26 +297,26 @@ To achieve complete feature and architectural parity with [White & Co Real Estat
 ```
 [x] Milestone 1: Foundation & asset restructuring
 [x] Milestone 2: Brand system integration (#00265E Navy + #CFB165 Gold)
-[x] Milestone 3: Slick slider standardization
-[x] Milestone 4: 6-Pillar navigation with solid interior header
-[x] Milestone 5: Homepage rotating hero engine & Dubai community sliders
-[x] Milestone 6.1: Secondary interior templates (properties-for-sale.html, properties-for-rent.html)
-[x] Milestone 6.2: Single property detail layout 3 (property-detail.html)
-[x] Milestone 6.3: Off-plan 2-tier investment hub & directory (off-plan.html, off-plan-properties.html)
-[x] Milestone 6.4: Off-plan project detail template (off-plan-detail.html)
-[x] Milestone 6.5: Universal 4-column footer & 26px mobile drawer toggle
-[x] Milestone 6.7: Commercial real estate portal (commercial-properties.html)
-[x] Milestone 6.8: Pillar 3 Seller acquisition & valuation estimator (list-a-property.html)
-[x] Milestone 6.9: Pillar 6 Leadership & broker directory (meet-the-team.html)
-[x] Milestone 6.10: Pillar 6 Corporate narrative & compliance (about-us.html)
-[x] Milestone 6.11: Pillar 6 Market reports & outlook (market-reports.html)
-[x] Milestone 6.12: Pillar 6 Headquarters & contact hub (contact-us.html)
-[x] Milestone 8: Dubai communities guide (dubai-communities.html & .htm)
-[ ] Milestone 7: Dedicated Mortgage & Net ROI Calculator (mortgage-calculator.html)
+[x] Milestone 3: Slick slider standardization & mobile responsiveness
+[x] Milestone 4: 6-Pillar master navigation with interior header
+[x] Milestone 5: Homepage rotating hero engine, property type carousel, & community sliders
+[x] Milestone 6.1: Properties for Sale portal (properties-for-sale.html)
+[x] Milestone 6.2: Properties for Rent portal (properties-for-rent.html)
+[x] Milestone 6.3: Single property detail layout 3 (property-detail.html)
+[x] Milestone 6.4: Off-Plan 2-tier investment hub & directory (off-plan.html, off-plan-properties.html)
+[x] Milestone 6.5: Off-plan project detail template (off-plan-detail.html)
+[x] Milestone 6.6: Commercial real estate portal (commercial-properties.html)
+[x] Milestone 6.7: Pillar 3 Seller acquisition & valuation estimator (list-a-property.html)
+[x] Milestone 6.8: Pillar 6 Leadership & broker directory (meet-the-team.html)
+[x] Milestone 6.9: Pillar 6 Corporate narrative & compliance (about-us.html)
+[x] Milestone 6.10: Pillar 6 Market reports & outlook (market-reports.html)
+[x] Milestone 6.11: Pillar 6 Headquarters & contact hub (contact-us.html)
+[x] Milestone 6.12: Dubai communities guide (dubai-communities.html & .htm)
+[x] Milestone 6.13: Dedicated Mortgage & Net ROI Calculator (mortgage-calculator.html)
+[x] Milestone 6.14: Universal 4-column footer & mobile drawer sync across all 16 pages
 [ ] Milestone 7.1: Blog & Property News Hub (blog.html & blog-detail.html)
-[ ] Milestone 8.1: Single Community Deep-Dive Template (community-detail.html)
-[ ] Milestone 8.2: Careers & Broker Recruitment Portal (careers.html)
-[ ] Milestone 9: Live lead dispatch webhook integration & production SEO metadata sanitization
+[ ] Milestone 7.2: Single Community Deep-Dive Template (community-detail.html)
+[ ] Milestone 7.3: Careers & Broker Recruitment Portal (careers.html)
 ```
 
 ---
