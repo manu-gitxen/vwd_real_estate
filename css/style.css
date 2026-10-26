@@ -4919,3 +4919,156 @@ input:not([type="checkbox"]):not([type="radio"]), select, textarea {
 	font-size: 18px;
 	margin-bottom: 14px;
 }
+
+/* ==========================================================================
+   VWD Pillar 6: ABOUT US (Corporate Story & Credentials)
+   ========================================================================== */
+
+/* Executive Letter Box */
+.vwd-founder-card {
+	background: #ffffff;
+	border: 1px solid #ebebeb;
+	border-radius: 4px;
+	padding: 30px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.vwd-founder-quote {
+	font-size: 15px;
+	font-style: italic;
+	color: #444444;
+	line-height: 1.7;
+	position: relative;
+	padding-left: 24px;
+	border-left: 3px solid #CFB165;
+	margin-bottom: 24px;
+}
+
+.vwd-founder-profile {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	border-top: 1px solid #ebebeb;
+	padding-top: 18px;
+}
+
+.vwd-founder-avatar {
+	width: 64px;
+	height: 64px;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 2px solid #CFB165;
+}
+
+/* Regulatory Compliance Badge Grid */
+.vwd-compliance-box {
+	background: #f8f9fc;
+	border: 1px solid #e2e6f0;
+	border-radius: 4px;
+	padding: 28px 30px;
+	margin-bottom: 45px;
+}
+
+.vwd-compliance-item {
+	display: flex;
+	align-items: flex-start;
+	gap: 14px;
+}
+
+.vwd-compliance-icon {
+	width: 40px;
+	height: 40px;
+	border-radius: 4px;
+	background: #00265E;
+	color: #CFB165;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 16px;
+	flex-shrink: 0;
+}
+
+.vwd-compliance-title {
+	font-size: 14.5px !important;
+	font-weight: 600 !important;
+	color: #00265E !important;
+	margin-bottom: 4px !important;
+}
+
+.vwd-compliance-desc {
+	font-size: 13px !important;
+	color: #666666 !important;
+	line-height: 1.55 !important;
+	margin: 0 !important;
+}
+
+/* Division Cards */
+.vwd-division-card {
+	background: #ffffff;
+	border: 1px solid #ebebeb;
+	border-radius: 4px;
+	padding: 28px 24px;
+	height: 100%;
+	transition: all 0.25s ease;
+}
+
+.vwd-division-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+	border-color: #00265E;
+}
+
+.vwd-division-badge {
+	font-size: 11px !important;
+	font-weight: 700 !important;
+	text-transform: uppercase !important;
+	letter-spacing: 1px !important;
+	color: #CFB165 !important;
+	display: block !important;
+	margin-bottom: 8px !important;
+}
+
+.vwd-division-title {
+	font-size: 17px !important;
+	font-weight: 600 !important;
+	color: #00265E !important;
+	margin-bottom: 10px !important;
+	line-height: 1.35 !important;
+}
+
+.vwd-division-desc {
+	font-size: 13.5px !important;
+	color: #666666 !important;
+	line-height: 1.65 !important;
+	margin-bottom: 16px !important;
+}
+
+.vwd-division-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	border-top: 1px solid #f0f0f0;
+	padding-top: 12px;
+}
+
+.vwd-division-list li {
+	font-size: 12.5px;
+	color: #555555;
+	margin-bottom: 6px;
+	position: relative;
+	padding-left: 18px;
+}
+
+.vwd-division-list li::before {
+	content: "\f00c";
+	font-family: "Font Awesome 5 Pro", "Font Awesome 5 Free";
+	font-weight: 900;
+	position: absolute;
+	left: 0;
+	top: 1px;
+	color: #CFB165;
+	font-size: 10px;
+}
