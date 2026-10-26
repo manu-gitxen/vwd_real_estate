@@ -398,6 +398,14 @@ The entire 250+ page inventory mapped from the competitor audit is structured in
 - **Specialized Department Directory:** Direct email contacts for Conveyancing & Golden Visa (`conveyancing@vwd.ae`), Property Management (`management@vwd.ae`), Research & Press (`research@vwd.ae`), and Careers/Recruitment (`careers@vwd.ae`).
 - **Institutional Governance Strip:** Verified credentials display: DLD Brokerage ORN: 30124, DET License: 1124589, 100% RERA Certified Brokers, and UAE Central Bank compliant escrow client trust accounts.
 
+### 7.15 Dubai Communities Guide & Investment Indices (`dubai-communities.html` & `dubai-communities.htm`)
+- **Master Shell & Header Highlight:** Completes 100% of the primary navigation ecosystem under `ABOUT` with active highlighting on `#menu-item-vwd-6` and `#menu-item-vwd-6-3`, gold header CTA `READ OUR OUTLOOK`, and universal 4-column footer.
+- **Institutional Proof Strip:** 4 KPI proof cards (42+ Master Communities, +15.2% average capital growth, 6.8% gross rental yields, 100% foreign freehold ownership & Golden Visa eligibility).
+- **Interactive Lifestyle & Category Filter System:** Reactive client-side filtering tabs covering All Communities, Waterfront & Island, Golf & Greenery, Urban & Downtown, Family & Suburban, and Financial & Business corridors, combined with real-time keyword search.
+- **Top 12 Dubai Enclaves Showcase:** Comprehensive cards for Palm Jumeirah, Downtown Dubai, Dubai Hills Estate, Emirates Hills, DIFC, Business Bay, Dubai Marina, Jumeirah Bay Island, Emaar Beachfront, Dubai Creek Harbour, Arabian Ranches, and City Walk with average rates (AED/SqFt), 12-month YoY capital growth badges, gross rental yields, and direct inventory query links (`properties-for-sale.html?location=...`).
+- **Official DLD Community Investment Matrix:** Comparative benchmark table detailing primary developers, lifestyle profiles, average rates, YoY capital growth, and gross ROI.
+- **Bespoke Chauffeur Community Tour Funnel:** High-contrast VIP service banner offering private chauffeur-driven community orientations with direct WhatsApp tour desk and phone booking.
+
 ## 8. Financial Algorithms (Dubai Real Estate Standards)
 
 ### 8.1 Dubai Mortgage Payment Formula
@@ -456,5 +464,5 @@ $$\text{Net Rental Yield (\%)} = \left(\frac{\text{Annual Rental Income} - \text
 | **Milestone 6.11** | Market Intelligence & Strategic Outlook (`market-reports.html`): Developed institutional research portal powering header `READ OUR OUTLOOK` CTA with flagship 48-page 2026 outlook showcase, 4 high-contrast KPI cards, 8-community DLD pricing & gross yield matrix, 4 sector intelligence reports, interactive PDF download lead capture modal with WhatsApp delivery, and bespoke advisory desk funnel. | **COMPLETED** | Verified in `market-reports.html` & browser |
 | **Milestone 6.12** | Pillar 6: Dubai Headquarters & Advisory Access (`contact-us.html`): Built corporate contact hub featuring 4 quick advisory channels, interactive multi-department inquiry form with WhatsApp/phone preference toggles, Control Tower Motor City headquarters showcase with valet/parking specs, interactive location map, specialized division directory, and DLD ORN 30124 credentials. | **COMPLETED** | Verified in `contact-us.html` & browser |
 | **Milestone 7** | Interactive Financial Tools: Dedicated Dubai Mortgage & Net Rental Yield Calculators. | **QUEUED** | Spec Finalized |
-| **Milestone 8** | Dubai Community Guides (42 Locations): Neighborhood hubs (Palm Jumeirah, Downtown, Dubai Hills, etc.) with price trends, lifestyle tags, and active property feeds. | **QUEUED** | Spec Finalized |
+| **Milestone 8** | Dubai Communities Guide (`dubai-communities.html` & `dubai-communities.htm`): Built comprehensive neighborhood portal featuring 12 premier Dubai enclaves, interactive lifestyle filter tabs (Waterfront, Golf, Urban, Family, Commercial), real-time search, DLD pricing/yield matrix, and private chauffeur tour booking funnel. | **COMPLETED** | Verified in `dubai-communities.html` & browser |
 | **Milestone 9** | Lead Generation: WhatsApp direct integrations, Valuation Request funnels, and CRM Webhooks. | **QUEUED** | Spec Finalized |
