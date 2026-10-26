@@ -4394,7 +4394,17 @@ input:not([type="checkbox"]):not([type="radio"]), select, textarea {
 	background-color: #ffffff !important;
 }
 
-.vwd-val-input:focus {
+textarea.vwd-val-input,
+.vwd-val-textarea {
+	height: auto !important;
+	min-height: 130px !important;
+	padding: 12px 14px !important;
+	line-height: 1.6 !important;
+	resize: vertical !important;
+}
+
+.vwd-val-input:focus,
+.vwd-val-textarea:focus {
 	border-color: #00265E !important;
 	box-shadow: none !important;
 }
@@ -5071,4 +5081,283 @@ input:not([type="checkbox"]):not([type="radio"]), select, textarea {
 	top: 1px;
 	color: #CFB165;
 	font-size: 10px;
+}
+
+/* ==========================================================================
+   VWD Market Reports & Intelligence (Native HomeID Styling)
+   ========================================================================== */
+
+/* Hero Flagship Report Box */
+.vwd-report-hero-card {
+	background: #ffffff;
+	border: 1px solid #ebebeb;
+	border-radius: 4px;
+	padding: 36px 32px;
+	margin-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+	.vwd-report-hero-card {
+		padding: 24px 18px;
+	}
+}
+
+.vwd-report-cover-box {
+	background: #00265E;
+	border: 1px solid rgba(207, 177, 101, 0.4);
+	border-radius: 4px;
+	padding: 32px 28px;
+	color: #ffffff;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	position: relative;
+	box-shadow: 0 10px 30px rgba(0, 38, 94, 0.12);
+}
+
+.vwd-report-cover-title {
+	font-size: 22px !important;
+	font-weight: 600 !important;
+	color: #ffffff !important;
+	line-height: 1.35 !important;
+	margin-bottom: 12px !important;
+}
+
+/* Community Performance Table */
+.vwd-report-table-wrap {
+	background: #ffffff;
+	border: 1px solid #ebebeb;
+	border-radius: 4px;
+	overflow-x: auto;
+	margin-bottom: 45px;
+}
+
+.vwd-report-table {
+	width: 100%;
+	margin-bottom: 0;
+	border-collapse: collapse;
+}
+
+.vwd-report-table th {
+	background: #fafafa;
+	color: #00265E;
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.8px;
+	padding: 14px 18px;
+	border-bottom: 1px solid #ebebeb;
+	white-space: nowrap;
+}
+
+.vwd-report-table td {
+	padding: 14px 18px;
+	font-size: 13.5px;
+	color: #444444;
+	border-bottom: 1px solid #f0f0f0;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+.vwd-report-table tr:hover td {
+	background: #fbfbfb;
+}
+
+.vwd-growth-positive {
+	color: #1b8a36;
+	font-weight: 600;
+}
+
+/* Research Archive Card */
+.vwd-archive-card {
+	background: #ffffff;
+	border: 1px solid #ebebeb;
+	border-radius: 4px;
+	padding: 26px 22px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	transition: all 0.25s ease;
+}
+
+.vwd-archive-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+	border-color: #00265E;
+}
+
+.vwd-archive-badge {
+	font-size: 11px !important;
+	font-weight: 700 !important;
+	text-transform: uppercase !important;
+	letter-spacing: 1px !important;
+	color: #CFB165 !important;
+	display: block !important;
+	margin-bottom: 8px !important;
+}
+
+.vwd-archive-title {
+	font-size: 16.5px !important;
+	font-weight: 600 !important;
+	color: #00265E !important;
+	margin-bottom: 10px !important;
+	line-height: 1.35 !important;
+}
+
+.vwd-archive-desc {
+	font-size: 13px !important;
+	color: #666666 !important;
+	line-height: 1.6 !important;
+	margin-bottom: 16px !important;
+}
+
+/* Modal styling matching HomeID */
+.vwd-report-modal .modal-content {
+	border-radius: 4px;
+	border: 1px solid #ebebeb;
+}
+
+.vwd-report-modal .modal-header {
+	border-bottom: 1px solid #ebebeb;
+	padding: 20px 24px;
+}
+
+.vwd-report-modal .modal-body {
+	padding: 24px;
+}
+
+/* -------------------------------------------------------------
+   Pillar 6: Contact Us & Headquarters Page Styles
+------------------------------------------------------------- */
+.vwd-contact-card {
+	background: #ffffff;
+	border: 1px solid #ebebeb;
+	border-radius: 4px;
+	padding: 28px 24px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	transition: all 0.25s ease;
+}
+
+.vwd-contact-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+	border-color: #00265E;
+}
+
+.vwd-contact-icon-box {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: rgba(0, 38, 94, 0.06);
+	color: #00265E;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 20px;
+	margin-bottom: 16px;
+	transition: all 0.25s ease;
+}
+
+.vwd-contact-card:hover .vwd-contact-icon-box {
+	background: #00265E;
+	color: #CFB165;
+}
+
+.vwd-contact-card-title {
+	font-size: 17px !important;
+	font-weight: 600 !important;
+	color: #00265E !important;
+	margin-bottom: 8px !important;
+}
+
+.vwd-contact-card-desc {
+	font-size: 13.5px !important;
+	color: #666666 !important;
+	line-height: 1.6 !important;
+	margin-bottom: 18px !important;
+}
+
+.vwd-contact-form-wrap {
+	background: #ffffff;
+	border: 1px solid #ebebeb;
+	border-radius: 4px;
+	padding: 36px 32px;
+}
+
+.vwd-hq-box {
+	background: #fafafa;
+	border: 1px solid #ebebeb;
+	border-radius: 4px;
+	padding: 32px 28px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.vwd-hq-title {
+	font-size: 20px !important;
+	font-weight: 600 !important;
+	color: #00265E !important;
+	margin-bottom: 12px !important;
+}
+
+.vwd-map-container {
+	position: relative;
+	border-radius: 4px;
+	overflow: hidden;
+	border: 1px solid #ebebeb;
+	background: #f7f7f7;
+	height: 420px;
+}
+
+.vwd-dept-card {
+	background: #ffffff;
+	border: 1px solid #ebebeb;
+	border-radius: 4px;
+	padding: 22px 20px;
+	transition: all 0.2s ease;
+	height: 100%;
+}
+
+.vwd-dept-card:hover {
+	border-color: #00265E;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.vwd-channel-radio-wrap {
+	display: flex;
+	gap: 12px;
+	flex-wrap: wrap;
+}
+
+.vwd-channel-option {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	padding: 8px 16px;
+	background: #fafafa;
+	border: 1px solid #ebebeb;
+	border-radius: 4px;
+	font-size: 13px;
+	color: #444;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.vwd-channel-option:hover,
+.vwd-channel-option.active {
+	background: #00265E;
+	color: #CFB165;
+	border-color: #00265E;
+}
+
+.vwd-channel-option input {
+	margin: 0;
+	accent-color: #CFB165;
 }
